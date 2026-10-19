@@ -1,3 +1,5 @@
+> Актуальна документація компонента — `.claude/skills/wnz-design-system/references/components/anchor.md`. Цей файл — історія перескладання.
+
 # Anchor — точна копія, правильна збірка
 
 Статус: **зібрано 2026-10-19** — Section `Anchor (new)` (78314:307705) на сторінці `↳ Anchor`: `Anchor/Item` (78314:307672), `Anchor` (78314:307677), превʼю MB/XON. Змінні `anchor/*`, `border-radius/anchor/item`, `contextual/anchor/item/*` створені в колекції `Product` (scopes задані) — імена збігаються з JSON, експорт з Token Studio їх оновить, а не продублює.
