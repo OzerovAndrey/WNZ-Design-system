@@ -25,6 +25,13 @@ Anchor/Item (COMPONENT, 78314:307672)  HORIZONTAL · HUG × 20
 | `Label` | Boolean | true |
 | `✏️ Label` | Text | `Label` |
 
+## Властивості `Anchor`
+| Властивість | Тип | Дефолт | Що робить |
+|---|---|---|---|
+| `Item 1` … `Item 4` | Boolean | true | показати / сховати відповідний пункт |
+
+Інстанси `Item 1…4` — **exposed nested instances**: у панелі `Anchor` видно і редагуються їхні `✏️ Label`, `Label`, `↳ 💠 Icon`.
+
 Іконки в `Anchor`: `document`, `777`, `statistics`, `rocket`.
 
 ## Токени (`mb/component`, `xon/component`)
