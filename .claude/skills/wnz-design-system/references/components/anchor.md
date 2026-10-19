@@ -37,12 +37,12 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `anchor.item.gap` | `{spacing.150}` 6 |
 | `anchor.item.icon-size` | **16** |
 | `border-radius.anchor.item` | MB `{border-radius.core.full}` · XON `{border-radius.core.300}` |
-| `contextual.anchor.item.fill` | MB `{core.brand-60.100}` #d6e0ff · XON `{core.grey.50}` #e3e8f8 |
-| `contextual.anchor.item.text` | MB `{core.grey.700}` #002491 · XON `{core.grey.800}` #0c142c |
-| `contextual.anchor.item.icon` | `{contextual.anchor.item.text}` (= колір тексту) |
-| `contextual.anchor.item-invert.fill` | MB `{core.grey.800}` #001e76 · XON `{core.grey.500}` #203879 |
-| `contextual.anchor.item-invert.text` | `{core.white.500}` (обидва) |
-| `contextual.anchor.item-invert.icon` | `{contextual.anchor.item-invert.text}` (= колір тексту) |
+| `contextual.anchor.item.fill` | `{semantic.fill.default}` |
+| `contextual.anchor.item.text` | `{semantic.text.default.heading}` |
+| `contextual.anchor.item.icon` | `{semantic.text.default.heading}` (= текст) |
+| `contextual.anchor.item-invert.fill` | `{semantic.background.slate-1}` |
+| `contextual.anchor.item-invert.text` | `{semantic.text.default-invert.heading}` |
+| `contextual.anchor.item-invert.icon` | `{semantic.text.default-invert.heading}` (= текст) |
 
 ## Прив'язка
 Токени Token Studio стоять на шарах напряму (plugin data `tokens`) + однойменні змінні колекції `Product`.
@@ -59,6 +59,9 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 
 - 2026-10-19 — кольори підібрані **окремо під кор кожного бренду** (MB — світлий продукт, XON — темний): semantic-аліаси давали в XON білий текст на світлій плашці і темну плашку, що зливалась з фоном сторінки #0e1935.
 
+- 2026-10-19 — кольори **тільки з alias (semantic)**, не з core — як у nav-menu / accordion / tabs. Попередній варіант з core скасовано командою.
+
 ## Відкриті питання
+- XON: `semantic.text.default.heading` білий → `Inverted=False` читається лише на темних поверхнях; `semantic.background.slate-1` = фон сторінки XON → плашка `Inverted=True` на сторінці XON не видна (текст читається). Рішення за командою.
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
 - Після приймання: старий Anchor → `Deprecated/Anchor`, інстанси в лейаутах переключити.

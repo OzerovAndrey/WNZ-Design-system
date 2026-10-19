@@ -32,7 +32,7 @@ description: Правила, еталони та чекліст очистки �
 3. **Instance, не імітація.** У компонентах і лейаутах — тільки інстанси реальних компонентів. Не малювати кнопку/бейдж фреймом.
 4. **Токени Token Studio — напряму на шар.** Не лише Figma-змінна: на кожну властивість ставиться токен Token Studio (plugin data `tokens`) + однойменна змінна, як в еталоні Button (`references/tokens.md`).
 5. **Жодного hardcode.** Колір, радіус, висота, падінги, розмір іконки, типографіка — через змінні/стилі. Hex-значення в компоненті = дефект.
-6. **Свої компонентні токени.** Компонент прив'язується до власних токенів `<component>.*`, `border-radius.<component>.*`, `contextual.<component>.*` у `mb/component` і `xon/component` (значення — аліаси), а не напряму до semantic/core і не до токенів інших компонентів (`references/token-studio.md`).
+6. **Свої компонентні токени.** Компонент прив'язується до власних токенів `<component>.*`, `border-radius.<component>.*`, `contextual.<component>.*` у `mb/component` і `xon/component` (значення кольорів — **тільки alias `semantic.*`**, не `core.*`), а не напряму до semantic/core і не до токенів інших компонентів (`references/token-studio.md`).
 7. **Жодних чужих бібліотек.** Змінні з чужих бібліотек (`Colors/text`, `Radius/0`, `spacing/xxs`, `grid/12`, `list item/*` …) заборонені — заміняти на токени колекції `Product`.
 8. **Один компонент — одна сутність.** Дублікати (`Input` ×2, `Selection-controls` vs `Toggles`, 10 наборів `Status` …) зливаються в один набір з варіантами; legacy видаляється або маркується `Deprecated`.
 9. **Неймінг за стандартом** (`references/naming.md`): Title Case англійською, без опечаток, без `Property 1`, без `Frame 123`.
