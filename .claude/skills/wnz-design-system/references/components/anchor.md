@@ -3,7 +3,7 @@
 Сторінка `↳ Anchor` · Section `Anchor` (78314:307705) · статус: зібрано заново 2026-10-19, чекає ревʼю (не Ready for dev).
 
 ## Призначення
-Рядок якірних посилань на секції сторінки: до 4 пунктів з іконкою і лейблом. Два варіанти: для світлих фонів (`Inverted=False`) і для темних (`Inverted=True`).
+Рядок якірних посилань на секції сторінки: до 4 пунктів з іконкою і лейблом. Два варіанти: `Inverted=False` — світла підкладка + темний лейбл; `Inverted=True` — **темна підкладка** + білий лейбл.
 
 ## Анатомія
 ```
@@ -40,7 +40,7 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `contextual.anchor.item.fill.default` | `{semantic.fill.default}` |
 | `contextual.anchor.item.text.default` | **`{semantic.text.default.heading}`** (темний на світлому) |
 | `contextual.anchor.item.icon.default` | `{core.grey.200}` |
-| `contextual.anchor.item-invert.fill.default` | `{semantic.fill.default}` |
+| `contextual.anchor.item-invert.fill.default` | **`{core.grey.800}`** (темна підкладка: MB #001e76 · XON #0c142c) |
 | `contextual.anchor.item-invert.text.default` | `{semantic.text.default-invert.heading}` (білий) |
 | `contextual.anchor.item-invert.icon.default` | `{core.grey.200}` |
 
@@ -52,6 +52,7 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 - 2026-10-19 — лейбл темний (`semantic.text.default.heading`) замість білого: білий не читався на світлому фоні.
 - 2026-10-19 — іконка 20 → **16 px**: 20 px упиралась у краї пункту висотою 20.
 - 2026-10-19 — доданий варіант `Inverted=True` для темних фонів (білий текст `semantic.text.default-invert.heading`). Назва варіанта — як в еталонах Accordion/Tabs.
+- 2026-10-19 — `Inverted=True`: підкладка темна `{core.grey.800}` (світлий текст ⇒ темна підкладка), а не прозора.
 - Варіант property для світлого/темного фону — `Inverted = False | True`; інвертні кольорові токени — `contextual.<component>.<part>-invert.*` (як `button.tertiary-invert`).
 
 ## Відкриті питання
