@@ -42,7 +42,7 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `contextual.anchor.item.icon` | `{contextual.anchor.item.text}` (= колір тексту) |
 | `contextual.anchor.item-invert.fill` | **`{core.grey.800}`** (темна підкладка: MB #001e76 · XON #0c142c) |
 | `contextual.anchor.item-invert.text` | `{semantic.text.default-invert.heading}` (білий) |
-| `contextual.anchor.item-invert.icon` | `{core.grey.200}` |
+| `contextual.anchor.item-invert.icon` | `{contextual.anchor.item-invert.text}` (= колір тексту) |
 
 ## Прив'язка
 Токени Token Studio стоять на шарах напряму (plugin data `tokens`) + однойменні змінні колекції `Product`.
