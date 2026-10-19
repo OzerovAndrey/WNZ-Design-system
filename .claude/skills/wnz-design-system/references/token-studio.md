@@ -10,8 +10,10 @@
 |---|---|---|
 | розміри, падінги, gap | `<component>.<part>.<property>` (`anchor.item.height`) | `sizing` / `spacing` |
 | радіус | `border-radius.<component>.<part>` | `borderRadius` |
-| кольори | `contextual.<component>.<part>.<role>.<state>` (`contextual.anchor.item.fill.default`) | `color` |
+| кольори | `contextual.<component>.<part>.<role>` → якщо є стани: `.<role>.<state>` | `color` |
 | типографіка | наявний alias-токен (`text.md-strong`) | `typography` |
+
+**Структура «в рядок»** (як `contextual.button.primary.fill.{default,hover,active,disabled}`): останній рівень — це набір значень, що стоять поруч (стани, розміри `sm/md/lg`, ролі `fill/text/icon`). **Не створювати рівень з одним листком** (`fill.default`, коли станів немає) — це дає окрему гілку на кожен колір. Без станів: `contextual.anchor.item.{fill,text,icon}`, `contextual.anchor.item-invert.{fill,text,icon}`.
 
 Значення — аліаси на alias/core (`{spacing.200}`, `{semantic.fill.default}`); сирі числа лише там, де немає відповідного аліасу (20).
 

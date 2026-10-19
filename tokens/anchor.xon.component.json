@@ -43,42 +43,30 @@
     "anchor": {
       "item": {
         "fill": {
-          "default": {
-            "value": "{semantic.fill.default}",
-            "type": "color"
-          }
+          "value": "{semantic.fill.default}",
+          "type": "color"
         },
         "text": {
-          "default": {
-            "value": "{semantic.text.default.heading}",
-            "type": "color"
-          }
+          "value": "{semantic.text.default.heading}",
+          "type": "color"
         },
         "icon": {
-          "default": {
-            "value": "{core.grey.200}",
-            "type": "color"
-          }
+          "value": "{contextual.anchor.item.text}",
+          "type": "color"
         }
       },
       "item-invert": {
         "fill": {
-          "default": {
-            "value": "{core.grey.800}",
-            "type": "color"
-          }
+          "value": "{core.grey.800}",
+          "type": "color"
         },
         "text": {
-          "default": {
-            "value": "{semantic.text.default-invert.heading}",
-            "type": "color"
-          }
+          "value": "{semantic.text.default-invert.heading}",
+          "type": "color"
         },
         "icon": {
-          "default": {
-            "value": "{core.grey.200}",
-            "type": "color"
-          }
+          "value": "{contextual.anchor.item-invert.text}",
+          "type": "color"
         }
       }
     }
