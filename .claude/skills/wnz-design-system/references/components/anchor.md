@@ -3,57 +3,58 @@
 Сторінка `↳ Anchor` · Section `Anchor` (78314:307705) · статус: зібрано заново 2026-10-19, чекає ревʼю (не Ready for dev).
 
 ## Призначення
-Рядок якірних посилань на секції сторінки: 4 пункти з іконкою і лейблом.
+Рядок якірних посилань на секції сторінки: до 4 пунктів з іконкою і лейблом. Два варіанти: для світлих фонів (`Inverted=False`) і для темних (`Inverted=True`).
 
 ## Анатомія
 ```
-Anchor (COMPONENT, 78314:307677)  HORIZONTAL · HUG × HUG · 388×20
-│  padding L/R = anchor/padding-horizontal · gap = anchor/gap
-└─ 4 × INSTANCE Anchor/Item
+Anchor (COMPONENT_SET, 78336:307530)   Inverted = False | True
+├─ Inverted=False (78314:307677)  HORIZONTAL · HUG × 20 · padding L/R anchor/padding-horizontal · gap anchor/gap
+│   └─ Item #1…#4  INSTANCE Anchor/Item (Inverted=False), exposed
+└─ Inverted=True  (78336:307495)  те саме, Item #1…#4 = Anchor/Item (Inverted=True)
 
-Anchor/Item (COMPONENT, 78314:307672)  HORIZONTAL · HUG × 20
-│  height = anchor/item/height · padding L/R = anchor/item/padding-left / padding-right
-│  gap = anchor/item/gap · radius = border-radius/anchor/item · fill = contextual/anchor/item/fill/default
-├─ INSTANCE "Icon"  20×20 = anchor/item/icon-size · колір = contextual/anchor/item/icon/default
-└─ TEXT "Label"     text style text/md-strong · колір = contextual/anchor/item/text/default
+Anchor/Item (COMPONENT_SET, 78336:307494)   Inverted = False | True
+├─ Inverted=False (78314:307672) / Inverted=True (78336:307489)
+│   HORIZONTAL · HUG × anchor/item/height (20) · padding anchor/item/padding-left / -right · gap anchor/item/gap
+│   radius border-radius/anchor/item · fill contextual/anchor/item[-invert]/fill/default
+├─ Icon   16×16 = anchor/item/icon-size · колір contextual/anchor/item[-invert]/icon/default
+└─ Label  text style text/md-strong · колір contextual/anchor/item[-invert]/text/default
 ```
 
-## Властивості `Anchor/Item`
-| Властивість | Тип | Дефолт |
-|---|---|---|
-| `↳ 💠 Icon` | Instance swap | `document` (Static — Icons) |
-| `✏️ Label` | Text | `Label` |
-
-## Властивості `Anchor`
-| Властивість | Тип | Дефолт | Що робить |
-|---|---|---|---|
-| `Item #1` … `Item #4` | Boolean | true | показати / сховати відповідний пункт |
-
-Інстанси `Item #1…#4` — **exposed nested instances**: у панелі `Anchor` видно і редагуються їхні `✏️ Label`, `↳ 💠 Icon`. Лейбл завжди видимий — вимикати його не можна (рішення команди).
-
-Іконки в `Anchor`: `document`, `777`, `statistics`, `rocket`.
+## Властивості
+`Anchor/Item`: `Inverted` (False | True), `↳ 💠 Icon` (swap, дефолт `document`), `✏️ Label` (text). Лейбл завжди видимий.
+`Anchor`: `Inverted` (False | True), `Item #1` … `Item #4` (Boolean — показати/сховати пункт). Інстанси `Item #1…#4` exposed → у панелі `Anchor` редагуються `✏️ Label` і `↳ 💠 Icon` кожного.
+Іконки за замовчуванням: `document`, `777`, `statistics`, `rocket`.
 
 ## Токени (`mb/component`, `xon/component`)
 JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (корінь репо).
 
-| Токен | MB | XON |
-|---|---|---|
-| `anchor.padding-horizontal` | `{layout.padding-horizontal.xs}` 16 | = |
-| `anchor.gap` | `{spacing.200}` 8 | = |
-| `anchor.item.height` | 20 | = |
-| `anchor.item.padding-left` / `padding-right` | `{spacing.200}` / `{spacing.300}` | = |
-| `anchor.item.gap` | `{spacing.150}` 6 | = |
-| `anchor.item.icon-size` | 20 | = |
-| `border-radius.anchor.item` | `{border-radius.core.full}` | `{border-radius.core.300}` |
-| `contextual.anchor.item.fill.default` | `{semantic.fill.default}` | = |
-| `contextual.anchor.item.text.default` | `{core.white.500}` | = |
-| `contextual.anchor.item.icon.default` | `{core.grey.200}` | = |
+| Токен | Значення (MB = XON, крім радіуса) |
+|---|---|
+| `anchor.padding-horizontal` | `{layout.padding-horizontal.xs}` 16 |
+| `anchor.gap` | `{spacing.200}` 8 |
+| `anchor.item.height` | 20 |
+| `anchor.item.padding-left` / `padding-right` | `{spacing.200}` / `{spacing.300}` |
+| `anchor.item.gap` | `{spacing.150}` 6 |
+| `anchor.item.icon-size` | **16** |
+| `border-radius.anchor.item` | MB `{border-radius.core.full}` · XON `{border-radius.core.300}` |
+| `contextual.anchor.item.fill.default` | `{semantic.fill.default}` |
+| `contextual.anchor.item.text.default` | **`{semantic.text.default.heading}`** (темний на світлому) |
+| `contextual.anchor.item.icon.default` | `{core.grey.200}` |
+| `contextual.anchor.item-invert.fill.default` | `{semantic.fill.default}` |
+| `contextual.anchor.item-invert.text.default` | `{semantic.text.default-invert.heading}` (білий) |
+| `contextual.anchor.item-invert.icon.default` | `{core.grey.200}` |
 
 ## Прив'язка
 Токени Token Studio стоять на шарах напряму (plugin data `tokens`) + однойменні змінні колекції `Product`.
 
-## Рішення та відкриті питання
-- Точна копія старого Anchor (67758:49763): ті самі розміри і кількість пунктів, нічого не додано.
-- Старий компонент рендериться темним через застарілий кешований колір в інстансі; за токенами в MB плашка світла, білий лейбл — низький контраст. Рішення за командою: змінити `contextual.anchor.item.fill.default` або `.text.default` у `mb/component`.
-- Іконка для multiplier — `rocket` (точного відповідника немає; альтернативи `flash`, `scale-up`).
-- Після приймання: старий → `Deprecated/Anchor`, інстанси в лейаутах переключити.
+## Історія рішень
+- 2026-10-19 — точна копія старого Anchor (67758:49763) за правилами ДС.
+- 2026-10-19 — лейбл темний (`semantic.text.default.heading`) замість білого: білий не читався на світлому фоні.
+- 2026-10-19 — іконка 20 → **16 px**: 20 px упиралась у краї пункту висотою 20.
+- 2026-10-19 — доданий варіант `Inverted=True` для темних фонів (білий текст `semantic.text.default-invert.heading`). Назва варіанта — як в еталонах Accordion/Tabs.
+- Варіант property для світлого/темного фону — `Inverted = False | True`; інвертні кольорові токени — `contextual.<component>.<part>-invert.*` (як `button.tertiary-invert`).
+
+## Відкриті питання
+- Колір іконки `core.grey.200` однаковий для обох варіантів; на світлому фоні контраст слабкий — перевірити.
+- Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
+- Після приймання: старий Anchor → `Deprecated/Anchor`, інстанси в лейаутах переключити.

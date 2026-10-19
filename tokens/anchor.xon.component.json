@@ -26,7 +26,7 @@
         "type": "spacing"
       },
       "icon-size": {
-        "value": "20",
+        "value": "16",
         "type": "sizing"
       }
     }
@@ -50,7 +50,27 @@
         },
         "text": {
           "default": {
-            "value": "{core.white.500}",
+            "value": "{semantic.text.default.heading}",
+            "type": "color"
+          }
+        },
+        "icon": {
+          "default": {
+            "value": "{core.grey.200}",
+            "type": "color"
+          }
+        }
+      },
+      "item-invert": {
+        "fill": {
+          "default": {
+            "value": "{semantic.fill.default}",
+            "type": "color"
+          }
+        },
+        "text": {
+          "default": {
+            "value": "{semantic.text.default-invert.heading}",
             "type": "color"
           }
         },
