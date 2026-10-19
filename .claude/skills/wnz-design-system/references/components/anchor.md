@@ -43,6 +43,9 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `contextual.anchor.item.text.default` | `{core.white.500}` | = |
 | `contextual.anchor.item.icon.default` | `{core.grey.200}` | = |
 
+## Прив'язка
+Токени Token Studio стоять на шарах напряму (plugin data `tokens`) + однойменні змінні колекції `Product`.
+
 ## Рішення та відкриті питання
 - Точна копія старого Anchor (67758:49763): ті самі розміри і кількість пунктів, нічого не додано.
 - Старий компонент рендериться темним через застарілий кешований колір в інстансі; за токенами в MB плашка світла, білий лейбл — низький контраст. Рішення за командою: змінити `contextual.anchor.item.fill.default` або `.text.default` у `mb/component`.
