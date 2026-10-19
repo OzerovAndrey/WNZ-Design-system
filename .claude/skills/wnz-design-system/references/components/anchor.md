@@ -22,7 +22,6 @@ Anchor/Item (COMPONENT, 78314:307672)  HORIZONTAL · HUG × 20
 | Властивість | Тип | Дефолт |
 |---|---|---|
 | `↳ 💠 Icon` | Instance swap | `document` (Static — Icons) |
-| `Label` | Boolean | true |
 | `✏️ Label` | Text | `Label` |
 
 ## Властивості `Anchor`
@@ -30,7 +29,7 @@ Anchor/Item (COMPONENT, 78314:307672)  HORIZONTAL · HUG × 20
 |---|---|---|---|
 | `Item 1` … `Item 4` | Boolean | true | показати / сховати відповідний пункт |
 
-Інстанси `Item 1…4` — **exposed nested instances**: у панелі `Anchor` видно і редагуються їхні `✏️ Label`, `Label`, `↳ 💠 Icon`.
+Інстанси `Item 1…4` — **exposed nested instances**: у панелі `Anchor` видно і редагуються їхні `✏️ Label`, `↳ 💠 Icon`. Лейбл завжди видимий — вимикати його не можна (рішення команди).
 
 Іконки в `Anchor`: `document`, `777`, `statistics`, `rocket`.
 
