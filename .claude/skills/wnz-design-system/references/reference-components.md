@@ -63,4 +63,4 @@ COMPONENT  auto layout HORIZONTAL · HUG × FIXED · padding 0/20/0/20 · gap 8
 - **Текст**: 0 текстів без стилю/змінних у всіх еталонах.
 - **Шари**: 0 дефолтних назв (`Frame 123`) у всіх еталонах.
 - **Маски** (`Mask` в Accordion, Dropdown) — допустимий hardcoded fill, бо це службовий шар.
-- **Опису компонентів (description) немає ні в одного еталону** — новий стандарт DoD вимагає додати.
+- **`description` у Figma порожній** — так і має бути; документація компонента живе в `references/components/`.

@@ -62,7 +62,7 @@ return out;
 | `remoteVars` | `[]` | будь-яка чужа змінна |
 | `hardGap` / `hardPad` / `hardRadius` | бажано 0; в еталонах ще є (gap у Button) | масово → фіксити |
 | `sets[*]` з `!! SET HAS ERRORS` | — | конфлікт варіантів |
-| `desc=0` | зараз у всіх | додати description |
+| `desc>0` | 0 — description порожній | перенести текст у `references/components/` і очистити |
 | `groups` | лише свій `contextual/<component>`, `semantic/*`, розмірні | чужі `contextual/*`, `core/*` поза ефектами |
 | `canvas` | лише `SECTION:<Component>` | TEXT, VECTOR, INSTANCE на канвасі |
 
