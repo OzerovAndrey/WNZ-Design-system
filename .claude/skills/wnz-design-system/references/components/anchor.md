@@ -37,11 +37,11 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `anchor.item.gap` | `{spacing.150}` 6 |
 | `anchor.item.icon-size` | **16** |
 | `border-radius.anchor.item` | MB `{border-radius.core.full}` · XON `{border-radius.core.300}` |
-| `contextual.anchor.item.fill` | `{semantic.fill.default}` |
-| `contextual.anchor.item.text` | **`{semantic.text.default.heading}`** (темний на світлому) |
+| `contextual.anchor.item.fill` | MB `{core.brand-60.100}` #d6e0ff · XON `{core.grey.50}` #e3e8f8 |
+| `contextual.anchor.item.text` | MB `{core.grey.700}` #002491 · XON `{core.grey.800}` #0c142c |
 | `contextual.anchor.item.icon` | `{contextual.anchor.item.text}` (= колір тексту) |
-| `contextual.anchor.item-invert.fill` | **`{core.grey.800}`** (темна підкладка: MB #001e76 · XON #0c142c) |
-| `contextual.anchor.item-invert.text` | `{semantic.text.default-invert.heading}` (білий) |
+| `contextual.anchor.item-invert.fill` | MB `{core.grey.800}` #001e76 · XON `{core.grey.500}` #203879 |
+| `contextual.anchor.item-invert.text` | `{core.white.500}` (обидва) |
 | `contextual.anchor.item-invert.icon` | `{contextual.anchor.item-invert.text}` (= колір тексту) |
 
 ## Прив'язка
@@ -56,6 +56,8 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 - Варіант property для світлого/темного фону — `Inverted = False | True`; інвертні кольорові токени — `contextual.<component>.<part>-invert.*` (як `button.tertiary-invert`).
 
 - 2026-10-19 — кольори без зайвого рівня `.default` (структура «в рядок», як у Button); іконка = колір тексту (аліас на `…text`).
+
+- 2026-10-19 — кольори підібрані **окремо під кор кожного бренду** (MB — світлий продукт, XON — темний): semantic-аліаси давали в XON білий текст на світлій плашці і темну плашку, що зливалась з фоном сторінки #0e1935.
 
 ## Відкриті питання
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).

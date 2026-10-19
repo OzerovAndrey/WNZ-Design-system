@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "mb/core",
+    "mb/alias",
+    "mb/component",
+    "xon/core",
+    "xon/alias",
+    "xon/component"
+  ]
+}

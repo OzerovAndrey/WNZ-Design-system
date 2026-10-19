@@ -43,11 +43,11 @@
     "anchor": {
       "item": {
         "fill": {
-          "value": "{semantic.fill.default}",
+          "value": "{core.brand-60.100}",
           "type": "color"
         },
         "text": {
-          "value": "{semantic.text.default.heading}",
+          "value": "{core.grey.700}",
           "type": "color"
         },
         "icon": {
@@ -61,7 +61,7 @@
           "type": "color"
         },
         "text": {
-          "value": "{semantic.text.default-invert.heading}",
+          "value": "{core.white.500}",
           "type": "color"
         },
         "icon": {
