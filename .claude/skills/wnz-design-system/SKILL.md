@@ -52,7 +52,8 @@ description: Правила, еталони та чекліст очистки �
 | Структура токенів, як прив'язувати, відомі проблеми | `references/tokens.md` |
 | Чи можна ставити компоненту Ready for dev | `references/definition-of-done.md` |
 | **Переробити компонент (покроково)** | `references/rebuild-workflow.md` |
-| Token Studio: формат, як вставляти JSON, запис у storage, Inspect | `references/token-studio.md` |
+| Token Studio: формат, «в рядок», semantic-only, вставка JSON, запис у storage, Inspect | `references/token-studio.md` |
+| Повний експорт токенів (джерело правди) | `tokens/system/` у корені репо |
 | Зробити аудит сторінки/компонента скриптом | `references/audit-script.md` |
 | Що вже знайдено, беклог по сторінках | `references/audit-2026-10-19.md` |
 | Збирати або чистити лейаут | `references/layouts.md` |
@@ -73,4 +74,5 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-19 — Anchor: кольори з alias semantic, структура «в рядок», Inverted, іконка = текст, змінні перестворено після Export.
 - 2026-10-19 — аудит файлу (`audit-2026-10-19.md`), створено скіл. Перший перескладений компонент — `Anchor` (`references/components/anchor.md`), на ньому відпрацьовано `rebuild-workflow.md`.

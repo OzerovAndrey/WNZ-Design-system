@@ -28,7 +28,7 @@ Anchor/Item (COMPONENT_SET, 78336:307494)   Inverted = False | True
 ## Токени (`mb/component`, `xon/component`)
 JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (корінь репо).
 
-| Токен | Значення (MB = XON, крім радіуса) |
+| Токен | Значення (MB = XON, якщо не вказано інше) |
 |---|---|
 | `anchor.padding-horizontal` | `{layout.padding-horizontal.xs}` 16 |
 | `anchor.gap` | `{spacing.200}` 8 |
@@ -47,21 +47,16 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 ## Прив'язка
 Токени Token Studio стоять на шарах напряму (plugin data `tokens`) + однойменні змінні колекції `Product`.
 
-## Історія рішень
-- 2026-10-19 — точна копія старого Anchor (67758:49763) за правилами ДС.
-- 2026-10-19 — лейбл темний (`semantic.text.default.heading`) замість білого: білий не читався на світлому фоні.
-- 2026-10-19 — іконка 20 → **16 px**: 20 px упиралась у краї пункту висотою 20.
-- 2026-10-19 — доданий варіант `Inverted=True` для темних фонів (білий текст `semantic.text.default-invert.heading`). Назва варіанта — як в еталонах Accordion/Tabs.
-- 2026-10-19 — `Inverted=True`: підкладка темна `{core.grey.800}` (світлий текст ⇒ темна підкладка), а не прозора.
-- Варіант property для світлого/темного фону — `Inverted = False | True`; інвертні кольорові токени — `contextual.<component>.<part>-invert.*` (як `button.tertiary-invert`).
-
-- 2026-10-19 — кольори без зайвого рівня `.default` (структура «в рядок», як у Button); іконка = колір тексту (аліас на `…text`).
-
-- 2026-10-19 — кольори підібрані **окремо під кор кожного бренду** (MB — світлий продукт, XON — темний): semantic-аліаси давали в XON білий текст на світлій плашці і темну плашку, що зливалась з фоном сторінки #0e1935.
-
-- 2026-10-19 — кольори **тільки з alias (semantic)**, не з core — як у nav-menu / accordion / tabs. Попередній варіант з core скасовано командою.
+## Історія рішень (фінальний стан — у таблиці токенів)
+1. Точна копія старого Anchor (67758:49763) за правилами ДС; власні токени `anchor.*`.
+2. Лейбл темний замість білого — білий не читався на світлому фоні.
+3. Іконка 20 → **16 px** — упиралась у краї пункту висотою 20.
+4. Варіант `Inverted=True` (як в Accordion/Tabs): **світлий текст ⇒ темна підкладка**.
+5. Структура «в рядок»: `contextual.anchor.item.{fill,text,icon}` без рівня `.default`; іконка = колір тексту.
+6. ~~Кольори з core під кожен бренд~~ — **скасовано**: кольори компонентів беруться **тільки з alias `semantic.*`**.
+7. XON `Inverted=False`: текст/іконка `semantic.text.static.primary`, бо `text.default.heading` у XON білий.
 
 ## Відкриті питання
-- XON `Inverted=False`: текст `semantic.text.static.primary` (темний), бо `text.default.heading` у XON білий (2026-10-19). `semantic.background.slate-1` = фон сторінки XON → плашка `Inverted=True` на сторінці XON не видна (текст читається). Рішення за командою.
+- `semantic.background.slate-1` = фон сторінки XON → плашка `Inverted=True` на сторінці XON не видна (текст читається). Рішення за командою.
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
 - Після приймання: старий Anchor → `Deprecated/Anchor`, інстанси в лейаутах переключити.

@@ -3,12 +3,13 @@
 ## Структура
 
 **Token Studio**: теми `MB`, `XON`; у кожного бренду сети `core` → `alias` → `component`.
-**Figma**: 1 колекція `Product`, режими `MB` / `XON`, 849 змінних (2026-10-19).
+**Figma**: 1 колекція `Product`, режими `MB` / `XON`.
+**Джерело правди** — експорт Token Studio у репо: `tokens/system/` (`$themes.json`, `mb/*`, `xon/*`). Формат, вставка JSON, «в рядок» — `token-studio.md`.
 
 | Шар у Figma | К-сть | Що це | Можна прив'язувати в компоненті? |
 |---|---|---|---|
 | `core/*` | 142 | примітиви (`brand-10`, `brand-30`, `brand-60`, `brand-preset`, `white`, `grey`, `content`, `vibrant`, `validation`, `additionals`) | ❌ ні (виняток: кольори всередині effect-тіней, градієнтні стопи — до рішення команди) |
-| `semantic/*` | 96 | `background`, `fill`, `text`, `icon`, `border`, `link`, `divider`, `status` | ✅ так |
+| `semantic/*` | 96 | `background`, `fill`, `text`, `icon`, `border`, `link`, `divider`, `status` | ✅ **єдине джерело кольорів** для компонентних токенів |
 | `contextual/*` | 382 | компонентні токени, 50+ компонентів | ✅ так, лише **свого** компонента |
 | розмірні (`button/*`, `input/*`, `status/*`, `dropdown-menu/*`, `popup/*`, `switcher/*`, `spacing/*`, `dimension/*`) | ~100 | висоти, падінги, гепи, розміри іконок | ✅ так |
 | `border-radius/*` | 58 (36 груп) | радіуси по компонентах | ✅ так, лише свого компонента |

@@ -21,7 +21,9 @@
 
 ## 3. Токени компонента (Token Studio)
 - **Свої компонентні токени**, а не прив'язка напряму до semantic/core: `<component>.*` (розміри/падінги/gap), `border-radius.<component>.*`, `contextual.<component>.*` (кольори).
-- Значення — **аліаси**, що дають рівно той самий результат, що й оригінал (`{spacing.200}`, `{semantic.fill.default}`, `{core.white.500}` …).
+- Значення — **аліаси**: розміри — на `spacing.*` / `layout.*` / `border-radius.core.*`; **кольори — тільки `semantic.*`** (ніколи `core.*`).
+- Брендова різниця: якщо semantic дає різний результат у MB і XON — значення в `mb/component` і `xon/component` можуть різнитись (напр. темний текст: MB `semantic.text.default.heading`, XON `semantic.text.static.primary`).
+- Структура «в рядок», без рівня з одним листком (`token-studio.md`).
 - Обидва сети: `mb/component` і `xon/component` (відрізняються лише там, де відрізняється бренд, напр. радіус).
 - Формат і як додавати — `token-studio.md`.
 
@@ -50,6 +52,9 @@
 - `references/components/<component>.md` — анатомія з node ID, властивості, таблиця токенів MB/XON, рішення й відкриті питання.
 - `tokens/<component>.mb.component.json`, `tokens/<component>.xon.component.json` у корені репо.
 - Рядок компонента в `audit-*.md` → новий статус.
+
+## 9a. Перевірка в обох темах
+Тимчасова превʼю-рамка: інстанси всіх варіантів на `semantic.background.page` і `semantic.background.slate-2` у режимах MB і XON → скріншот → видалити рамку.
 
 ## 10. Передача
 Перелік відкритих питань (контраст, вибір іконки) — команді, не вирішувати самостійно. Статус Ready for dev ставить команда.
