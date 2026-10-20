@@ -3,7 +3,7 @@
 Сторінка `↳ Anchor` · Section `Anchor` (78314:307705) · статус: зібрано заново 2026-10-19, чекає ревʼю (не Ready for dev).
 
 ## Призначення
-Рядок якірних посилань на секції сторінки: до 4 пунктів з іконкою і лейблом. Два варіанти: `Inverted=False` — світла підкладка + темний лейбл; `Inverted=True` — **темна підкладка** + білий лейбл.
+Рядок якірних посилань на секції сторінки: до 4 пунктів з іконкою і лейблом. Два варіанти, як в Accordion: плашка однакова (`semantic.fill.default`), змінюється лише колір контенту — `Inverted=False` → `semantic.text.default.heading`, `Inverted=True` → `semantic.text.default-invert.heading`.
 
 ## Анатомія
 ```
@@ -40,7 +40,7 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `contextual.anchor.item.fill` | `{semantic.fill.default}` |
 | `contextual.anchor.item.text` | `{semantic.text.default.heading}` |
 | `contextual.anchor.item.icon` | `{semantic.text.default.heading}` (= текст) |
-| `contextual.anchor.item-invert.fill` | `{semantic.background.slate-1}` |
+| `contextual.anchor.item-invert.fill` | `{semantic.fill.default}` (та сама плашка, як в Accordion) |
 | `contextual.anchor.item-invert.text` | `{semantic.text.default-invert.heading}` |
 | `contextual.anchor.item-invert.icon` | `{semantic.text.default-invert.heading}` (= текст) |
 
@@ -51,12 +51,11 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 1. Точна копія старого Anchor (67758:49763) за правилами ДС; власні токени `anchor.*`.
 2. Лейбл темний замість білого — білий не читався на світлому фоні.
 3. Іконка 20 → **16 px** — упиралась у краї пункту висотою 20.
-4. Варіант `Inverted=True` (як в Accordion/Tabs): **світлий текст ⇒ темна підкладка**.
+4. Варіант `Inverted=True` (як в Accordion/Tabs). ~~Темна підкладка `slate-1`~~ — **скасовано**: як в еталоні, `Inverted` міняє лише колір контенту, плашка та сама `semantic.fill.default`.
 5. Структура «в рядок»: `contextual.anchor.item.{fill,text,icon}` без рівня `.default`; іконка = колір тексту.
 6. ~~Кольори з core під кожен бренд~~ — **скасовано**: кольори компонентів беруться **тільки з alias `semantic.*`**.
 7. ~~XON `Inverted=False` на `semantic.text.static.primary`~~ — **скасовано**: як в еталонах (Accordion `color`, Tabs `content`), `Inverted=False` бере `semantic.text.default.*` — у MB темний, у XON білий (XON — темний продукт, компонент лежить на темному фоні).
 
 ## Відкриті питання
-- `semantic.background.slate-1` = фон сторінки XON → плашка `Inverted=True` на сторінці XON не видна (текст читається). Рішення за командою.
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
 - Після приймання: старий Anchor → `Deprecated/Anchor`, інстанси в лейаутах переключити.

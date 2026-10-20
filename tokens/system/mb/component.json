@@ -2428,7 +2428,7 @@
       },
       "item-invert": {
         "fill": {
-          "value": "{semantic.background.slate-1}",
+          "value": "{semantic.fill.default}",
           "type": "color"
         },
         "text": {
