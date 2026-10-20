@@ -3372,10 +3372,6 @@
     }
   },
   "anchor": {
-    "padding-horizontal": {
-      "value": "{layout.padding-horizontal.xs}",
-      "type": "spacing"
-    },
     "gap": {
       "value": "{spacing.200}",
       "type": "spacing"

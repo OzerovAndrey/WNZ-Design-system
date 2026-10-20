@@ -7,7 +7,7 @@
 
 ## Анатомія
 ```
-Anchor (COMPONENT, 78314:307677)  HORIZONTAL · HUG × 20 · padding L/R anchor/padding-horizontal
+Anchor (COMPONENT, 78314:307677)  HORIZONTAL · HUG × 20 · без падінгів (відступи задає контейнер, куди ставлять Anchor)
 └─ SLOT "Items" (78442:85)  HORIZONTAL · HUG · gap anchor/gap      ← property `Items` (SLOT)
     └─ N × INSTANCE Anchor/Item   (за замовчуванням 4: document, 777, statistics, rocket)
 
@@ -28,7 +28,6 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 
 | Токен | Значення (MB = XON, якщо не вказано інше) |
 |---|---|
-| `anchor.padding-horizontal` | `{layout.padding-horizontal.xs}` 16 |
 | `anchor.gap` | `{spacing.200}` 8 |
 | `anchor.item.height` | 20 |
 | `anchor.item.padding-horizontal` | `{spacing.200}` 8 (лівий і правий) |
@@ -57,6 +56,8 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 9. Пункти збираються в **слоті `Items`** (як `Navigation`), замість фіксованих `Item #1…#4` з Boolean; `Anchor` — один компонент, `Inverted` обирається на `Anchor/Item`.
 
 10. Падінги айтема 8 / 12 → один `anchor.item.padding-horizontal` = 8.
+
+11. Обгортка `Anchor` без горизонтальних падінгів; токен `anchor.padding-horizontal` видалено.
 
 ## Відкриті питання
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
