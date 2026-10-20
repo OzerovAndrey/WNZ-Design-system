@@ -13,7 +13,7 @@ Anchor (COMPONENT, 78314:307677)  HORIZONTAL · HUG × 20 · padding L/R anchor/
 
 Anchor/Item (COMPONENT_SET, 78336:307494)   Inverted = False | True
 ├─ Inverted=False (78314:307672) / Inverted=True (78336:307489)
-│   HORIZONTAL · HUG × anchor/item/height (20) · padding anchor/item/padding-left / -right · gap anchor/item/gap
+│   HORIZONTAL · HUG × anchor/item/height (20) · padding L/R anchor/item/padding-horizontal · gap anchor/item/gap
 │   radius border-radius/anchor/item · fill contextual/anchor/item[-invert]/fill
 ├─ Icon   16×16 = anchor/item/icon-size · колір contextual/anchor/item[-invert]/color
 └─ Label  text style text/md-strong · колір contextual/anchor/item[-invert]/color
@@ -31,7 +31,7 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `anchor.padding-horizontal` | `{layout.padding-horizontal.xs}` 16 |
 | `anchor.gap` | `{spacing.200}` 8 |
 | `anchor.item.height` | 20 |
-| `anchor.item.padding-left` / `padding-right` | `{spacing.200}` / `{spacing.300}` |
+| `anchor.item.padding-horizontal` | `{spacing.200}` 8 (лівий і правий) |
 | `anchor.item.gap` | `{spacing.150}` 6 |
 | `anchor.item.icon-size` | **16** |
 | `border-radius.anchor.item` | MB `{border-radius.core.full}` · XON `{border-radius.core.300}` |
@@ -55,6 +55,8 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 8. Оптимізація: текст і іконка — один токен `color` (6 → 4 кольорові токени). Структура `item` / `item-invert` і окремі плашки `fill` **зберігаються** (рішення команди).
 
 9. Пункти збираються в **слоті `Items`** (як `Navigation`), замість фіксованих `Item #1…#4` з Boolean; `Anchor` — один компонент, `Inverted` обирається на `Anchor/Item`.
+
+10. Падінги айтема 8 / 12 → один `anchor.item.padding-horizontal` = 8.
 
 ## Відкриті питання
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
