@@ -38,8 +38,8 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `anchor.item.icon-size` | **16** |
 | `border-radius.anchor.item` | MB `{border-radius.core.full}` · XON `{border-radius.core.300}` |
 | `contextual.anchor.item.fill` | `{semantic.fill.default}` |
-| `contextual.anchor.item.text` | MB `{semantic.text.default.heading}` · XON `{semantic.text.static.primary}` |
-| `contextual.anchor.item.icon` | = текст: MB `{semantic.text.default.heading}` · XON `{semantic.text.static.primary}` |
+| `contextual.anchor.item.text` | `{semantic.text.default.heading}` |
+| `contextual.anchor.item.icon` | `{semantic.text.default.heading}` (= текст) |
 | `contextual.anchor.item-invert.fill` | `{semantic.background.slate-1}` |
 | `contextual.anchor.item-invert.text` | `{semantic.text.default-invert.heading}` |
 | `contextual.anchor.item-invert.icon` | `{semantic.text.default-invert.heading}` (= текст) |
@@ -54,7 +54,7 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 4. Варіант `Inverted=True` (як в Accordion/Tabs): **світлий текст ⇒ темна підкладка**.
 5. Структура «в рядок»: `contextual.anchor.item.{fill,text,icon}` без рівня `.default`; іконка = колір тексту.
 6. ~~Кольори з core під кожен бренд~~ — **скасовано**: кольори компонентів беруться **тільки з alias `semantic.*`**.
-7. XON `Inverted=False`: текст/іконка `semantic.text.static.primary`, бо `text.default.heading` у XON білий.
+7. ~~XON `Inverted=False` на `semantic.text.static.primary`~~ — **скасовано**: як в еталонах (Accordion `color`, Tabs `content`), `Inverted=False` бере `semantic.text.default.*` — у MB темний, у XON білий (XON — темний продукт, компонент лежить на темному фоні).
 
 ## Відкриті питання
 - `semantic.background.slate-1` = фон сторінки XON → плашка `Inverted=True` на сторінці XON не видна (текст читається). Рішення за командою.

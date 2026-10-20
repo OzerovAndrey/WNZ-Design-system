@@ -47,11 +47,11 @@
           "type": "color"
         },
         "text": {
-          "value": "{semantic.text.static.primary}",
+          "value": "{semantic.text.default.heading}",
           "type": "color"
         },
         "icon": {
-          "value": "{semantic.text.static.primary}",
+          "value": "{semantic.text.default.heading}",
           "type": "color"
         }
       },
