@@ -2412,17 +2412,25 @@
       }
     },
     "anchor": {
-      "fill": {
-        "value": "{semantic.fill.default}",
-        "type": "color"
+      "item": {
+        "fill": {
+          "value": "{semantic.fill.default}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{semantic.text.default.heading}",
+          "type": "color"
+        }
       },
-      "color": {
-        "value": "{semantic.text.default.heading}",
-        "type": "color"
-      },
-      "color-invert": {
-        "value": "{semantic.text.default-invert.heading}",
-        "type": "color"
+      "item-invert": {
+        "fill": {
+          "value": "{semantic.fill.default}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{semantic.text.default-invert.heading}",
+          "type": "color"
+        }
       }
     }
   },
