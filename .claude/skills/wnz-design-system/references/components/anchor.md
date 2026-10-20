@@ -7,10 +7,9 @@
 
 ## Анатомія
 ```
-Anchor (COMPONENT_SET, 78336:307530)   Inverted = False | True
-├─ Inverted=False (78314:307677)  HORIZONTAL · HUG × 20 · padding L/R anchor/padding-horizontal · gap anchor/gap
-│   └─ Item #1…#4  INSTANCE Anchor/Item (Inverted=False), exposed
-└─ Inverted=True  (78336:307495)  те саме, Item #1…#4 = Anchor/Item (Inverted=True)
+Anchor (COMPONENT, 78314:307677)  HORIZONTAL · HUG × 20 · padding L/R anchor/padding-horizontal
+└─ SLOT "Items" (78442:85)  HORIZONTAL · HUG · gap anchor/gap      ← property `Items` (SLOT)
+    └─ N × INSTANCE Anchor/Item   (за замовчуванням 4: document, 777, statistics, rocket)
 
 Anchor/Item (COMPONENT_SET, 78336:307494)   Inverted = False | True
 ├─ Inverted=False (78314:307672) / Inverted=True (78336:307489)
@@ -21,9 +20,8 @@ Anchor/Item (COMPONENT_SET, 78336:307494)   Inverted = False | True
 ```
 
 ## Властивості
-`Anchor/Item`: `Inverted` (False | True), `↳ 💠 Icon` (swap, дефолт `document`), `✏️ Label` (text). Лейбл завжди видимий.
-`Anchor`: `Inverted` (False | True), `Item #1` … `Item #4` (Boolean — показати/сховати пункт). Інстанси `Item #1…#4` exposed → у панелі `Anchor` редагуються `✏️ Label` і `↳ 💠 Icon` кожного.
-Іконки за замовчуванням: `document`, `777`, `statistics`, `rocket`.
+`Anchor`: `Items` (Slot) — пункти додаються/видаляються/переставляються прямо в слоті інстансу; кожен пункт — інстанс `Anchor/Item` зі своїми властивостями.
+`Anchor/Item`: `Inverted` (False | True — обирається на кожному пункті), `↳ 💠 Icon` (swap), `✏️ Label` (text). Лейбл завжди видимий.
 
 ## Токени (`mb/component`, `xon/component`)
 JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (корінь репо).
@@ -55,6 +53,8 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 7. ~~XON `Inverted=False` на `semantic.text.static.primary`~~ — **скасовано**: як в еталонах (Accordion `color`, Tabs `content`), `Inverted=False` бере `semantic.text.default.*` — у MB темний, у XON білий (XON — темний продукт, компонент лежить на темному фоні).
 
 8. Оптимізація: текст і іконка — один токен `color` (6 → 4 кольорові токени). Структура `item` / `item-invert` і окремі плашки `fill` **зберігаються** (рішення команди).
+
+9. Пункти збираються в **слоті `Items`** (як `Navigation`), замість фіксованих `Item #1…#4` з Boolean; `Anchor` — один компонент, `Inverted` обирається на `Anchor/Item`.
 
 ## Відкриті питання
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
