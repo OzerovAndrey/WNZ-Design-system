@@ -3,7 +3,7 @@
 Сторінка `↳ Anchor` · Section `Anchor` (78314:307705) · статус: зібрано заново 2026-10-19, чекає ревʼю (не Ready for dev).
 
 ## Призначення
-Рядок якірних посилань на секції сторінки: до 4 пунктів з іконкою і лейблом. Два варіанти, як в Accordion: плашка однакова (`semantic.fill.default`), змінюється лише колір контенту — `Inverted=False` → `semantic.text.default.heading`, `Inverted=True` → `semantic.text.default-invert.heading`.
+Рядок якірних посилань на секції сторінки: до 4 пунктів з іконкою і лейблом. Два варіанти, як в Accordion: плашка однакова (`contextual.anchor.fill`), змінюється лише колір контенту — `contextual.anchor.color` / `contextual.anchor.color-invert` (один токен на текст і іконку).
 
 ## Анатомія
 ```
@@ -15,9 +15,9 @@ Anchor (COMPONENT_SET, 78336:307530)   Inverted = False | True
 Anchor/Item (COMPONENT_SET, 78336:307494)   Inverted = False | True
 ├─ Inverted=False (78314:307672) / Inverted=True (78336:307489)
 │   HORIZONTAL · HUG × anchor/item/height (20) · padding anchor/item/padding-left / -right · gap anchor/item/gap
-│   radius border-radius/anchor/item · fill contextual/anchor/item[-invert]/fill
-├─ Icon   16×16 = anchor/item/icon-size · колір contextual/anchor/item[-invert]/icon
-└─ Label  text style text/md-strong · колір contextual/anchor/item[-invert]/text
+│   radius border-radius/anchor/item · fill contextual/anchor/fill
+├─ Icon   16×16 = anchor/item/icon-size · колір contextual/anchor/color[-invert]
+└─ Label  text style text/md-strong · колір contextual/anchor/color[-invert]
 ```
 
 ## Властивості
@@ -37,12 +37,9 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 | `anchor.item.gap` | `{spacing.150}` 6 |
 | `anchor.item.icon-size` | **16** |
 | `border-radius.anchor.item` | MB `{border-radius.core.full}` · XON `{border-radius.core.300}` |
-| `contextual.anchor.item.fill` | `{semantic.fill.default}` |
-| `contextual.anchor.item.text` | `{semantic.text.default.heading}` |
-| `contextual.anchor.item.icon` | `{semantic.text.default.heading}` (= текст) |
-| `contextual.anchor.item-invert.fill` | `{semantic.fill.default}` (та сама плашка, як в Accordion) |
-| `contextual.anchor.item-invert.text` | `{semantic.text.default-invert.heading}` |
-| `contextual.anchor.item-invert.icon` | `{semantic.text.default-invert.heading}` (= текст) |
+| `contextual.anchor.fill` | `{semantic.fill.default}` — плашка обох варіантів |
+| `contextual.anchor.color` | `{semantic.text.default.heading}` — текст + іконка, `Inverted=False` |
+| `contextual.anchor.color-invert` | `{semantic.text.default-invert.heading}` — текст + іконка, `Inverted=True` |
 
 ## Прив'язка
 Токени Token Studio стоять на шарах напряму (plugin data `tokens`) + однойменні змінні колекції `Product`.
@@ -55,6 +52,8 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 5. Структура «в рядок»: `contextual.anchor.item.{fill,text,icon}` без рівня `.default`; іконка = колір тексту.
 6. ~~Кольори з core під кожен бренд~~ — **скасовано**: кольори компонентів беруться **тільки з alias `semantic.*`**.
 7. ~~XON `Inverted=False` на `semantic.text.static.primary`~~ — **скасовано**: як в еталонах (Accordion `color`, Tabs `content`), `Inverted=False` бере `semantic.text.default.*` — у MB темний, у XON білий (XON — темний продукт, компонент лежить на темному фоні).
+
+8. Оптимізація: 6 кольорових токенів → 3 (`fill`, `color`, `color-invert`), як в Accordion (`background.fill`, `color.primary`, `color-invert.primary`); текст і іконка — один токен.
 
 ## Відкриті питання
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
