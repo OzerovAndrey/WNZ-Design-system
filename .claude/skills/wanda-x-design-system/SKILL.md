@@ -1,11 +1,9 @@
 ---
 name: wanda-x-design-system
-description: Правила, еталони та чекліст очистки для Figma-файлу "[WNZ] Design system" (fileKey 3MbdWPLOGBjBj92Y3EnPYN, бренди MB / XON, Token Studio core/alias/component). Use ANY TIME the user works on Wanda X components, layouts or tokens — audit, cleanup, fixing a component, building a layout from Wanda X components — or mentions "Wanda X", "Wanda X ДС", the former name "WNZ" / "WNZ ДС", file key 3MbdWPLOGBjBj92Y3EnPYN, MB/XON themes. INDEX file — details live in references/*.md, load only what the task needs.
+description: Правила, еталони та чекліст очистки для Figma-файлу "[Wanda X] Design system" (fileKey 3MbdWPLOGBjBj92Y3EnPYN, бренди MB / XON, Token Studio core/alias/component). Use ANY TIME the user works on Wanda X components, layouts or tokens — audit, cleanup, fixing a component, building a layout from Wanda X components — or mentions "Wanda X", "Wanda X ДС", file key 3MbdWPLOGBjBj92Y3EnPYN, MB/XON themes. INDEX file — details live in references/*.md, load only what the task needs.
 ---
 
 # Wanda X — index
-
-Проєкт **Wanda X** (колишня назва WNZ). Figma-файл досі називається **[WNZ] Design system** — посилання й назву файлу не змінюємо.
 
 > **Figma зараз — лише читання.** Команда сама доробляє компоненти у файлі; нічого в Figma не змінювати (жодних `use_figma`/записів), поки команда явно не скаже підключатися.
 
@@ -15,7 +13,7 @@ description: Правила, еталони та чекліст очистки �
 
 | | |
 |---|---|
-| Figma | `https://www.figma.com/design/3MbdWPLOGBjBj92Y3EnPYN/-WNZ--Design-system` |
+| Figma | `https://www.figma.com/design/3MbdWPLOGBjBj92Y3EnPYN/-Wanda-X--Design-system` |
 | fileKey | `3MbdWPLOGBjBj92Y3EnPYN` |
 | Бренди / теми | **MB**, **XON** (Token Studio: у кожного бренду сети `core`, `alias`, `component`) |
 | Змінні у Figma | 1 колекція `Product`, режими `MB` / `XON` |
@@ -82,8 +80,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
-- 2026-10-21 — Figma-файл лишається «[WNZ] Design system» (назву/посилання повернуто); Figma — лише читання, поки команда доробляє компоненти.
-- 2026-10-21 — **перейменування**: проєкт WNZ → **Wanda X**, репо `OzerovAndrey/WNZ-Design-system` → `OzerovAndrey/Wanda-X`, скіл `wnz-design-system` → `wanda-x-design-system` (папка, `name`, посилання в README/CLAUDE.md/звітах). Тригер «WNZ» лишено в description як стару назву.
+- 2026-10-21 — **перейменування в Wanda X**: проєкт, репо `OzerovAndrey/Wanda-X`, скіл `wanda-x-design-system`, назви у всіх файлах.
 - 2026-10-21 — **відкат Chips/Tag**: нові набори `Chip` і `Tag`, їхні 42 змінні та файли (`components/chip.md`, `tag.md`, `tokens/chip.*`, `tokens/tag.*`) прибрано; `contextual/chips/normal/*` відновлено, старий `Chips` перепривʼязано; сторінка знову `↳ Chips & Tags`. Правила (Section, Inverted, однина, свіжі токени) лишаються.
 - 2026-10-21 — Chip: група `base` прибрана (`contextual.chip.*`, `contextual.chip-invert.*`); стара `contextual.chips.normal.*` видалена з Token Studio і Figma після перевірки всього файлу. `border-radius.chips` лишається — його бере осиротілий `Chips/Default/Static` (126 інстансів).
 - 2026-10-21 — правило «назви в однині»: `Chips` → `Chip` (набір, Section, сторінка `↳ Chip & Tag`, токени `chip.*`, `contextual.chip.*`, власний `border-radius.chip`); `components/chips.md` → `chip.md`.
