@@ -25,7 +25,9 @@ description: Правила, еталони та чекліст очистки �
 
 > Статус Ready for dev через Plugin API **не читається** (`devStatus` → "not a supported API"). Якщо список еталонів змінився — оновіть його тут вручну.
 
-## 16 золотих правил
+## 17 золотих правил
+
+0. **Спершу — свіжі токени.** Токени в Token Studio щодня змінюють колеги. На початку будь-якої роботи з WNZ спитати, чи були зміни, і попросити свіжий архів JSON; оновити `tokens/system/` і показати diff (`references/token-studio.md` → Свіжість експорту).
 
 1. **Точна копія — нічого не додумувати.** Переробляючи компонент, зберігаємо вигляд, розміри, кількість елементів і стани оригіналу; змінюємо лише збірку. Нові варіанти/брейкпоінти/слоти — тільки на запит команди (`references/rebuild-workflow.md`).
 2. **Еталон перш за все.** Перед тим як правити компонент — відкрий найближчий еталон і повтори його анатомію, неймінг і прив'язки токенів (`references/reference-components.md`).
@@ -55,6 +57,7 @@ description: Правила, еталони та чекліст очистки �
 | **Переробити компонент (покроково)** | `references/rebuild-workflow.md` |
 | Token Studio: формат, «в рядок», semantic-only, вставка JSON, запис у storage, Inspect | `references/token-studio.md` |
 | Повний експорт токенів (джерело правди) | `tokens/system/` у корені репо |
+| Отримали свіжий архів JSON — оновити експорт і показати diff | `references/token-studio.md` → Свіжість експорту, `scripts/tokens-diff.py` |
 | Зробити аудит сторінки/компонента скриптом | `references/audit-script.md` |
 | Що вже знайдено, беклог по сторінках | `references/audit-2026-10-19.md` |
 | Збирати або чистити лейаут | `references/layouts.md` |
@@ -75,6 +78,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-21 — правило «свіжі токени»: щоразу питати архів JSON з Token Studio; `tokens/system/` оновлено (+57 / −3 / ~1 у component кожного бренду), скрипт `scripts/tokens-diff.py`.
 - 2026-10-21 — Chips і Tag перескладено за еталоном Anchor (State × Inverted, токени `contextual.<c>.base[-invert]`, сіра Section); Tag — один компонент з іконкою `close`, без окремої кнопки.
 - 2026-10-21 — правила: Section сіра `#BBBBBB` (еталон — Section `Anchor`); `Inverted` обов'язковий для всіх компонентів (`naming.md`, DoD, `rebuild-workflow.md`).
 - 2026-10-19 — Anchor: кольори з alias semantic, структура «в рядок», Inverted, іконка = текст, змінні перестворено після Export.

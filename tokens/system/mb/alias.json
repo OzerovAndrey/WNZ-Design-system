@@ -2,11 +2,19 @@
   "line-height": {
     "accent": {
       "value": "120%",
-      "type": "lineHeights"
+      "type": "lineHeights",
+      "$deprecated": {
+        "severity": "warning",
+        "message": ""
+      }
     },
     "main": {
       "value": "130%",
-      "type": "lineHeights"
+      "type": "lineHeights",
+      "$deprecated": {
+        "severity": "warning",
+        "message": ""
+      }
     }
   },
   "text-decoration": {
@@ -936,6 +944,10 @@
     },
     "1200": {
       "value": "{dimension.12}",
+      "type": "dimension"
+    },
+    "1400": {
+      "value": "{dimension.16}",
       "type": "dimension"
     },
     "025": {
