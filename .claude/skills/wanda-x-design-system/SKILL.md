@@ -23,7 +23,14 @@ description: Правила, еталони та чекліст очистки �
 
 **Еталон (Ready for dev, виправлено нашою командою):** Atoms → `Accordion`, `Badge`, `Button`, `Link`, `Divider`, `Dropdown`, `Label`, `Loader`.
 
-Все інше — **не еталон**, поки не пройшло `references/definition-of-done.md`. Поточний стан кожної сторінки — у `references/audit-2026-10-19.md`.
+Все інше — **не еталон**, поки не пройшло `references/definition-of-done.md`. Поточний стан кожної сторінки — у `references/audit-2026-10-19.md`; що вже вивчено і коли — у `references/component-registry.md`.
+
+## Режим навчання
+
+Проєкт **поступово навчається**: команда освіжає й додає компоненти у Figma, Claude відстежує зміни і вивчає кожен компонент — характер, стани, токени (`references/learning-workflow.md`).
+- Тригер — «оновили / додали `<Компонент>`», «що змінилось у `<X>`», або початок сесії (спитати, що чіпали з минулого разу).
+- Цикл: свіжі токени → знімок `scripts/snapshot-component.js` (read-only) → `snapshots/<c>.json` → diff `scripts/snapshot-diff.py` → `references/components/<c>.md` за `_template.md` → реєстр → журнал + коміт `learn(<c>): …`.
+- Claude нічого не виправляє: відхилення від правил — у розділ «Відхилення» компонента і питання команді; повторюване відхилення — привід спитати, чи це нове правило.
 
 > Статус Ready for dev через Plugin API **не читається** (`devStatus` → "not a supported API"). Якщо список еталонів змінився — оновіть його тут вручну.
 
@@ -65,6 +72,9 @@ description: Правила, еталони та чекліст очистки �
 | Збирати або чистити лейаут | `references/layouts.md` |
 | Замінити / підібрати іконку | `references/icons.md` |
 | Опис конкретного компонента (анатомія, токени, рішення) | `references/components/<component>.md` |
+| **Команда оновила / додала компонент — вивчити** | `references/learning-workflow.md`, шаблон `references/components/_template.md` |
+| Що вивчено, коли, статуси | `references/component-registry.md` |
+| Знімок компонента і diff з минулим разом | `scripts/snapshot-component.js`, `scripts/snapshot-diff.py`, `snapshots/` |
 | Як оформлювати Section на сторінці компонента | `references/section-layout.md` |
 
 ## Технічні нотатки Figma MCP (перевірено на цьому файлі)
@@ -80,6 +90,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-21 — **режим навчання**: `learning-workflow.md`, шаблон `components/_template.md`, реєстр `component-registry.md`, скрипти `snapshot-component.js` / `snapshot-diff.py`, тека `snapshots/`. Команда освіжає компоненти — Claude знімає, порівнює і документує, не правлячи файл.
 - 2026-10-21 — **перейменування в Wanda X**: проєкт, репо `OzerovAndrey/Wanda-X`, скіл `wanda-x-design-system`, назви у всіх файлах.
 - 2026-10-21 — **відкат Chips/Tag**: нові набори `Chip` і `Tag`, їхні 42 змінні та файли (`components/chip.md`, `tag.md`, `tokens/chip.*`, `tokens/tag.*`) прибрано; `contextual/chips/normal/*` відновлено, старий `Chips` перепривʼязано; сторінка знову `↳ Chips & Tags`. Правила (Section, Inverted, однина, свіжі токени) лишаються.
 - 2026-10-21 — Chip: група `base` прибрана (`contextual.chip.*`, `contextual.chip-invert.*`); стара `contextual.chips.normal.*` видалена з Token Studio і Figma після перевірки всього файлу. `border-radius.chips` лишається — його бере осиротілий `Chips/Default/Static` (126 інстансів).
