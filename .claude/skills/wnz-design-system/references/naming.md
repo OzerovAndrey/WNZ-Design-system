@@ -3,6 +3,7 @@
 ## Компоненти (набори)
 
 - Англійською, **Title Case**, без опечаток: `Button`, `Dropdown/Item`, `Status/Badge`.
+- **Однина** — і в назві набору, і в Section, і в токенах: `Chip` (не `Chips`), `Tag` (не `Tags`), `chip.*`, `contextual.chip.*`, `border-radius.chip`. Назва сторінки — так само (`↳ Chip & Tag`).
 - Під-компонент — через `/` від батька: `Tabs/Item`, `Sidebar/Item`, `Navigation/Item`.
 - Різновид одного під-компонента — через ` — ` (em dash): `Tabs/Item — Default`, `Tabs/Item — Navigation`.
 - **Заборонено**: snake_case (`list_item`, `Welcome_bonus_row`), lowercase (`scrollbar`, `zero block`, `bage`), префікси-маркери `[M]`, `[BASE]`, `(Cashbox)`, `[new]`, брейкпоінт у назві (`Banner RP mob`, `Popup mob`, `Popup web`), назви фіч (`Hall-of-fame / …`, `Welcom-bonus empty`).
@@ -37,7 +38,7 @@
 - Розміри, падінги, радіуси, text style — **спільні** для обох версій (одні й ті самі токени `<component>.*`).
 - Кольорові токени: звичайна частина `contextual.<component>.<part>.<role>[.<state>]`, інвертована — `contextual.<component>.<part>-invert.<role>[.<state>]` (як `contextual.anchor.item.color` / `contextual.anchor.item-invert.color`). Значення — тільки alias `semantic.*`; якщо інвертного semantic-токена немає — питання до команди, не `core.*`.
 - Де живе властивість: на компоненті, що має **власний кольоровий контент**. Контейнер без власних кольорів (`Anchor` зі слотом) `Inverted` не має — його мають пункти (`Anchor/Item`).
-- **Заборонено** кодувати інверсію значенням іншої властивості: `State=Invert`, `State=Inverted`, `Variant=Tertiary-Invert`, `Type=Dark`, `Theme=Light|Dark`, а також окремим набором (`Chips Inverted`). Відомі відхилення в еталонах (вирівняти при наступній правці): `Link` (`State=Invert`), `Button/Link` (`State=Inverted`), `Button` (`Variant=Tertiary-Invert`).
+- **Заборонено** кодувати інверсію значенням іншої властивості: `State=Invert`, `State=Inverted`, `Variant=Tertiary-Invert`, `Type=Dark`, `Theme=Light|Dark`, а також окремим набором (`Chip Inverted`). Відомі відхилення в еталонах (вирівняти при наступній правці): `Link` (`State=Invert`), `Button/Link` (`State=Inverted`), `Button` (`Variant=Tertiary-Invert`).
 - Inverted ≠ бренд: темність продукту (XON) дає alias бренду в `semantic.*`, а не `Inverted`. У XON `Inverted=False` лишається `semantic.text.default.*` (`token-studio.md`).
 
 ## Вкладені інстанси (композитні компоненти)

@@ -1,5 +1,5 @@
 {
-  "chips": {
+  "chip": {
     "height": {
       "value": "32",
       "type": "sizing"
@@ -23,8 +23,14 @@
       }
     }
   },
+  "border-radius": {
+    "chip": {
+      "value": "{border-radius.core.full}",
+      "type": "borderRadius"
+    }
+  },
   "contextual": {
-    "chips": {
+    "chip": {
       "base": {
         "fill": {
           "value": "{semantic.border.default.secondary}",
