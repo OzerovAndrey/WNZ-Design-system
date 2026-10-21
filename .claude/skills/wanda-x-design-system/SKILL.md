@@ -1,9 +1,9 @@
 ---
-name: wnz-design-system
-description: Правила, еталони та чекліст очистки для Figma-файлу "[WNZ] Design system" (fileKey 3MbdWPLOGBjBj92Y3EnPYN, бренди MB / XON, Token Studio core/alias/component). Use ANY TIME the user works on WNZ components, layouts or tokens — audit, cleanup, fixing a component, building a layout from WNZ components — or mentions "WNZ", "WNZ ДС", file key 3MbdWPLOGBjBj92Y3EnPYN, MB/XON themes. INDEX file — details live in references/*.md, load only what the task needs.
+name: wanda-x-design-system
+description: Правила, еталони та чекліст очистки для Figma-файлу "[Wanda X] Design system" (fileKey 3MbdWPLOGBjBj92Y3EnPYN, бренди MB / XON, Token Studio core/alias/component). Use ANY TIME the user works on Wanda X components, layouts or tokens — audit, cleanup, fixing a component, building a layout from Wanda X components — or mentions "Wanda X", "Wanda X ДС", the former name "WNZ" / "WNZ ДС", file key 3MbdWPLOGBjBj92Y3EnPYN, MB/XON themes. INDEX file — details live in references/*.md, load only what the task needs.
 ---
 
-# [WNZ] Design system — index
+# [Wanda X] Design system — index
 
 Дизайн-система, отримана від іншого департаменту. Мета команди — **очистити її від неправильних рішень** і далі використовувати як робочу бібліотеку. Еталон якості — компоненти, позначені **Ready for dev**.
 
@@ -11,7 +11,7 @@ description: Правила, еталони та чекліст очистки �
 
 | | |
 |---|---|
-| Figma | `https://www.figma.com/design/3MbdWPLOGBjBj92Y3EnPYN/-WNZ--Design-system` |
+| Figma | `https://www.figma.com/design/3MbdWPLOGBjBj92Y3EnPYN/-Wanda-X--Design-system` |
 | fileKey | `3MbdWPLOGBjBj92Y3EnPYN` |
 | Бренди / теми | **MB**, **XON** (Token Studio: у кожного бренду сети `core`, `alias`, `component`) |
 | Змінні у Figma | 1 колекція `Product`, режими `MB` / `XON` |
@@ -27,7 +27,7 @@ description: Правила, еталони та чекліст очистки �
 
 ## 17 золотих правил
 
-0. **Спершу — свіжі токени.** Токени в Token Studio щодня змінюють колеги. На початку будь-якої роботи з WNZ спитати, чи були зміни, і попросити свіжий архів JSON; оновити `tokens/system/` і показати diff (`references/token-studio.md` → Свіжість експорту).
+0. **Спершу — свіжі токени.** Токени в Token Studio щодня змінюють колеги. На початку будь-якої роботи з Wanda X спитати, чи були зміни, і попросити свіжий архів JSON; оновити `tokens/system/` і показати diff (`references/token-studio.md` → Свіжість експорту).
 
 1. **Точна копія — нічого не додумувати.** Переробляючи компонент, зберігаємо вигляд, розміри, кількість елементів і стани оригіналу; змінюємо лише збірку. Нові варіанти/брейкпоінти/слоти — тільки на запит команди (`references/rebuild-workflow.md`).
 2. **Еталон перш за все.** Перед тим як правити компонент — відкрий найближчий еталон і повтори його анатомію, неймінг і прив'язки токенів (`references/reference-components.md`).
@@ -78,6 +78,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-21 — **перейменування**: проєкт WNZ → **Wanda X**, репо `OzerovAndrey/WNZ-Design-system` → `OzerovAndrey/Wanda-X`, скіл `wnz-design-system` → `wanda-x-design-system` (папка, `name`, посилання в README/CLAUDE.md/звітах). Тригер «WNZ» лишено в description як стару назву.
 - 2026-10-21 — **відкат Chips/Tag**: нові набори `Chip` і `Tag`, їхні 42 змінні та файли (`components/chip.md`, `tag.md`, `tokens/chip.*`, `tokens/tag.*`) прибрано; `contextual/chips/normal/*` відновлено, старий `Chips` перепривʼязано; сторінка знову `↳ Chips & Tags`. Правила (Section, Inverted, однина, свіжі токени) лишаються.
 - 2026-10-21 — Chip: група `base` прибрана (`contextual.chip.*`, `contextual.chip-invert.*`); стара `contextual.chips.normal.*` видалена з Token Studio і Figma після перевірки всього файлу. `border-radius.chips` лишається — його бере осиротілий `Chips/Default/Static` (126 інстансів).
 - 2026-10-21 — правило «назви в однині»: `Chips` → `Chip` (набір, Section, сторінка `↳ Chip & Tag`, токени `chip.*`, `contextual.chip.*`, власний `border-radius.chip`); `components/chips.md` → `chip.md`.

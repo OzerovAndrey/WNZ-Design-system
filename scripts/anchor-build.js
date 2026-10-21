@@ -1,4 +1,4 @@
-// ⚠️ Перша версія скрипта (до правок команди). Фінальний стан Anchor: без description, без Boolean "Label", exposed Item #1–#4, токени Token Studio на шарах — див. .claude/skills/wnz-design-system/references/components/anchor.md і rebuild-workflow.md.
+// ⚠️ Перша версія скрипта (до правок команди). Фінальний стан Anchor: без description, без Boolean "Label", exposed Item #1–#4, токени Token Studio на шарах — див. .claude/skills/wanda-x-design-system/references/components/anchor.md і rebuild-workflow.md.
 // Anchor — точна копія, правильна збірка. Запуск: use_figma у файлі 3MbdWPLOGBjBj92Y3EnPYN
 // Передумови: 1) токени з tokens/anchor.*.component.json додані в Token Studio і експортовані у Variables;
 //             2) акаунт Figma MCP має право Can edit на файл.

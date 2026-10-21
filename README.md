@@ -1,11 +1,11 @@
-# WNZ Design system
+# Wanda X Design system
 
-Робочий репозиторій команди для очистки Figma-файлу **[WNZ] Design system** (`3MbdWPLOGBjBj92Y3EnPYN`, бренди MB / XON).
+Робочий репозиторій команди для очистки Figma-файлу **[Wanda X] Design system** (`3MbdWPLOGBjBj92Y3EnPYN`, бренди MB / XON).
 
 ## Структура
 
 ```
-.claude/skills/wnz-design-system/   # Claude skill — правила, еталони, DoD, скрипт аудиту
+.claude/skills/wanda-x-design-system/   # Claude skill — правила, еталони, DoD, скрипт аудиту
 ├── SKILL.md
 └── references/
     ├── reference-components.md
@@ -21,7 +21,7 @@ reports/                            # звіти аудитів, по одном
 
 ## Як користуватись
 - **Claude Code**: відкрити репо — скіл з `.claude/skills/` підхоплюється автоматично.
-- **Claude app**: заархівувати `.claude/skills/wnz-design-system` у zip і завантажити як skill.
+- **Claude app**: заархівувати `.claude/skills/wanda-x-design-system` у zip і завантажити як skill.
 
 ## Правила оновлення
 - Компонент став Ready for dev → список у `SKILL.md` + рядок у беклозі.

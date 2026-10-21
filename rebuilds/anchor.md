@@ -1,4 +1,4 @@
-> Актуальна документація компонента — `.claude/skills/wnz-design-system/references/components/anchor.md`. Цей файл — історія перескладання.
+> Актуальна документація компонента — `.claude/skills/wanda-x-design-system/references/components/anchor.md`. Цей файл — історія перескладання.
 
 # Anchor — точна копія, правильна збірка
 
