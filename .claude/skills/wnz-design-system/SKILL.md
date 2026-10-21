@@ -78,6 +78,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-21 — **відкат Chips/Tag**: нові набори `Chip` і `Tag`, їхні 42 змінні та файли (`components/chip.md`, `tag.md`, `tokens/chip.*`, `tokens/tag.*`) прибрано; `contextual/chips/normal/*` відновлено, старий `Chips` перепривʼязано; сторінка знову `↳ Chips & Tags`. Правила (Section, Inverted, однина, свіжі токени) лишаються.
 - 2026-10-21 — Chip: група `base` прибрана (`contextual.chip.*`, `contextual.chip-invert.*`); стара `contextual.chips.normal.*` видалена з Token Studio і Figma після перевірки всього файлу. `border-radius.chips` лишається — його бере осиротілий `Chips/Default/Static` (126 інстансів).
 - 2026-10-21 — правило «назви в однині»: `Chips` → `Chip` (набір, Section, сторінка `↳ Chip & Tag`, токени `chip.*`, `contextual.chip.*`, власний `border-radius.chip`); `components/chips.md` → `chip.md`.
 - 2026-10-21 — правило «свіжі токени»: щоразу питати архів JSON з Token Studio; `tokens/system/` оновлено (+57 / −3 / ~1 у component кожного бренду), скрипт `scripts/tokens-diff.py`.
