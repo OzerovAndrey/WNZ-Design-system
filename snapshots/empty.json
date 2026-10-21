@@ -1,0 +1,94 @@
+{
+ "takenAt": "2026-10-21T11:01:45.870Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "78315:449009",
+   "name": "Empty",
+   "page": "↳ Empty - Ден  💛",
+   "section": "Empty (78315:453285)",
+   "descriptionLength": 0,
+   "properties": {
+    "Title": {
+     "type": "TEXT",
+     "default": "Choose your Welcome Bonus "
+    },
+    "Discription": {
+     "type": "TEXT",
+     "default": "You currently do not have any current welcome bonuses"
+    },
+    "↳ ✏️ Text": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    " ↳ ✏️ Text": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Button": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    " ↳ Img": {
+     "type": "SLOT"
+    },
+    "Img": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Size": {
+     "type": "VARIANT",
+     "default": "xs",
+     "options": [
+      "xs",
+      "md"
+     ]
+    },
+    "Fill": {
+     "type": "VARIANT",
+     "default": "True",
+     "options": [
+      "False",
+      "True"
+     ]
+    }
+   },
+   "variantCount": 4,
+   "format": "digest",
+   "variants": {
+    "Size=xs, Fill=True": {
+     "(root)": "9a1296b6",
+     " ↳ Img": "229ee779",
+     "Frame 2147203444": "c93e68fc",
+     "Frame 2147203444 > Call to action": "2d82e8c6",
+     "Frame 2147203444 > You currently do not have any current welcome bonuses": "408c0f26",
+     "Button": "e7583b87"
+    },
+    "Size=md, Fill=True": {
+     "(root)": "1b1debae",
+     " ↳ Img": "229ee779",
+     "Frame 2147203444": "c93e68fc",
+     "Frame 2147203444 > Call to action": "169e31f2",
+     "Frame 2147203444 > You currently do not have any current welcome bonuses": "a816ccac",
+     "Button": "e7583b87"
+    },
+    "Size=xs, Fill=False": {
+     "(root)": "f1f69556",
+     " ↳ Img": "229ee779",
+     "Frame 2147203444": "c93e68fc",
+     "Frame 2147203444 > Call to action": "2d82e8c6",
+     "Frame 2147203444 > You currently do not have any current welcome bonuses": "408c0f26",
+     "Button": "e7583b87"
+    },
+    "Size=md, Fill=False": {
+     "(root)": "1fa7352b",
+     " ↳ Img": "229ee779",
+     "Frame 2147203444": "c93e68fc",
+     "Frame 2147203444 > Call to action": "169e31f2",
+     "Frame 2147203444 > You currently do not have any current welcome bonuses": "a816ccac",
+     "Button": "e7583b87"
+    }
+   }
+  }
+ ]
+}

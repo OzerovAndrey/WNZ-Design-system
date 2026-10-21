@@ -1,0 +1,75 @@
+{
+ "takenAt": "2026-10-21T11:01:45.870Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "46859:45827",
+   "name": "Chips",
+   "page": "↳ Chip & Tag - Андрей",
+   "section": "Chip (78589:280056)",
+   "descriptionLength": 0,
+   "properties": {
+    "Icon-left": {
+     "type": "BOOLEAN",
+     "default": false
+    },
+    "Icon-right": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Left-icon": {
+     "type": "INSTANCE_SWAP",
+     "default": "77639:517100",
+     "preferred": 97
+    },
+    "Right-icon": {
+     "type": "INSTANCE_SWAP",
+     "default": "77639:517100",
+     "preferred": 97
+    },
+    "Label": {
+     "type": "TEXT",
+     "default": "Label"
+    },
+    "State": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Hover",
+      "Active"
+     ]
+    },
+    "Type": {
+     "type": "VARIANT",
+     "default": "Normal",
+     "options": [
+      "Normal"
+     ]
+    }
+   },
+   "variantCount": 3,
+   "format": "digest",
+   "variants": {
+    "State=Default, Type=Normal": {
+     "(root)": "1b44b241",
+     "Icon[0]": "8043286e",
+     "Label": "2800db64",
+     "Icon[1]": "5675f50a"
+    },
+    "State=Hover, Type=Normal": {
+     "(root)": "b2605eab",
+     "Icon[0]": "8043286e",
+     "Label": "2659ece8",
+     "Icon[1]": "5675f50a"
+    },
+    "State=Active, Type=Normal": {
+     "(root)": "60f87c05",
+     "Icon[0]": "8043286e",
+     "Label": "f26b0a30",
+     "Icon[1]": "5675f50a"
+    }
+   }
+  }
+ ]
+}

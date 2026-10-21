@@ -1,0 +1,378 @@
+{
+ "takenAt": "2026-10-21T11:01:45.870Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "78201:1158",
+   "name": "Input",
+   "page": "↳ Input  💛",
+   "section": "Input (78201:1159)",
+   "descriptionLength": 362,
+   "properties": {
+    "Label": {
+     "type": "TEXT",
+     "default": "Label"
+    },
+    "Value": {
+     "type": "TEXT",
+     "default": "Placeholder"
+    },
+    "Helper text": {
+     "type": "TEXT",
+     "default": "Helper text"
+    },
+    "Error text": {
+     "type": "TEXT",
+     "default": "Error text"
+    },
+    "Show label": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Show left slot": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Show right slot": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Show tags": {
+     "type": "BOOLEAN",
+     "default": false
+    },
+    "Show helper text": {
+     "type": "BOOLEAN",
+     "default": false
+    },
+    "State": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Hover",
+      "Active",
+      "Filled",
+      "Error",
+      "Disabled"
+     ]
+    },
+    "Type": {
+     "type": "VARIANT",
+     "default": "Input",
+     "options": [
+      "Input",
+      "Text-area"
+     ]
+    }
+   },
+   "variantCount": 12,
+   "format": "digest",
+   "variants": {
+    "State=Default, Type=Input": {
+     "(root)": "ed6add07",
+     "Field": "9714c3e2",
+     "Field > Main": "df574435",
+     "Field > Main > Label": "580770b4",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "1d8afb89",
+     "Field > Main > Row > Left slot": "0ddac261",
+     "Field > Main > Row > Value": "c1d424ee",
+     "Field > Main > Row > Value > Tag[0]": "9a510f67",
+     "Field > Main > Row > Value > Tag[1]": "9a510f67",
+     "Field > Main > Row > Value > Value": "1d17d98d",
+     "Field > Right slot": "a5d406bf",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Hover, Type=Input": {
+     "(root)": "ed6add07",
+     "Field": "9714c3e2",
+     "Field > Main": "df574435",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "1d8afb89",
+     "Field > Main > Row > Left slot": "0ddac261",
+     "Field > Main > Row > Value": "c1d424ee",
+     "Field > Main > Row > Value > Tag[0]": "9a510f67",
+     "Field > Main > Row > Value > Tag[1]": "9a510f67",
+     "Field > Main > Row > Value > Value": "0607e870",
+     "Field > Right slot": "a5d406bf",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Active, Type=Input": {
+     "(root)": "ed6add07",
+     "Field": "9714c3e2",
+     "Field > Main": "df574435",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "1d8afb89",
+     "Field > Main > Row > Left slot": "0ddac261",
+     "Field > Main > Row > Value": "c1d424ee",
+     "Field > Main > Row > Value > Tag[0]": "9a510f67",
+     "Field > Main > Row > Value > Tag[1]": "9a510f67",
+     "Field > Main > Row > Value > Value": "d54d8baf",
+     "Field > Right slot": "a5d406bf",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Filled, Type=Input": {
+     "(root)": "ed6add07",
+     "Field": "9714c3e2",
+     "Field > Main": "df574435",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "1d8afb89",
+     "Field > Main > Row > Left slot": "0ddac261",
+     "Field > Main > Row > Value": "c1d424ee",
+     "Field > Main > Row > Value > Tag[0]": "9a510f67",
+     "Field > Main > Row > Value > Tag[1]": "9a510f67",
+     "Field > Main > Row > Value > Value": "d54d8baf",
+     "Field > Right slot": "a5d406bf",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Error, Type=Input": {
+     "(root)": "135da489",
+     "Field": "a2d3a7dc",
+     "Field > Main": "df574435",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "1d8afb89",
+     "Field > Main > Row > Left slot": "0ddac261",
+     "Field > Main > Row > Value": "c1d424ee",
+     "Field > Main > Row > Value > Tag[0]": "9a510f67",
+     "Field > Main > Row > Value > Tag[1]": "9a510f67",
+     "Field > Main > Row > Value > Value": "d54d8baf",
+     "Field > Right slot": "a5d406bf",
+     "Error": "f4304546",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Disabled, Type=Input": {
+     "(root)": "ed6add07",
+     "Field": "adde5c65",
+     "Field > Main": "df574435",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "fd332346",
+     "Field > Main > Row": "1d8afb89",
+     "Field > Main > Row > Left slot": "0ddac261",
+     "Field > Main > Row > Value": "c1d424ee",
+     "Field > Main > Row > Value > Tag[0]": "9a510f67",
+     "Field > Main > Row > Value > Tag[1]": "9a510f67",
+     "Field > Main > Row > Value > Value": "31f7de9b",
+     "Field > Right slot": "a5d406bf",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Default, Type=Text-area": {
+     "(root)": "e367f94c",
+     "Field": "491c800c",
+     "Field > Main": "c9f84718",
+     "Field > Main > Label": "580770b4",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "676573d4",
+     "Field > Main > Row > Value": "a857ccb2",
+     "Field > Main > Row > Value > Value": "1d17d98d",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Hover, Type=Text-area": {
+     "(root)": "e367f94c",
+     "Field": "491c800c",
+     "Field > Main": "c9f84718",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "676573d4",
+     "Field > Main > Row > Value": "a857ccb2",
+     "Field > Main > Row > Value > Value": "0607e870",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Active, Type=Text-area": {
+     "(root)": "e367f94c",
+     "Field": "491c800c",
+     "Field > Main": "c9f84718",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "676573d4",
+     "Field > Main > Row > Value": "a857ccb2",
+     "Field > Main > Row > Value > Value": "d54d8baf",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Filled, Type=Text-area": {
+     "(root)": "e367f94c",
+     "Field": "491c800c",
+     "Field > Main": "c9f84718",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "676573d4",
+     "Field > Main > Row > Value": "a857ccb2",
+     "Field > Main > Row > Value > Value": "d54d8baf",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Error, Type=Text-area": {
+     "(root)": "f67e1656",
+     "Field": "a40eb94e",
+     "Field > Main": "c9f84718",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "7249a45d",
+     "Field > Main > Row": "676573d4",
+     "Field > Main > Row > Value": "a857ccb2",
+     "Field > Main > Row > Value > Value": "d54d8baf",
+     "Error": "f4304546",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    },
+    "State=Disabled, Type=Text-area": {
+     "(root)": "e367f94c",
+     "Field": "9b0d9fdd",
+     "Field > Main": "c9f84718",
+     "Field > Main > Label": "dcc0b226",
+     "Field > Main > Label > Label text": "fd332346",
+     "Field > Main > Row": "676573d4",
+     "Field > Main > Row > Value": "a857ccb2",
+     "Field > Main > Row > Value > Value": "31f7de9b",
+     "Error": "ead491f9",
+     "Error > Error text": "9dd57937",
+     "Helper": "a24cf249",
+     "Helper > Helper text": "add47441"
+    }
+   }
+  },
+  {
+   "id": "33138:79803",
+   "name": "Input Side Left",
+   "page": "↳ Input  💛",
+   "section": "Input (78201:1159)",
+   "descriptionLength": 0,
+   "properties": {
+    "Show country code": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Choose Icon Left": {
+     "type": "INSTANCE_SWAP",
+     "default": "77639:517100",
+     "preferred": 10
+    },
+    "Type": {
+     "type": "VARIANT",
+     "default": "Icon container",
+     "options": [
+      "Button",
+      "Icon container",
+      "Number",
+      "Payment system",
+      "Country"
+     ]
+    }
+   },
+   "variantCount": 5,
+   "format": "digest",
+   "variants": {
+    "Type=Icon container": {
+     "(root)": "b3d20d07",
+     "Icon 16*16": "ad060201"
+    },
+    "Type=Country": {
+     "(root)": "b3d20d07",
+     "Great Britan — Circle": "c1e7775f"
+    },
+    "Type=Payment system": {
+     "(root)": "fe1c23c0",
+     "Wrapper": "4822e124",
+     "Wrapper > Maestro": "2190b7ab"
+    },
+    "Type=Button": {
+     "(root)": "ba8e92eb",
+     "Button": "864190b1"
+    },
+    "Type=Number": {
+     "(root)": "49672f9d",
+     "Number code selector": "74c87ca2",
+     "Number code selector > Great Britan — Circle": "c1e7775f",
+     "Number code selector > arrow-triangle-down-filled": "85d46621",
+     "Number code selector > +380": "beaf0531"
+    }
+   }
+  },
+  {
+   "id": "33138:79804",
+   "name": "Input Side Right ",
+   "page": "↳ Input  💛",
+   "section": "Input (78201:1159)",
+   "descriptionLength": 0,
+   "properties": {
+    "Choose Icon Right": {
+     "type": "INSTANCE_SWAP",
+     "default": "77645:559117",
+     "preferred": 10
+    },
+    "Type": {
+     "type": "VARIANT",
+     "default": "Icon container",
+     "options": [
+      "Button",
+      "Icon container",
+      "Text-btn",
+      "currency",
+      "icon + button"
+     ]
+    }
+   },
+   "variantCount": 5,
+   "format": "digest",
+   "variants": {
+    "Type=Icon container": {
+     "(root)": "dabe1001",
+     "chevron-down": "6dae234a"
+    },
+    "Type=currency": {
+     "(root)": "d99e85d9",
+     "Select": "00e9dec9",
+     "Select > Flag": "67add9b4",
+     "Select > BRL": "aa6be350",
+     "Select > chevron-down": "82c2f3de"
+    },
+    "Type=Button": {
+     "(root)": "9bd2ab2d",
+     "Button": "864190b1"
+    },
+    "Type=icon + button": {
+     "(root)": "9e93507f",
+     "close": "eef1dacb",
+     "Button": "62ce35d3"
+    },
+    "Type=Text-btn": {
+     "(root)": "1b3167f9",
+     "Additional component": "159d4259",
+     "Additional component > Clear": "2c800e47"
+    }
+   }
+  }
+ ]
+}

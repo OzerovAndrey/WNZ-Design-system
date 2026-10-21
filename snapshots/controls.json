@@ -1,0 +1,220 @@
+{
+ "takenAt": "2026-10-21T10:59:52.604Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "78315:499124",
+   "name": "Controls/checkbox",
+   "page": "↳ Controls (Checkbox, Radio, Toggle) 💛",
+   "section": "Controls (78361:636600)",
+   "descriptionLength": 0,
+   "properties": {
+    "State": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Hover",
+      "Disabled",
+      "Validation"
+     ]
+    },
+    "Active": {
+     "type": "VARIANT",
+     "default": "False",
+     "options": [
+      "False",
+      "True"
+     ]
+    }
+   },
+   "variantCount": 8,
+   "format": "digest",
+   "variants": {
+    "State=Disabled, Active=False": {
+     "(root)": "c143adc5",
+     "Control": "58056875",
+     "Text": "c5304c2c"
+    },
+    "State=Validation, Active=False": {
+     "(root)": "c143adc5",
+     "Control": "b04fd31b",
+     "Text": "cb063b00"
+    },
+    "State=Default, Active=True": {
+     "(root)": "c143adc5",
+     "Control": "caf7ffcb",
+     "Control > check-mark": "46b6ce5a",
+     "Text": "cb063b00"
+    },
+    "State=Hover, Active=True": {
+     "(root)": "c143adc5",
+     "Control": "6396b6f5",
+     "Control > check-mark": "46b6ce5a",
+     "Text": "cb063b00"
+    },
+    "State=Disabled, Active=True": {
+     "(root)": "c143adc5",
+     "Control": "15c8d445",
+     "Control > check-mark": "46b6ce5a",
+     "Text": "c5304c2c"
+    },
+    "State=Validation, Active=True": {
+     "(root)": "c143adc5",
+     "Control": "2302030f",
+     "Control > check-mark": "46b6ce5a",
+     "Text": "cb063b00"
+    },
+    "State=Default, Active=False": {
+     "(root)": "c143adc5",
+     "Control": "2ca0350d",
+     "Text": "cb063b00"
+    },
+    "State=Hover, Active=False": {
+     "(root)": "c143adc5",
+     "Control": "5fd74747",
+     "Text": "cb063b00"
+    }
+   }
+  },
+  {
+   "id": "78315:499199",
+   "name": "Controls/radio",
+   "page": "↳ Controls (Checkbox, Radio, Toggle) 💛",
+   "section": "Controls (78361:636600)",
+   "descriptionLength": 0,
+   "properties": {
+    "State": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Hover",
+      "Disabled"
+     ]
+    },
+    "Active": {
+     "type": "VARIANT",
+     "default": "False",
+     "options": [
+      "False",
+      "True"
+     ]
+    }
+   },
+   "variantCount": 6,
+   "format": "digest",
+   "variants": {
+    "State=Disabled, Active=False": {
+     "(root)": "c143adc5",
+     "Control": "4e2e17cc",
+     "Text": "c5304c2c"
+    },
+    "State=Disabled, Active=True": {
+     "(root)": "c143adc5",
+     "Control": "a4eacb12",
+     "Control > Bullet": "776cfb60",
+     "Text": "c5304c2c"
+    },
+    "State=Default, Active=True": {
+     "(root)": "c143adc5",
+     "Control": "126315cc",
+     "Control > Bullet": "cec41525",
+     "Text": "cb063b00"
+    },
+    "State=Hover, Active=True": {
+     "(root)": "c143adc5",
+     "Control": "386847a4",
+     "Control > Bullet": "6e1b887e",
+     "Text": "cb063b00"
+    },
+    "State=Default, Active=False": {
+     "(root)": "c143adc5",
+     "Control": "94503e3c",
+     "Text": "cb063b00"
+    },
+    "State=Hover, Active=False": {
+     "(root)": "c143adc5",
+     "Control": "39d77a9c",
+     "Text": "cb063b00"
+    }
+   }
+  },
+  {
+   "id": "78315:499274",
+   "name": "Controls/toggle",
+   "page": "↳ Controls (Checkbox, Radio, Toggle) 💛",
+   "section": "Controls (78361:636600)",
+   "descriptionLength": 0,
+   "properties": {
+    "Label": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "State": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Hover",
+      "Disabled"
+     ]
+    },
+    "Active": {
+     "type": "VARIANT",
+     "default": "False",
+     "options": [
+      "False",
+      "True"
+     ]
+    }
+   },
+   "variantCount": 6,
+   "format": "digest",
+   "variants": {
+    "State=Default, Active=False": {
+     "(root)": "39ccf097",
+     "Control": "fca4c1bd",
+     "Control > Indicator": "b3e4a369",
+     "Control > Inner": "a3d18455",
+     "Text": "28e71eb4"
+    },
+    "State=Hover, Active=False": {
+     "(root)": "39ccf097",
+     "Control": "a3ad8627",
+     "Control > Indicator": "94b4c3d2",
+     "Control > Inner": "a3d18455",
+     "Text": "28e71eb4"
+    },
+    "State=Default, Active=True": {
+     "(root)": "39ccf097",
+     "Control": "9575eaab",
+     "Control > Inner": "a3d18455",
+     "Control > Indicator": "31a1fbba",
+     "Text": "28e71eb4"
+    },
+    "State=Hover, Active=True": {
+     "(root)": "39ccf097",
+     "Control": "61ad40cd",
+     "Control > Inner": "a3d18455",
+     "Control > Indicator": "41f5fbdd",
+     "Text": "28e71eb4"
+    },
+    "State=Disabled, Active=True": {
+     "(root)": "39ccf097",
+     "Control": "7659e87b",
+     "Control > Inner": "a3d18455",
+     "Control > Indicator": "772a9125",
+     "Text": "394b81c8"
+    },
+    "State=Disabled, Active=False": {
+     "(root)": "39ccf097",
+     "Control": "09a6ee2f",
+     "Control > Indicator": "bdfbb930",
+     "Control > Inner": "a3d18455",
+     "Text": "394b81c8"
+    }
+   }
+  }
+ ]
+}

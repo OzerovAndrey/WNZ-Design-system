@@ -59,6 +59,9 @@ JSON: `tokens/anchor.mb.component.json`, `tokens/anchor.xon.component.json` (к�
 
 11. Обгортка `Anchor` без горизонтальних падінгів; токен `anchor.padding-horizontal` видалено.
 
+## Мета знімка
+`snapshots/anchor.json` (дайджест) · перевірено 2026-10-21 — без змін відносно опису.
+
 ## Відкриті питання
 - Іконка для multiplier — `rocket` (альтернативи `flash`, `scale-up`).
 - Після приймання: старий Anchor → `Deprecated/Anchor`, інстанси в лейаутах переключити.

@@ -1,0 +1,366 @@
+{
+ "takenAt": "2026-10-21T10:59:52.604Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "47052:2374",
+   "name": "Status/Badge",
+   "page": "↳ Status  💛",
+   "section": "Statuses (78047:94426)",
+   "descriptionLength": 0,
+   "properties": {
+    "Icon": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "↳ 💠 Icon": {
+     "type": "INSTANCE_SWAP",
+     "default": "77639:517100"
+    },
+    "✏️ Label": {
+     "type": "TEXT",
+     "default": "Status"
+    },
+    "Indicator": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Variant": {
+     "type": "VARIANT",
+     "default": "Subtle",
+     "options": [
+      "Subtle",
+      "Solid"
+     ]
+    },
+    "Size": {
+     "type": "VARIANT",
+     "default": "SM",
+     "options": [
+      "SM",
+      "MD"
+     ]
+    },
+    "Status": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Success",
+      "Warning",
+      "Error",
+      "Info",
+      "Declined",
+      "Pending"
+     ]
+    }
+   },
+   "variantCount": 28,
+   "format": "digest",
+   "variants": {
+    "Variant=Subtle, Size=SM, Status=Success": {
+     "(root)": "3fe7ed3b",
+     "Indicator": "b2ba2c76",
+     "plus": "ba34e935",
+     "Time title": "5c13d040"
+    },
+    "Variant=Subtle, Size=MD, Status=Success": {
+     "(root)": "3294ce5a",
+     "Indicator": "b2ba2c76",
+     "plus": "ef2f0212",
+     "Time title": "5c13d040"
+    },
+    "Variant=Subtle, Size=SM, Status=Default": {
+     "(root)": "1eed0fad",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Subtle, Size=MD, Status=Default": {
+     "(root)": "0b74ed0c",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Subtle, Size=SM, Status=Info": {
+     "(root)": "5fbdbbae",
+     "Indicator": "8c559de1",
+     "plus": "ba34e935",
+     "Time title": "cdb2d09b"
+    },
+    "Variant=Subtle, Size=SM, Status=Declined": {
+     "(root)": "a41e57dc",
+     "Indicator": "f0523b7f",
+     "plus": "ba34e935",
+     "Time title": "d1a61351"
+    },
+    "Variant=Subtle, Size=SM, Status=Pending": {
+     "(root)": "5b9ea27f",
+     "Indicator": "ba28a1e6",
+     "plus": "ba34e935",
+     "Time title": "b4d024d0"
+    },
+    "Variant=Subtle, Size=MD, Status=Info": {
+     "(root)": "0706ffa5",
+     "Indicator": "8c559de1",
+     "plus": "ef2f0212",
+     "Time title": "cdb2d09b"
+    },
+    "Variant=Subtle, Size=MD, Status=Declined": {
+     "(root)": "08cd21d7",
+     "Indicator": "f0523b7f",
+     "plus": "ef2f0212",
+     "Time title": "d1a61351"
+    },
+    "Variant=Subtle, Size=MD, Status=Pending": {
+     "(root)": "586f16ea",
+     "Indicator": "ba28a1e6",
+     "plus": "ef2f0212",
+     "Time title": "b4d024d0"
+    },
+    "Variant=Solid, Size=SM, Status=Success": {
+     "(root)": "779af843",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=MD, Status=Success": {
+     "(root)": "a61de95e",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=SM, Status=Default": {
+     "(root)": "60ab10d9",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=MD, Status=Default": {
+     "(root)": "79af507c",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=SM, Status=Info": {
+     "(root)": "14b3d2fa",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=SM, Status=Declined": {
+     "(root)": "397c4764",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=SM, Status=Pending": {
+     "(root)": "a5a3217f",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=MD, Status=Info": {
+     "(root)": "4dcdc541",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=MD, Status=Declined": {
+     "(root)": "2f8d43ef",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=MD, Status=Pending": {
+     "(root)": "c4d0ed0e",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Subtle, Size=SM, Status=Warning": {
+     "(root)": "5f0620dc",
+     "Indicator": "05a4749d",
+     "plus": "ba34e935",
+     "Time title": "6a7be96b"
+    },
+    "Variant=Subtle, Size=MD, Status=Warning": {
+     "(root)": "eff5acf9",
+     "Indicator": "05a4749d",
+     "plus": "ef2f0212",
+     "Time title": "6a7be96b"
+    },
+    "Variant=Solid, Size=SM, Status=Warning": {
+     "(root)": "a312a864",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=MD, Status=Warning": {
+     "(root)": "e3dc39bd",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=SM, Status=Error": {
+     "(root)": "08c6ce2e",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Solid, Size=MD, Status=Error": {
+     "(root)": "28ee9617",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "d5cbe4c2"
+    },
+    "Variant=Subtle, Size=SM, Status=Error": {
+     "(root)": "08c63a7a",
+     "Indicator": "0fd21d97",
+     "plus": "ba34e935",
+     "Time title": "b0b4bc85"
+    },
+    "Variant=Subtle, Size=MD, Status=Error": {
+     "(root)": "5dc29d9f",
+     "Indicator": "0fd21d97",
+     "plus": "ef2f0212",
+     "Time title": "b0b4bc85"
+    }
+   }
+  },
+  {
+   "id": "78152:197",
+   "name": "Status/Indicator",
+   "page": "↳ Status  💛",
+   "section": "Statuses (78047:94426)",
+   "descriptionLength": 93,
+   "properties": {
+    "Icon": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "↳ 💠 Icon": {
+     "type": "INSTANCE_SWAP",
+     "default": "77639:517100"
+    },
+    "✏️ Label": {
+     "type": "TEXT",
+     "default": "Status"
+    },
+    "Indicator": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Size": {
+     "type": "VARIANT",
+     "default": "SM",
+     "options": [
+      "SM",
+      "MD"
+     ]
+    },
+    "Status": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Success",
+      "Warning",
+      "Error",
+      "Info",
+      "Declined",
+      "Pending"
+     ]
+    }
+   },
+   "variantCount": 14,
+   "format": "digest",
+   "variants": {
+    "Size=SM, Status=Default": {
+     "(root)": "ddc3195b",
+     "Indicator": "b3129bcc",
+     "plus": "ba34e935",
+     "Time title": "d5cbe4c2"
+    },
+    "Size=SM, Status=Success": {
+     "(root)": "ddc3195b",
+     "Indicator": "b2ba2c76",
+     "plus": "ba34e935",
+     "Time title": "5c13d040"
+    },
+    "Size=SM, Status=Warning": {
+     "(root)": "ddc3195b",
+     "Indicator": "05a4749d",
+     "plus": "ba34e935",
+     "Time title": "6a7be96b"
+    },
+    "Size=SM, Status=Error": {
+     "(root)": "ddc3195b",
+     "Indicator": "0fd21d97",
+     "plus": "ba34e935",
+     "Time title": "b0b4bc85"
+    },
+    "Size=SM, Status=Info": {
+     "(root)": "ddc3195b",
+     "Indicator": "8c559de1",
+     "plus": "ba34e935",
+     "Time title": "cdb2d09b"
+    },
+    "Size=SM, Status=Declined": {
+     "(root)": "ddc3195b",
+     "Indicator": "f0523b7f",
+     "plus": "ba34e935",
+     "Time title": "d1a61351"
+    },
+    "Size=SM, Status=Pending": {
+     "(root)": "ddc3195b",
+     "Indicator": "ba28a1e6",
+     "plus": "ba34e935",
+     "Time title": "b4d024d0"
+    },
+    "Size=MD, Status=Default": {
+     "(root)": "e0841085",
+     "Indicator": "b3129bcc",
+     "plus": "ef2f0212",
+     "Time title": "3d09fe8d"
+    },
+    "Size=MD, Status=Success": {
+     "(root)": "e0841085",
+     "Indicator": "b2ba2c76",
+     "plus": "ef2f0212",
+     "Time title": "28f09797"
+    },
+    "Size=MD, Status=Warning": {
+     "(root)": "e0841085",
+     "Indicator": "05a4749d",
+     "plus": "ef2f0212",
+     "Time title": "8d5413a4"
+    },
+    "Size=MD, Status=Error": {
+     "(root)": "e0841085",
+     "Indicator": "0fd21d97",
+     "plus": "ef2f0212",
+     "Time title": "236bb1ee"
+    },
+    "Size=MD, Status=Info": {
+     "(root)": "e0841085",
+     "Indicator": "8c559de1",
+     "plus": "ef2f0212",
+     "Time title": "55e1120a"
+    },
+    "Size=MD, Status=Declined": {
+     "(root)": "e0841085",
+     "Indicator": "f0523b7f",
+     "plus": "ef2f0212",
+     "Time title": "bcaf41c4"
+    },
+    "Size=MD, Status=Pending": {
+     "(root)": "e0841085",
+     "Indicator": "ba28a1e6",
+     "plus": "ef2f0212",
+     "Time title": "c309e133"
+    }
+   }
+  }
+ ]
+}

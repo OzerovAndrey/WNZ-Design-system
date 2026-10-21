@@ -1,0 +1,63 @@
+{
+ "takenAt": "2026-10-21T11:01:45.870Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "78336:307494",
+   "name": "Anchor/Item",
+   "page": "↳ Anchor  💛",
+   "section": "Anchor (78314:307705)",
+   "descriptionLength": 0,
+   "properties": {
+    "💠 Icon": {
+     "type": "INSTANCE_SWAP",
+     "default": "77639:517100"
+    },
+    "Inverted": {
+     "type": "VARIANT",
+     "default": "False",
+     "options": [
+      "False",
+      "True"
+     ]
+    }
+   },
+   "variantCount": 2,
+   "format": "digest",
+   "variants": {
+    "Inverted=False": {
+     "(root)": "74177f0d",
+     "Icon": "d91965a0",
+     "Label": "70ffee64"
+    },
+    "Inverted=True": {
+     "(root)": "20ae5594",
+     "Icon": "d91965a0",
+     "Label": "703b28fb"
+    }
+   }
+  },
+  {
+   "id": "78314:307677",
+   "name": "Anchor",
+   "page": "↳ Anchor  💛",
+   "section": "Anchor (78314:307705)",
+   "descriptionLength": 0,
+   "properties": {
+    "Items": {
+     "type": "SLOT"
+    }
+   },
+   "variantCount": 1,
+   "format": "digest",
+   "variants": {
+    "Anchor": {
+     "(root)": "25701c01",
+     "Items": "76c5b3fb",
+     "Items > Anchor/Item[0]": "e6bc4920",
+     "Items > Anchor/Item[1]": "6cee03a8"
+    }
+   }
+  }
+ ]
+}

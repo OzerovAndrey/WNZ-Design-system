@@ -1,0 +1,58 @@
+{
+ "takenAt": "2026-10-21T11:01:45.870Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "78589:294536",
+   "name": "Tag",
+   "page": "↳ Chip & Tag - Андрей",
+   "section": "Tag (78589:294522)",
+   "descriptionLength": 0,
+   "properties": {
+    "Show-right-icon": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "left icon": {
+     "type": "BOOLEAN",
+     "default": false
+    },
+    "Label": {
+     "type": "TEXT",
+     "default": "Label"
+    },
+    "State": {
+     "type": "VARIANT",
+     "default": "Default",
+     "options": [
+      "Default",
+      "Hover",
+      "Disabled"
+     ]
+    }
+   },
+   "variantCount": 3,
+   "format": "digest",
+   "variants": {
+    "State=Default": {
+     "(root)": "87178a4d",
+     "Icon[0]": "03e1651e",
+     "Label": "b7dd19f7",
+     "Icon[1]": "83c7b6ca"
+    },
+    "State=Disabled": {
+     "(root)": "74c8c3b1",
+     "Icon[0]": "03e1651e",
+     "Label": "51cb2be0",
+     "Icon[1]": "83c7b6ca"
+    },
+    "State=Hover": {
+     "(root)": "d3082d65",
+     "Icon[0]": "03e1651e",
+     "Label": "c34fd36e",
+     "Icon[1]": "83c7b6ca"
+    }
+   }
+  }
+ ]
+}

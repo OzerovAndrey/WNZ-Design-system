@@ -1,0 +1,51 @@
+{
+ "takenAt": "2026-10-21T11:01:45.870Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "78117:335001",
+   "name": "Section",
+   "page": "↳ Section  💛",
+   "section": null,
+   "descriptionLength": 0,
+   "properties": {
+    "Slot": {
+     "type": "SLOT"
+    },
+    "BG": {
+     "type": "SLOT"
+    },
+    "Back Img": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "device": {
+     "type": "VARIANT",
+     "default": "desktop",
+     "options": [
+      "mobile",
+      "desktop"
+     ]
+    }
+   },
+   "variantCount": 2,
+   "format": "digest",
+   "variants": {
+    "device=desktop": {
+     "(root)": "67276a88",
+     "BG": "fe2e4d94",
+     "Heading": "b927b15e",
+     "Slot": "188676bb",
+     "Navigator": "e9e08177"
+    },
+    "device=mobile": {
+     "(root)": "d208ad44",
+     "BG": "fe2e4d94",
+     "Heading": "3dc3b59e",
+     "Slot": "39e75bbe",
+     "Navigator": "e9e08177"
+    }
+   }
+  }
+ ]
+}

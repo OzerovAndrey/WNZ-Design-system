@@ -21,7 +21,9 @@ description: Правила, еталони та чекліст очистки �
 
 ## Статус компонентів
 
-**Еталон (Ready for dev, виправлено нашою командою):** Atoms → `Accordion`, `Badge`, `Button`, `Link`, `Divider`, `Dropdown`, `Label`, `Loader`.
+**Еталон (Ready for dev, виправлено нашою командою):** Atoms → `Accordion`, `Badge`, `Button`, `Link`, `Divider`, `Dropdown`, `Label`, `Spinner`.
+
+**Оновлено командою і вивчено (💛, не Ready for dev):** `Input`, `Controls`, `Status`, `Timer`, `Empty`, `Section` — `references/components/<c>.md`. У роботі: `Chip & Tag`, `Banner`, `Heading`. Повний список і статуси — `references/component-registry.md`; питання до команди — `references/open-questions.md`.
 
 Все інше — **не еталон**, поки не пройшло `references/definition-of-done.md`. Поточний стан кожної сторінки — у `references/audit-2026-10-19.md`; що вже вивчено і коли — у `references/component-registry.md`.
 
@@ -74,6 +76,7 @@ description: Правила, еталони та чекліст очистки �
 | Опис конкретного компонента (анатомія, токени, рішення) | `references/components/<component>.md` |
 | **Команда оновила / додала компонент — вивчити** | `references/learning-workflow.md`, шаблон `references/components/_template.md` |
 | Що вивчено, коли, статуси | `references/component-registry.md` |
+| Питання до команди, нові конвенції на перевірку | `references/open-questions.md` |
 | Знімок компонента і diff з минулим разом | `scripts/snapshot-component.js`, `scripts/snapshot-diff.py`, `snapshots/` |
 | Як оформлювати Section на сторінці компонента | `references/section-layout.md` |
 
@@ -90,6 +93,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-21 — **перший обхід у режимі навчання** (42 сторінки, read-only). Вивчено 💛: Input, Controls, Status, Timer, Empty, Section (+ проміжно Chip & Tag); дайджести в `snapshots/`. Структура файлу: Forms → `Input` + `Controls`, Loader → `Spinner`, Section-title → `Heading` (Molecules), Page → `Layout`, Image → Atoms, Thumb → Molecules, Breadcrumbs і Fader прибрані; `Button/Link` → `Button/Text`. Знімок у git — дайджест (хеші шарів), зміни — режимом `BASELINE`. Сім конвенцій на підтвердження — `open-questions.md`.
 - 2026-10-21 — **режим навчання**: `learning-workflow.md`, шаблон `components/_template.md`, реєстр `component-registry.md`, скрипти `snapshot-component.js` / `snapshot-diff.py`, тека `snapshots/`. Команда освіжає компоненти — Claude знімає, порівнює і документує, не правлячи файл.
 - 2026-10-21 — **перейменування в Wanda X**: проєкт, репо `OzerovAndrey/Wanda-X`, скіл `wanda-x-design-system`, назви у всіх файлах.
 - 2026-10-21 — **відкат Chips/Tag**: нові набори `Chip` і `Tag`, їхні 42 змінні та файли (`components/chip.md`, `tag.md`, `tokens/chip.*`, `tokens/tag.*`) прибрано; `contextual/chips/normal/*` відновлено, старий `Chips` перепривʼязано; сторінка знову `↳ Chips & Tags`. Правила (Section, Inverted, однина, свіжі токени) лишаються.

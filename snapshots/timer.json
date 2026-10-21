@@ -1,0 +1,367 @@
+{
+ "takenAt": "2026-10-21T10:59:52.604Z",
+ "fileKey": "3MbdWPLOGBjBj92Y3EnPYN",
+ "components": [
+  {
+   "id": "77857:445144",
+   "name": "Timer",
+   "page": "↳ Timer  💛",
+   "section": null,
+   "descriptionLength": 0,
+   "properties": {
+    "Label": {
+     "type": "TEXT",
+     "default": "Ends in:"
+    },
+    " ↳ ✏️ Text": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Day": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Hour": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Second": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Splitter": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Splitter2": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Minute": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Splitter3": {
+     "type": "BOOLEAN",
+     "default": true
+    },
+    "Type": {
+     "type": "VARIANT",
+     "default": "Timer",
+     "options": [
+      "Timer",
+      "Date"
+     ]
+    },
+    "Invert": {
+     "type": "VARIANT",
+     "default": "false",
+     "options": [
+      "false",
+      "true"
+     ]
+    },
+    "Fill": {
+     "type": "VARIANT",
+     "default": "true",
+     "options": [
+      "false",
+      "true"
+     ]
+    },
+    "Accent": {
+     "type": "VARIANT",
+     "default": "false",
+     "options": [
+      "false",
+      "true"
+     ]
+    }
+   },
+   "variantCount": 16,
+   "format": "digest",
+   "variants": {
+    "Type=Timer, Invert=false, Fill=true, Accent=false": {
+     "(root)": "59a24b10",
+     "Ends in:": "b13b1b32",
+     "base": "9b935698",
+     "base > Frame 31": "5d9359bc",
+     "base > Frame 31 > 12": "d8a77274",
+     "base > Frame 31 > d": "5615c108",
+     "base > :[0]": "ebcd696b",
+     "base > Frame 34": "d9c7789e",
+     "base > Frame 34 > 12": "d8a77274",
+     "base > Frame 34 > h": "5615c108",
+     "base > :[1]": "901d8aa9",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "d8a77274",
+     "base > Frame 32 > m": "5615c108",
+     "base > :[2]": "1fc060ca",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Timer, Invert=false, Fill=false, Accent=false": {
+     "(root)": "75e2c118",
+     "Ends in:": "b13b1b32",
+     "base": "9b935698",
+     "base > Frame 34": "5d9359bc",
+     "base > Frame 34 > 12": "d8a77274",
+     "base > Frame 34 > d": "5615c108",
+     "base > :[0]": "ebcd696b",
+     "base > Frame 31": "d9c7789e",
+     "base > Frame 31 > 12": "d8a77274",
+     "base > Frame 31 > h": "5615c108",
+     "base > :[1]": "901d8aa9",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "d8a77274",
+     "base > Frame 32 > m": "5615c108",
+     "base > :[2]": "1fc060ca",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Timer, Invert=true, Fill=true, Accent=false": {
+     "(root)": "59a24b10",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Frame 34": "5d9359bc",
+     "base > Frame 34 > 12": "63d0b683",
+     "base > Frame 34 > d": "2c8604ef",
+     "base > :[0]": "43ae660e",
+     "base > Frame 31": "d9c7789e",
+     "base > Frame 31 > 12": "63d0b683",
+     "base > Frame 31 > h": "2c8604ef",
+     "base > :[1]": "3e85ab7c",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "63d0b683",
+     "base > Frame 32 > m": "2c8604ef",
+     "base > :[2]": "94ace331",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "63d0b683",
+     "base > Frame 33 > s": "2c8604ef"
+    },
+    "Type=Timer, Invert=true, Fill=false, Accent=false": {
+     "(root)": "75e2c118",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Frame 34": "5d9359bc",
+     "base > Frame 34 > 12": "63d0b683",
+     "base > Frame 34 > d": "2c8604ef",
+     "base > :[0]": "43ae660e",
+     "base > Frame 31": "d9c7789e",
+     "base > Frame 31 > 12": "63d0b683",
+     "base > Frame 31 > h": "2c8604ef",
+     "base > :[1]": "3e85ab7c",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "63d0b683",
+     "base > Frame 32 > m": "2c8604ef",
+     "base > :[2]": "94ace331",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "63d0b683",
+     "base > Frame 33 > s": "2c8604ef"
+    },
+    "Type=Timer, Invert=false, Fill=true, Accent=true": {
+     "(root)": "59a24b10",
+     "Ends in:": "60326234",
+     "base": "9b935698",
+     "base > Frame 34": "5d9359bc",
+     "base > Frame 34 > 12": "440c8f24",
+     "base > Frame 34 > d": "736f4254",
+     "base > :[0]": "ebcd696b",
+     "base > Frame 31": "d9c7789e",
+     "base > Frame 31 > 12": "440c8f24",
+     "base > Frame 31 > h": "736f4254",
+     "base > :[1]": "901d8aa9",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "440c8f24",
+     "base > Frame 32 > m": "736f4254",
+     "base > :[2]": "1fc060ca",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "440c8f24",
+     "base > Frame 33 > s": "736f4254"
+    },
+    "Type=Timer, Invert=false, Fill=false, Accent=true": {
+     "(root)": "75e2c118",
+     "Ends in:": "b13b1b32",
+     "base": "9b935698",
+     "base > Frame 34": "5d9359bc",
+     "base > Frame 34 > 12": "440c8f24",
+     "base > Frame 34 > d": "736f4254",
+     "base > :[0]": "ebcd696b",
+     "base > Frame 31": "d9c7789e",
+     "base > Frame 31 > 12": "440c8f24",
+     "base > Frame 31 > h": "736f4254",
+     "base > :[1]": "901d8aa9",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "440c8f24",
+     "base > Frame 32 > m": "736f4254",
+     "base > :[2]": "1fc060ca",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "440c8f24",
+     "base > Frame 33 > s": "736f4254"
+    },
+    "Type=Timer, Invert=true, Fill=true, Accent=true": {
+     "(root)": "59a24b10",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Frame 34": "5d9359bc",
+     "base > Frame 34 > 12": "440c8f24",
+     "base > Frame 34 > d": "736f4254",
+     "base > :[0]": "43ae660e",
+     "base > Frame 31": "d9c7789e",
+     "base > Frame 31 > 12": "440c8f24",
+     "base > Frame 31 > h": "736f4254",
+     "base > :[1]": "3e85ab7c",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "440c8f24",
+     "base > Frame 32 > m": "736f4254",
+     "base > :[2]": "94ace331",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "440c8f24",
+     "base > Frame 33 > s": "736f4254"
+    },
+    "Type=Timer, Invert=true, Fill=false, Accent=true": {
+     "(root)": "75e2c118",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Frame 34": "5d9359bc",
+     "base > Frame 34 > 12": "440c8f24",
+     "base > Frame 34 > d": "736f4254",
+     "base > :[0]": "43ae660e",
+     "base > Frame 31": "d9c7789e",
+     "base > Frame 31 > 12": "440c8f24",
+     "base > Frame 31 > h": "736f4254",
+     "base > :[1]": "3e85ab7c",
+     "base > Frame 32": "2f9e2618",
+     "base > Frame 32 > 35": "440c8f24",
+     "base > Frame 32 > m": "736f4254",
+     "base > :[2]": "94ace331",
+     "base > Frame 33": "cc013cdc",
+     "base > Frame 33 > 12": "440c8f24",
+     "base > Frame 33 > s": "736f4254"
+    },
+    "Type=Date, Invert=false, Fill=true, Accent=false": {
+     "(root)": "0b8b7a7b",
+     "Ends in:": "b13b1b32",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "610cfc40",
+     "base > To Label": "6f5d9d9c",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "610cfc40",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Date, Invert=false, Fill=false, Accent=false": {
+     "(root)": "76f60b15",
+     "Ends in:": "b13b1b32",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "610cfc40",
+     "base > To Label": "6f5d9d9c",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "610cfc40",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Date, Invert=true, Fill=true, Accent=false": {
+     "(root)": "0b8b7a7b",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "62c9ada9",
+     "base > To Label": "5290c19b",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "62c9ada9",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Date, Invert=true, Fill=false, Accent=false": {
+     "(root)": "76f60b15",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "62c9ada9",
+     "base > To Label": "5290c19b",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "62c9ada9",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Date, Invert=false, Fill=true, Accent=true": {
+     "(root)": "0b8b7a7b",
+     "Ends in:": "60326234",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "e67c1980",
+     "base > To Label": "6f5d9d9c",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "e67c1980",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Date, Invert=false, Fill=false, Accent=true": {
+     "(root)": "76f60b15",
+     "Ends in:": "b13b1b32",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "e67c1980",
+     "base > To Label": "6f5d9d9c",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "e67c1980",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Date, Invert=true, Fill=true, Accent=true": {
+     "(root)": "0b8b7a7b",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "e67c1980",
+     "base > To Label": "5290c19b",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "e67c1980",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    },
+    "Type=Date, Invert=true, Fill=false, Accent=true": {
+     "(root)": "76f60b15",
+     "Ends in:": "c2a7cf39",
+     "base": "9b935698",
+     "base > Date Range Container[0]": "9b935698",
+     "base > Date Range Container[0] > 14.01.25": "81bcbf2a",
+     "base > Date Range Container[0] > Start Date": "e67c1980",
+     "base > To Label": "5290c19b",
+     "base > Date Range Container[1]": "9b935698",
+     "base > Date Range Container[1] > End Date": "e67c1980",
+     "base > :": "d7de538e",
+     "base > Frame 33": "78f95942",
+     "base > Frame 33 > 12": "d8a77274",
+     "base > Frame 33 > s": "5615c108"
+    }
+   }
+  }
+ ]
+}

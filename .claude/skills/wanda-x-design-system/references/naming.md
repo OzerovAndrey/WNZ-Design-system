@@ -38,7 +38,7 @@
 - Розміри, падінги, радіуси, text style — **спільні** для обох версій (одні й ті самі токени `<component>.*`).
 - Кольорові токени: звичайна частина `contextual.<component>.<part>.<role>[.<state>]`, інвертована — `contextual.<component>.<part>-invert.<role>[.<state>]` (як `contextual.anchor.item.color` / `contextual.anchor.item-invert.color`). Компонент з однієї частини — без рівня частини: `contextual.chip.*` / `contextual.chip-invert.*`. Значення — тільки alias `semantic.*`; якщо інвертного semantic-токена немає — питання до команди, не `core.*`.
 - Де живе властивість: на компоненті, що має **власний кольоровий контент**. Контейнер без власних кольорів (`Anchor` зі слотом) `Inverted` не має — його мають пункти (`Anchor/Item`).
-- **Заборонено** кодувати інверсію значенням іншої властивості: `State=Invert`, `State=Inverted`, `Variant=Tertiary-Invert`, `Type=Dark`, `Theme=Light|Dark`, а також окремим набором (`Chip Inverted`). Відомі відхилення в еталонах (вирівняти при наступній правці): `Link` (`State=Invert`), `Button/Link` (`State=Inverted`), `Button` (`Variant=Tertiary-Invert`).
+- **Заборонено** кодувати інверсію значенням іншої властивості: `State=Invert`, `State=Inverted`, `Variant=Tertiary-Invert`, `Type=Dark`, `Theme=Light|Dark`, а також окремим набором (`Chip Inverted`). Відомі відхилення в еталонах (вирівняти при наступній правці): `Link` (`State=Invert`), `Button/Text` (`State=Inverted`), `Button` (`Variant=Tertiary [Invert]`).
 - Inverted ≠ бренд: темність продукту (XON) дає alias бренду в `semantic.*`, а не `Inverted`. У XON `Inverted=False` лишається `semantic.text.default.*` (`token-studio.md`).
 
 ## Вкладені інстанси (композитні компоненти)

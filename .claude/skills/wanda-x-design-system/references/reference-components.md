@@ -1,14 +1,14 @@
 # Еталонні компоненти (Ready for dev)
 
-Atoms: **Accordion · Badge · Button · Link · Divider · Dropdown · Label · Loader**.
+Atoms: **Accordion · Badge · Button · Link · Divider · Dropdown · Label · Spinner** (сторінка `↳ Spinner`, до 21.10 — Loader).
 Нижче — правила, витягнуті з їхньої реальної будови (дані з файлу станом на 2026-10-19).
 
 ## 1. Набори і варіанти
 
 | Компонент | Набір | Варіантів | Властивості |
 |---|---|---|---|
-| Button | `Button` | 120 | `Variant` = Primary \| Secondary \| Tertiary \| Tertiary-Invert \| Static · `Size` = lg \| md \| sm · `State` = Default \| Hover \| Active \| Disabled · `Label` = True \| False · bool `⬅️ Icon`, `Icon ➡️` · swap `↳ 💠 Component` |
-| Button | `Button/Link` | 3 | `State` = Default \| Inverted \| Hover · bool `Label`, `⬅️ Icon`, `Icon ➡️` |
+| Button | `Button` | 120 | `Variant` = Primary \| Secondary \| Tertiary \| Tertiary [Invert] \| Static · `Size` = lg \| md \| sm · `State` = Default \| Hover \| Active \| Disabled · `Label` = True \| False · bool `⬅️ Icon`, `Icon ➡️` · swap `↳ 💠 Component` |
+| Button | `Button/Text` (до 21.10 — `Button/Link`) | 3 | `State` = Default \| Inverted \| Hover · bool `Label`, `⬅️ Icon`, `Icon ➡️` · swap `↳ 💠 Component` ×2 |
 | Badge | `Badge` | 9 | `Variant` = Warning \| Primary \| Outlined · `Size` = lg \| md \| sm |
 | Accordion | `Accordion` | 12 | `State` = Closed \| Mixed \| Openned* · `Inverted` = False \| True · `Heading` = False \| True · slot `Layout` |
 | Link | `Link` | 21 | `Variant` = Default \| Accent · `Size` = md \| sm · `State` = Default \| Invert \| Hover · `Strong` = False \| True |
@@ -16,7 +16,7 @@ Atoms: **Accordion · Badge · Button · Link · Divider · Dropdown · Label ·
 | Dropdown | `Dropdown` | 8 | `Position` = Top — Left … Right — Center · slots `Trigger`, `Body`, `↳ Slot` · bool `Show`, `Header [sticky]` |
 | Dropdown | `Dropdown/Item` | 3 | `State` = Default \| Hover \| Selected · bool `Caption`, `⬅️ Icon`, `Icon ➡️`, `⬅️ Slot`, `Slot ➡️` |
 | Label | `Label` | 24 | `Variant` = Primary … Sale \| Timer \| Transparent light · `Label`, `Counter` = True \| False · bool `Icon`, `Indicator` |
-| Loader | `Spinner` | 1 (component) | — |
+| Spinner | `Spinner` | 1 (component) | — |
 
 \* `Openned` — опечатка навіть в еталоні, виправити на `Opened` (див. беклог).
 
@@ -53,11 +53,11 @@ COMPONENT  auto layout HORIZONTAL · HUG × FIXED · padding 0/20/0/20 · gap 8
 
 ## 3. Загальні патерни еталонів
 
-- **Section на компонент**: Badge, Accordion, Link, Divider, Dropdown, Label, Loader (`Spinner`) — кожен у Section з назвою компонента.
-- **Під-компоненти** через `/`: `Dropdown/Item`, `Button/Link`.
+- **Section на компонент**: Badge, Accordion, Link, Divider, Dropdown, Label, Spinner — кожен у Section з назвою компонента.
+- **Під-компоненти** через `/`: `Dropdown/Item`, `Button/Text`.
 - **Розмір** = окремий варіант `Size` (lg | md | sm), а всі розмірні величини — токени `{component}/{property}/{size}`.
 - **Бінарні варіанти**, що змінюють структуру, — Variant з `True | False` (`Label`, `Inverted`, `Strong`, `Counter`). Якщо змінюється лише видимість шару — Boolean property.
-- **Inverted** — у кожного компонента, окремою властивістю `Inverted = False | True` (`naming.md` → Inverted). В еталонах правильно: `Accordion`, `Anchor/Item`. Відхилення: `Link` (`State=Invert`), `Button/Link` (`State=Inverted`), `Button` (`Variant=Tertiary-Invert`); за таблицею вище (дані 2026-10-19) властивості `Inverted` немає в `Badge`, `Divider`, `Dropdown`, `Label`, `Loader` — перевірити й додати (беклог).
+- **Inverted** — у кожного компонента, окремою властивістю `Inverted = False | True` (`naming.md` → Inverted). В еталонах правильно: `Accordion`, `Anchor/Item`. Відхилення: `Link` (`State=Invert`), `Button/Text` (`State=Inverted`), `Button` (`Variant=Tertiary [Invert]`); за таблицею вище (дані 2026-10-19) властивості `Inverted` немає в `Badge`, `Divider`, `Dropdown`, `Label`, `Spinner` — перевірити й додати (беклог).
 - **Іконки**: bool `⬅️ Icon` / `Icon ➡️` + вкладений swap з префіксом `↳ 💠`.
 - **Слоти**: Slot-властивості (`Trigger`, `Body`, `Layout`, `↳ Slot`) для контейнерів (Dropdown, Tooltip, Popover, Accordion).
 - **Позиціонування поповерів**: `Position` = `Top — Left | Top — Center | Top — Right | Bottom — … | Left — Center | Right — Center` (em dash з пробілами).
