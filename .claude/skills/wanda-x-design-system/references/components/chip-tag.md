@@ -11,21 +11,21 @@
 - Розміри: `chips.height`, `chips.padding-h`, `chips.gap`, `chips.icon.size`, `border-radius.chips` — спільні для обох версій.
 
 ### Кольорові токени
-| Токен | Inverted=False (`contextual.chips.normal.*`) | Inverted=True (`contextual.chips.normal-invert.*`) |
+| Токен | Inverted=False (`contextual.chips.normal.*`) | Inverted=True (`contextual.chips.inverted.*`) |
 |---|---|---|
 | `fill.default` / `fill.hover` | `{core.content.a0}` | `{core.content.a0}` (плашка та сама) |
 | `fill.active` | `{core.content.a8}` | `{core.white.a0}` ⚠ |
 | `icon.default` / `icon.hover` (текст + іконка) | `{semantic.icon.default.tertiary}` | `{semantic.text.default-invert.tertiary}` |
 | `icon.active` | `{core.content.a100}` | `{semantic.text.default-invert.heading}` |
 | `border.default` | `{core.grey.300}` | `{core.white.a30}` |
-| `border.hover` | `{contextual.chips.normal.border.active}` | `{contextual.chips.normal-invert.border.active}` |
+| `border.hover` | `{contextual.chips.normal.border.active}` | `{contextual.chips.inverted.border.active}` |
 | `border.active` | `{core.content.a100}` | `{core.white.500}` |
 
-Значення однакові в MB і XON. Змінні `contextual/chips/normal-invert/*` у колекції `Product` — alias на ті самі змінні, scope `ALL_SCOPES` (як у `normal`). Токени Token Studio стоять на шарах (`fill`, `borderColor`) разом зі змінними.
+Значення однакові в MB і XON. Змінні `contextual/chips/inverted/*` у колекції `Product` — alias на ті самі змінні, scope `ALL_SCOPES` (як у `normal`). Токени Token Studio стоять на шарах (`fill`, `borderColor`) разом зі змінними.
 
 ### Рішення
 1. 2026-10-21 — (Claude, на запит Андрея) додано `Inverted` за правилом 15: клон кожного State, міняються лише кольори контенту й обведення; розміри й text style спільні.
-2. Неймінг інвертних токенів повторює структуру команди: `contextual.chips.normal` → `contextual.chips.normal-invert`.
+2. Неймінг інвертних токенів — група-сусід `contextual.chips.inverted` поруч з `contextual.chips.normal` (рішення Андрея 21.10, замість `normal-invert`).
 3. Де є semantic-інверт — alias на нього (`semantic.text.default-invert.*`); де немає (обведення, `white`-тінт) — `core.white.*`, як у звичайній версії команда бере `core.*`.
 
 ### Відхилення / питання

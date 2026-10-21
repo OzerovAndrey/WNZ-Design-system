@@ -12,6 +12,7 @@
 | 4 | **`description` заповнений** | Input (362), Status/Indicator (93), Banner (466) | правило 14 | Команда тепер документує у Figma? Тоді правило 14 змінюємо або дублюємо в скіл. |
 | 5 | Шкала **breakpoint `3xs … 3xl`** | Header, Footer, Layout, Navigation, TabBar | `device=mobile\|desktop` у Section, Banner | Зафіксувати шкалу як стандарт для властивості `Breakpoint`? |
 | 6 | Розміри **`SM \| MD`** (uppercase), **`xs \| md`** | Status, Empty | еталони `lg \| md \| sm` | Єдина шкала розмірів? |
+| 8 | Інвертна група токенів названа **`inverted`** (`contextual.chips.inverted.*`, сусід `normal`) | Chip | `naming.md` → Inverted (`<part>-invert`, як Anchor, Accordion, Tabs) | Новий стандарт `inverted` для всіх компонентів (і перейменувати `*-invert` в Anchor/Accordion/Tabs/Button), чи лише для Chip? |
 | 7 | **Спільний неймспейс токенів** на кілька компонентів (`contextual.selection-controls.*`) і **semantic напряму** (`semantic.status.*`, тексти Timer) | Controls, Status, Timer | правило 6 | Дозволяємо спільні токени для сімейства компонентів? |
 
 ## Компоненти
