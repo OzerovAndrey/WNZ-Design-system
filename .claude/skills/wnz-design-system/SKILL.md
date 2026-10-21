@@ -75,6 +75,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-21 — Chips і Tag перескладено за еталоном Anchor (State × Inverted, токени `contextual.<c>.base[-invert]`, сіра Section); Tag — один компонент з іконкою `close`, без окремої кнопки.
 - 2026-10-21 — правила: Section сіра `#BBBBBB` (еталон — Section `Anchor`); `Inverted` обов'язковий для всіх компонентів (`naming.md`, DoD, `rebuild-workflow.md`).
 - 2026-10-19 — Anchor: кольори з alias semantic, структура «в рядок», Inverted, іконка = текст, змінні перестворено після Export.
 - 2026-10-19 — аудит файлу (`audit-2026-10-19.md`), створено скіл. Перший перескладений компонент — `Anchor` (`references/components/anchor.md`), на ньому відпрацьовано `rebuild-workflow.md`.
