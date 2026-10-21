@@ -22,15 +22,23 @@
 | Text | `✏️ …` | — | `✏️ Label` |
 | Slot | Title Case | — | `Trigger`, `Body`, `↳ Slot` |
 
-Стандартні значення `State`: `Default | Hover | Active | Selected | Disabled` (+ `Error`, `Filled`, `Focus` для форм). Порядок властивостей: `Variant → Size → State → решта`.
+Стандартні значення `State`: `Default | Hover | Active | Selected | Disabled` (+ `Error`, `Filled`, `Focus` для форм). Порядок властивостей: `Variant → Size → State → Inverted → решта`.
 
 **Заборонено**: `Property 1`, lowercase-ключі (`device`, `type`, `state`, `status`, `login`), `yes | no`, `on | off`, `-`, `mob | desk`, `Mobile(320-767)`, опечатки (`opientation`, `transperrent`, `Openned`, `Whaiting`, `Tornament`).
 
 Пристрій ≠ варіант компонента: якщо мобільна і десктопна версія відрізняються лише шириною — це один компонент з `FILL`. Якщо відрізняються структурою — `Breakpoint=…`, а не `device=mob|desk`.
 
-## Світлий / темний фон
-- Варіант `Inverted = False | True`, як в Accordion/Tabs: **міняється лише колір контенту** (`semantic.text.default.*` → `semantic.text.default-invert.*`), фон/плашка лишається тим самим токеном. Не додавати окремий фон для інвертного варіанту без рішення команди.
-- Кольорові токени інвертного варіанту: `contextual.<component>.<part>-invert.<role>.<state>`.
+## Inverted — обов'язковий для кожного компонента
+У ДС **кожен компонент має інвертовану версію** — для розміщення на темному/кольоровому фоні. Компонент без `Inverted=True` не вважається готовим (`definition-of-done.md`).
+
+- Окрема Variant-властивість **`Inverted = False | True`**, за замовчуванням `False`. Порядок властивостей: `Variant → Size → State → Inverted → решта`.
+- Інвертованим є **кожне** поєднання інших варіантів: матриця варіантів подвоюється (`State=Hover, Inverted=True` теж існує).
+- **Міняється лише колір контенту** (текст, іконка, обведення контенту): `semantic.text.default.*` → `semantic.text.default-invert.*`. Фон/плашка — свій токен `…-invert.fill`, але значення те саме, що в звичайній версії. Не робити окрему темну підкладку без рішення команди.
+- Розміри, падінги, радіуси, text style — **спільні** для обох версій (одні й ті самі токени `<component>.*`).
+- Кольорові токени: звичайна частина `contextual.<component>.<part>.<role>[.<state>]`, інвертована — `contextual.<component>.<part>-invert.<role>[.<state>]` (як `contextual.anchor.item.color` / `contextual.anchor.item-invert.color`). Значення — тільки alias `semantic.*`; якщо інвертного semantic-токена немає — питання до команди, не `core.*`.
+- Де живе властивість: на компоненті, що має **власний кольоровий контент**. Контейнер без власних кольорів (`Anchor` зі слотом) `Inverted` не має — його мають пункти (`Anchor/Item`).
+- **Заборонено** кодувати інверсію значенням іншої властивості: `State=Invert`, `State=Inverted`, `Variant=Tertiary-Invert`, `Type=Dark`, `Theme=Light|Dark`, а також окремим набором (`Chips Inverted`). Відомі відхилення в еталонах (вирівняти при наступній правці): `Link` (`State=Invert`), `Button/Link` (`State=Inverted`), `Button` (`Variant=Tertiary-Invert`).
+- Inverted ≠ бренд: темність продукту (XON) дає alias бренду в `semantic.*`, а не `Inverted`. У XON `Inverted=False` лишається `semantic.text.default.*` (`token-studio.md`).
 
 ## Вкладені інстанси (композитні компоненти)
 - **Список однакових пунктів** (навігація, якорі, таби) — **SLOT `Items`** (як `Navigation`, `Anchor`): HORIZONTAL/VERTICAL auto layout, gap токеном на слоті, всередині інстанси під-компонента. Кількість пунктів не фіксуємо Boolean-ами.

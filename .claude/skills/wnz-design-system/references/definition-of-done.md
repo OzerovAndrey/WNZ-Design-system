@@ -27,11 +27,12 @@
 - [ ] Використані лише свої contextual/semantic токени; 0 `core/*` поза тінями/градієнтами.
 - [ ] 0 змінних з чужих бібліотек.
 - [ ] Токени Token Studio стоять на шарах **напряму** (Inspect без ⬡ «via variable»), а не лише Figma-змінні.
-- [ ] Перевірено в обох режимах — `MB` і `XON`.
+- [ ] Перевірено в обох режимах — `MB` і `XON`, обидві версії — `Inverted=False` і `Inverted=True`.
 
 ## Властивості
 - [ ] Іконки — `⬅️ Icon` / `Icon ➡️` + swap `↳ 💠 …`; текст — Text property.
 - [ ] Стани покривають мінімум `Default | Hover | Active/Selected | Disabled` (для інтерактивних).
+- [ ] Є `Inverted = False | True` для кожного поєднання варіантів; інвертовані кольори — токени `contextual.<component>.<part>-invert.*` (`naming.md` → Inverted).
 - [ ] Вкладені елементи — інстанси інших компонентів ДС, не detached копії.
 - [ ] Список однакових пунктів — у SLOT `Items`; фіксовані вкладені елементи — exposed + Boolean `Item #N`.
 

@@ -57,6 +57,7 @@ COMPONENT  auto layout HORIZONTAL · HUG × FIXED · padding 0/20/0/20 · gap 8
 - **Під-компоненти** через `/`: `Dropdown/Item`, `Button/Link`.
 - **Розмір** = окремий варіант `Size` (lg | md | sm), а всі розмірні величини — токени `{component}/{property}/{size}`.
 - **Бінарні варіанти**, що змінюють структуру, — Variant з `True | False` (`Label`, `Inverted`, `Strong`, `Counter`). Якщо змінюється лише видимість шару — Boolean property.
+- **Inverted** — у кожного компонента, окремою властивістю `Inverted = False | True` (`naming.md` → Inverted). В еталонах правильно: `Accordion`, `Anchor/Item`. Відхилення: `Link` (`State=Invert`), `Button/Link` (`State=Inverted`), `Button` (`Variant=Tertiary-Invert`); за таблицею вище (дані 2026-10-19) властивості `Inverted` немає в `Badge`, `Divider`, `Dropdown`, `Label`, `Loader` — перевірити й додати (беклог).
 - **Іконки**: bool `⬅️ Icon` / `Icon ➡️` + вкладений swap з префіксом `↳ 💠`.
 - **Слоти**: Slot-властивості (`Trigger`, `Body`, `Layout`, `↳ Slot`) для контейнерів (Dropdown, Tooltip, Popover, Accordion).
 - **Позиціонування поповерів**: `Position` = `Top — Left | Top — Center | Top — Right | Bottom — … | Left — Center | Right — Center` (em dash з пробілами).
