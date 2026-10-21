@@ -14,7 +14,7 @@
 |---|---|---|---|---|---|---|
 | Anchor | `↳ Anchor 💛` | Rebuilt — review | 2026-10-21 | 78336:307494 (`Anchor/Item`), 78314:307677 | 2 + 1 | `components/anchor.md` |
 | Banner | `↳ Banner - Ден` | In progress (team) | — | новий `Banner` 78285:719 (13 props, Device) + `Banner/Content-block`, `Slider`; legacy поруч | 2 | — |
-| Chip & Tag | `↳ Chip & Tag - Андрей` | In progress (team) | 2026-10-21 (проміжно) | 46859:45827 (`Chips`), 78589:294536 (`Tag`, новий) | 3 + 3 | `components/chip-tag.md` |
+| Chip & Tag | `↳ Chip & Tag - Андрей` | Chip оновлено + Inverted; Tag — in progress | 2026-10-21 | 46859:45827 (`Chips`), 78589:294536 (`Tag`, новий) | 6 + 3 | `components/chip-tag.md` |
 | Datepicker | `↳ Datepicker - Андрей` | Not started | | 27893:322641 | 2 | |
 | Empty | `↳ Empty - Ден 💛` | Learned | 2026-10-21 | 78315:449009 | 4 | `components/empty.md` |
 | Filter & Sorting | `↳ Filter & Sorting - Андрей` | Not started | | 46835:368804 | 6 | |

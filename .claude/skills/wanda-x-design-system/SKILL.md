@@ -93,6 +93,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-21 — **Chip: Inverted** (на запит Андрея, запис у Figma): набір `Chips` State × Inverted (6v); 9 токенів `contextual.chips.normal-invert.*` у `mb/component` і `xon/component` + змінні `Product`; ліві іконки отримали колір `contextual.chips.normal.icon.*`. Питання: немає `core.white.a8` для Active-інверта (`components/chip-tag.md`).
 - 2026-10-21 — **перший обхід у режимі навчання** (42 сторінки, read-only). Вивчено 💛: Input, Controls, Status, Timer, Empty, Section (+ проміжно Chip & Tag); дайджести в `snapshots/`. Структура файлу: Forms → `Input` + `Controls`, Loader → `Spinner`, Section-title → `Heading` (Molecules), Page → `Layout`, Image → Atoms, Thumb → Molecules, Breadcrumbs і Fader прибрані; `Button/Link` → `Button/Text`. Знімок у git — дайджест (хеші шарів), зміни — режимом `BASELINE`. Сім конвенцій на підтвердження — `open-questions.md`.
 - 2026-10-21 — **режим навчання**: `learning-workflow.md`, шаблон `components/_template.md`, реєстр `component-registry.md`, скрипти `snapshot-component.js` / `snapshot-diff.py`, тека `snapshots/`. Команда освіжає компоненти — Claude знімає, порівнює і документує, не правлячи файл.
 - 2026-10-21 — **перейменування в Wanda X**: проєкт, репо `OzerovAndrey/Wanda-X`, скіл `wanda-x-design-system`, назви у всіх файлах.
