@@ -52,6 +52,7 @@ JSON: `tokens/tag.mb.component.json`, `tokens/tag.xon.component.json` (MB = XON)
 5. Нові токени `contextual.tag.base.*` замість `contextual.tag.{fill,border,color}.*` (core-значення, XON-баг з прозорим текстом); старі лишаються для оригіналу.
 
 ## Відкриті питання
+- **Неймінг токенів не за новим правилом:** `contextual.tag.base[-invert].*` → має бути `contextual.tag.*` / `contextual.tag-invert.*` (як Chip). Заважають старі `contextual.tag.{fill,border,color}.*`, на яких тримається оригінальний `Tag` (42238:3739): спершу перевірити використання по файлу і видалити їх, потім прибрати `base`.
 - **Hover-тон змінився:** оригінал — жовтуватий `brand-30.a10`, зараз блакитний `semantic.background.slate-4` (`brand-60.a15`). Semantic-токена для легкого акцентного тону немає — потрібен `semantic.fill.accent-subtle`?
 - Обведення: оригінал `brand-30` 80%, зараз `semantic.text.static.accent` (100%) — токен текстової ролі.
 - Disabled на темному фоні — `text.default-invert.tertiary` (немає `semantic.text.disabled-invert.*`).

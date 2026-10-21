@@ -38,6 +38,8 @@ MB — світлий продукт (page `#f0f8ff`, heading `#113098`), XON �
 
 **Структура «в рядок»** (як `contextual.button.primary.fill.{default,hover,active,disabled}`): останній рівень — це набір значень, що стоять поруч (стани, розміри `sm/md/lg`, ролі `fill/text/icon`). **Не створювати рівень з одним листком** (`fill.default`, коли станів немає) — це дає окрему гілку на кожен колір. Без станів: `contextual.anchor.item.{fill,color}`, `contextual.anchor.item-invert.{fill,color}`.
 
+**Компонент з однієї частини** (Chip, Tag, Badge) — без проміжного рівня `base`/`item`: кольори прямо в `contextual.<component>.<role>.<state>`, інвертовані — `contextual.<component>-invert.<role>.<state>` (`contextual.chip.border.hover`, `contextual.chip-invert.color.default`). Рівень частини (`item`, як в Anchor) — лише коли в компоненті є під-компоненти.
+
 **Мінімум токенів:** текст і іконка одного елемента — **один** токен кольору (`color`, як `accordion.color.primary`); симетричні падінги — один токен `padding-horizontal` / `padding-vertical`, а не `padding-left` + `padding-right`; **структуру частин не зливати**: `item` / `item-invert` мають кожен свій `fill`, навіть якщо значення однакові (команда може розвести їх пізніше).
 
 Значення — аліаси на alias/core (`{spacing.200}`, `{semantic.fill.default}`); сирі числа лише там, де немає відповідного аліасу (20).
