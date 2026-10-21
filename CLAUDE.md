@@ -1,6 +1,8 @@
 # Wanda X Design system — інструкція для Claude
 
-Перед будь-якою роботою з компонентами, токенами чи лейаутами Figma-файлу **[Wanda X] Design system** (`3MbdWPLOGBjBj92Y3EnPYN`):
+> **Зараз у Figma нічого не змінювати** — команда сама доробляє компоненти й скаже, коли підключатися. Дозволено лише читати.
+
+Перед будь-якою роботою з компонентами, токенами чи лейаутами Figma-файлу **[WNZ] Design system** (`3MbdWPLOGBjBj92Y3EnPYN`):
 
 0. **Спитай, чи були нові зміни в Token Studio, і попроси свіжий архів JSON** — колеги змінюють токени щодня. Онови `tokens/system/` і покажи diff (`scripts/tokens-diff.py`, порядок — `references/token-studio.md` → Свіжість експорту). Без свіжого архіву — працюй з останнім експортом і скажи, від якої він дати.
 1. Прочитай `.claude/skills/wanda-x-design-system/SKILL.md` і потрібні `references/*.md` (таблиця «Коли що читати» в SKILL.md).

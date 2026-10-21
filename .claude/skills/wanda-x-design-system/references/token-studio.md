@@ -1,4 +1,4 @@
-# Token Studio у файлі Wanda X
+# Token Studio у Figma-файлі [WNZ] Design system
 
 ## Структура
 - Версія плагіна 2.13, storage `local` (токени живуть у самому Figma-файлі).

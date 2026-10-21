@@ -1,6 +1,6 @@
 # Wanda X Design system
 
-Робочий репозиторій команди для очистки Figma-файлу **[Wanda X] Design system** (`3MbdWPLOGBjBj92Y3EnPYN`, бренди MB / XON).
+Робочий репозиторій команди для очистки Figma-файлу **[WNZ] Design system** (`3MbdWPLOGBjBj92Y3EnPYN`, бренди MB / XON).
 
 ## Структура
 
