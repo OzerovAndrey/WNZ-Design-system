@@ -63,3 +63,12 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 - `contextual.filter-sort.item.fill.hover` → `{semantic.fill.hover}` (було `core.grey.300`), `.active` → `{semantic.fill.active}` (було `core.grey.200a40`); новий alias `semantic.fill.active` = `{core.grey.200a40}`.
 - Текст, іконка, шеврон — глобальні `semantic.text.*` / `semantic.icon.*` напряму (правило).
 - `filter-sort.button.{height (size.400), padding-v (spacing.100), padding-h (spacing.200 — 8 з обох боків у всіх варіантах, Label раніше мав зліва 12), gap (spacing.50), icon-size (20), chevron-size (size.200)}` — прив'язано на копії `Filter sort` (78821:89) разом зі змінними Product.
+
+## Tabs & Sort — слот (2026-10-22)
+- Команда: `Breakpoint` → `Mobile = False | True`, `Filter button` → `Filter sort`.
+- Вміст обох варіантів — **один спільний слот `Items`** (preferred: `Chips`, `Filter sort`), auto layout H, gap 8, HUG; у Mobile — FILL + SPACE_BETWEEN.
+- Прибрано рамку `Chips` (її замінив слот) і прихований `Filter button` без властивості в Desktop — потрібний фільтр тепер кладеться у слот.
+- Override-и вкладених Chip/Filter sort скинуто (були прив'язки на видалені змінні), тексти/видимість збережено. Наслідок: друга кнопка в Mobile (Filter sort Icon) більше не opacity 0 — видима.
+- `maxWidth` → жива `max-width/content`.
+- Токенів ще немає: `tabs-sort.padding-h` = 32 (`{spacing.800}`, однаковий у Mobile і Desktop ⚠ — у Mobile очікувано 16?), `tabs-sort.gap` = 8 (`{spacing.200}`, gap слота).
+- Питання: після слота варіанти відрізняються лише вирівнюванням (MIN vs SPACE_BETWEEN) — чи потрібен `Mobile` взагалі?
