@@ -6,15 +6,14 @@
 
 ## Анатомія копії
 ```
-Section Datepicker (#BBBBBB, 80 px)
-├─ Datepicker/Week day (78766:182)   COMPONENT
-├─ Datepicker/Date     (78766:184)   State × Range
-│    Day (було wrap) → Label (було "1")
-├─ Datepicker/Month    (78766:221)   State
+Section Datepicker (#BBBBBB, 80 px) — основний зверху, під-компоненти під ним
+├─ Datepicker          (78766:265)   Type = Days | Months
+│    Days:   Calendar → Select · Weeks → Week days (7× Week day) · Week ×6 (Date) ; Footer (Button sm)
+│    Months: Calendar → Row ×4 (3× Month)
 ├─ Datepicker/Select   (78766:232)   COMPONENT · інстанси Input: Month, Year
-└─ Datepicker          (78766:265)   Type = Days | Months
-     Days:   Calendar → Select · Weeks → Week days (7× Week day) · Week ×6 (Date) ; Footer (Button sm)
-     Months: Calendar → Row ×4 (3× Month)
+├─ Datepicker/Week day (78766:182)   COMPONENT
+├─ Datepicker/Date     (78766:184)   State × Range · Day → Label
+└─ Datepicker/Month    (78766:221)   State
 ```
 
 ## Властивості

@@ -94,6 +94,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-22 — **правило порядку в Section:** основний компонент (той, що йде в дизайн) — завжди перший, під-компоненти під ним; Section Datepicker переставлено (`section-layout.md`).
 - 2026-10-22 — **правило: без text-властивостей** (`✏️ Label`) — текст змінюється вручну в інстансі. З копії Datepicker (`Week day`, `Date`, `Month`) прибрано, тексти 62 інстансів збережено.
 - 2026-10-22 — **Datepicker: виправлена копія** (на запит Андрея, без нових токенів): Section `Datepicker` поруч з оригіналом; під-компоненти `Datepicker/Week day|Date|Month|Select`, Date — `State × Range` замість `Type` + `Selected range`; `✏️ Label`; прибрано `Title old`; колір Week day перенесено з override-ів у мейн (`components/datepicker.md`).
 - 2026-10-21 — **Chip: Inverted** (на запит Андрея, запис у Figma): набір `Chips` State × Inverted (6v); 9 токенів `contextual.chips.inverted.*` у `mb/component` і `xon/component` + змінні `Product`. Питання: немає `core.white.a8` для Active-інверта (`components/chip-tag.md`).
