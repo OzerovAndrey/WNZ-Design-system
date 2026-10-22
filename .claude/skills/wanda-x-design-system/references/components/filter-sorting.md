@@ -72,3 +72,15 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 - `maxWidth` → жива `max-width/content`.
 - Токени (2026-10-22): `tabs-sort.padding-h` = `{spacing.800}` (32, обидва варіанти) на корені, `tabs-sort.gap` = `{spacing.200}` на слоті `Items`. Команда прибрала maxWidth, ширина — HUG/FIXED.
 - Питання: після слота варіанти відрізняються лише вирівнюванням (MIN vs SPACE_BETWEEN) — чи потрібен `Mobile` взагалі?
+
+## Gamehall / Open-thumb-provider — токени розмірів (2026-10-22)
+| Шар | Властивість | Токен | Значення |
+|---|---|---|---|
+| Корінь (Progress=On/Off) | height | `gamehall.thumb-providers.height` | `{dimension.16}` = 64 |
+| Корінь | max-width | `gamehall.thumb-providers.max-width` | 364 |
+| Корінь | padding left/right | `gamehall.thumb-providers.padding-h` | `{spacing.800}` = 32 |
+| Корінь | stroke | `contextual.gamehall.thumb-providers.background.border` | (був `semantic.border.default.secondary`, те саме значення) |
+| Prowider | gap | `gamehall.thumb-providers.provider.gap` | `{spacing.200}` = 8 |
+| Progress | gap | `gamehall.thumb-providers.progress.gap` | `{spacing.400}` = 16 |
+Gap кореня = Auto (space-between) — токен не потрібен.
+Відкрито: текст назви провайдера посилається на неіснуючий `text.ml-strong` (fontFamily/fontWeight — мертві змінні); значення 16/24/600 = `text.lg-strong`. Лого провайдера 22×24 (remote інстанс) — без токена.
