@@ -68,3 +68,7 @@ Section `List-item`: `List-item` (основний) і `List-item/Bullet` під
 - Дефолтний вміст: усі тексти `Label`, іконка `plus` (Static — Icons); у розкритих Item — 3 Subitem `Label`.
 - Живі інстанси (Profile sidebar, Payment sidebar, Profile popup content mobile) перенесено з усіма текстами/іконками/станами; старий набір `Profile Menu (Device)` видалено (це була наша проміжна збірка, не оригінал).
 - Урок: якщо текст інстансу дорівнює дефолтному тексту мейна, override немає — зміна дефолту його перепише (так злетів `Balances`, відновлено). Перед зміною дефолтів — фіксувати тексти в інстансах.
+
+## State замість Active × Open (2026-10-22, рішення Андрея)
+«Не активний пункт не може бути відкритим»: `Profile Menu/Item` = `State = Default | Active | Open` × `Inverted` = 6 варіантів (+ boolean `Chevron`, `Tag`, SLOT `Items`). `Open` = активний і розкритий (заголовок як Active + слот підпунктів). Варіанти `Active=False, Open=True` видалено (0 інстансів), інші перейменовано без втрати інстансів.
+Виправлено: у клонованих Inverted-варіантах злетіли componentPropertyReferences (`Chevron`, `Tag` — шар `Tag` зник); відновлено на всіх варіантах. Урок: після `clone()` варіанта перевіряти посилання на властивості.
