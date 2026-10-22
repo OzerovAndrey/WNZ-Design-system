@@ -17,7 +17,7 @@
 | Chip & Tag | `↳ Chip & Tag - Андрей` | Chip оновлено + Inverted; Tag — in progress | 2026-10-21 | 46859:45827 (`Chips`), 78589:294536 (`Tag`, новий) | 6 + 3 | `components/chip-tag.md` |
 | Datepicker | `↳ Datepicker - Андрей` | Виправлена копія поруч (на перевірці) | 2026-10-22 | 78766:265 (копія), 27893:322641 (оригінал) | 2 + 12 + 5 | `components/datepicker.md` |
 | Empty | `↳ Empty - Ден 💛` | Learned | 2026-10-21 | 78315:449009 | 4 | `components/empty.md` |
-| Filter & Sorting | `↳ Filter & Sorting - Андрей` | Not started | | 46835:368804 | 6 | |
+| Filter & Sorting | `↳ Filter & Sorting - Андрей` | Впорядкована копія поруч (на перевірці) | 2026-10-22 | 78821:132 (Tabs & Sort), 78821:89 (Filter button) | 2 + 6 | `components/filter-sorting.md` |
 | Input | `↳ Input 💛` | Learned | 2026-10-21 | 78201:1158 + `Input Side Left/Right` | 12 + 5 + 5 | `components/input.md` |
 | Controls (Checkbox, Radio, Toggle) | `↳ Controls … 💛` | Learned | 2026-10-21 | 78315:499124 / 499199 / 499274 | 8 + 6 + 6 | `components/controls.md` |
 | List item | `↳ List item - Андрей` | Not started | | — (8 legacy наборів) | | |
