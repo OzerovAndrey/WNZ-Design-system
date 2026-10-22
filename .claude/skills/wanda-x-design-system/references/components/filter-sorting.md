@@ -70,5 +70,5 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 - Прибрано рамку `Chips` (її замінив слот) і прихований `Filter button` без властивості в Desktop — потрібний фільтр тепер кладеться у слот.
 - Override-и вкладених Chip/Filter sort скинуто (були прив'язки на видалені змінні), тексти/видимість збережено. Наслідок: друга кнопка в Mobile (Filter sort Icon) більше не opacity 0 — видима.
 - `maxWidth` → жива `max-width/content`.
-- Токенів ще немає: `tabs-sort.padding-h` = 32 (`{spacing.800}`, однаковий у Mobile і Desktop ⚠ — у Mobile очікувано 16?), `tabs-sort.gap` = 8 (`{spacing.200}`, gap слота).
+- Токени (2026-10-22): `tabs-sort.padding-h` = `{spacing.800}` (32, обидва варіанти) на корені, `tabs-sort.gap` = `{spacing.200}` на слоті `Items`. Команда прибрала maxWidth, ширина — HUG/FIXED.
 - Питання: після слота варіанти відрізняються лише вирівнюванням (MIN vs SPACE_BETWEEN) — чи потрібен `Mobile` взагалі?
