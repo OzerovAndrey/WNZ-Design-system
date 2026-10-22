@@ -48,8 +48,6 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 | `filter-sort.button.gap` | 2 → `{spacing.50}` | |
 | `filter-sort.button.icon-size` | 20 | Icon |
 | `filter-sort.button.chevron-size` | 16 → `{size.200}` | Chevron |
-| `contextual.filter-sort.item.text.default` / `.active` | `{semantic.text.default.primary}` / `.heading` | Label (замість semantic напряму) |
-| `contextual.filter-sort.item.icon.*` | ? | іконки зараз без кольору-токена (колір з бібліотеки) |
 | `tabs-sort.padding-horizontal` | 32 → `{spacing.800}` | Tabs & Sort |
 | `tabs-sort.chips.gap` | 8 → `{spacing.200}` | Chips |
 
@@ -60,3 +58,8 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 - `Tabs & Sort` Desktop: прихований Filter button без властивості; Mobile: друга кнопка opacity 0 з іконкою `BR / Filter` (чужа бібліотека) — фактично невидима.
 - Mobile gap 58 при SPACE_BETWEEN — значення ні на що не впливає.
 - `Gamehall / Open-thumb-provider` — продуктовий (тільки Gamehall) → Patterns; не копіювався. Дефекти: шар `Prowider wrap` (опечатка), текст `7Mojos` без стилю, `Frame 1321316241`, лого провайдера з чужої бібліотеки.
+
+## Токени Filter button (2026-10-22, у гілці Token Studio `filter-button-tabs-sort`)
+- `contextual.filter-sort.item.fill.hover` → `{semantic.fill.hover}` (було `core.grey.300`), `.active` → `{semantic.fill.active}` (було `core.grey.200a40`); новий alias `semantic.fill.active` = `{core.grey.200a40}`.
+- Текст, іконка, шеврон — глобальні `semantic.text.*` / `semantic.icon.*` напряму (правило).
+- `filter-sort.button.{height, padding-vertical, padding-left.icon, padding-left.text, padding-right, gap, icon-size, chevron-size}`; padding-right вирівняно до 8 у всіх станах.
