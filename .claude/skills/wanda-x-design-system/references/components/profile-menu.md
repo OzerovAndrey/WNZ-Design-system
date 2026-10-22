@@ -62,3 +62,9 @@ Section `List-item`: `List-item` (основний) і `List-item/Bullet` під
 - Кольори Inverted: текст `semantic.text.default-invert.heading|primary|secondary`; іконки й шеврон — теж `semantic.text.default-invert.*` (групи `semantic.icon.*-invert` немає); заливка Active/Open — **white @10% числом** (токена немає → потрібен `contextual.profile-menu.item.fill.active-inverted` або `semantic.fill.*-invert`).
 - Перемкнуто на Inverted: Payment sidebar (3 пункти, Chevron off) і Profile popup content mobile / tab=balances (6 пунктів).
 - У XON `semantic.text.default.*` і так білий — Inverted і звичайний там збігаються за текстом.
+
+## Стандартизація (2026-10-22, на запит Андрея)
+- `Profile Menu` — **один компонент** без `Device`: VERTICAL, ширина 235, SLOT `Items` (preferred `Profile Menu/Item`), gap 0; дефолт — 3 пункти. Відступ між пунктами в мобільному попапі — override gap слота (4) в інстансі.
+- Дефолтний вміст: усі тексти `Label`, іконка `plus` (Static — Icons); у розкритих Item — 3 Subitem `Label`.
+- Живі інстанси (Profile sidebar, Payment sidebar, Profile popup content mobile) перенесено з усіма текстами/іконками/станами; старий набір `Profile Menu (Device)` видалено (це була наша проміжна збірка, не оригінал).
+- Урок: якщо текст інстансу дорівнює дефолтному тексту мейна, override немає — зміна дефолту його перепише (так злетів `Balances`, відновлено). Перед зміною дефолтів — фіксувати тексти в інстансах.

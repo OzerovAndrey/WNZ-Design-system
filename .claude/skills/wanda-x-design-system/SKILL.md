@@ -94,6 +94,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-22 — **Profile Menu стандартизовано:** один компонент без Device (слот, 3 пункти), дефолти `Label` + іконка `plus`; живі макети перенесено.
 - 2026-10-22 — **Profile Menu: Inverted** для Item (8v) і Subitem (4v); Payment sidebar і Profile popup mobile перемкнуто на Inverted (`components/profile-menu.md`).
 - 2026-10-22 — **Profile Menu**: 6 старих наборів (34 варіанти) зведено в 3 (8 варіантів); живі використання в Profile sidebar, Profile popup mobile, Payment sidebar, anchors замінено; оригінали в Section `Originals` (`components/profile-menu.md`). `List-item` + `List-item/Bullet` (виправлені командою) — у власній Section.
 - 2026-10-22 — **правило:** квадратні елементи — lock aspect ratio, токен розміру лише на висоту; застосовано до іконок Filter sort.
