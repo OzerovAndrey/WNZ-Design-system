@@ -55,3 +55,10 @@ Payment sidebar (Cashbox s2p) — темно-синій фон, пункти з�
 
 ## List-item (виправлено командою)
 Section `List-item`: `List-item` (основний) і `List-item/Bullet` під ним — еталон, оформлено за `section-layout.md`.
+
+## Inverted (2026-10-22, на запит Андрея)
+Темні контексти: `Payment sidebar` (`semantic.background.slate-1` — темний в обох брендах) і `Profile popup mobile` → `Content container` (темний фон на видаленій змінній).
+- `Profile Menu/Item`: `Active × Open × Inverted` = 8 варіантів; `Profile Menu/Subitem`: `State × Inverted` = 4. `Profile Menu` сам кольорів не має — Inverted не потрібен (пункти в слоті перемикаються в інстансі).
+- Кольори Inverted: текст `semantic.text.default-invert.heading|primary|secondary`; іконки й шеврон — теж `semantic.text.default-invert.*` (групи `semantic.icon.*-invert` немає); заливка Active/Open — **white @10% числом** (токена немає → потрібен `contextual.profile-menu.item.fill.active-inverted` або `semantic.fill.*-invert`).
+- Перемкнуто на Inverted: Payment sidebar (3 пункти, Chevron off) і Profile popup content mobile / tab=balances (6 пунктів).
+- У XON `semantic.text.default.*` і так білий — Inverted і звичайний там збігаються за текстом.
