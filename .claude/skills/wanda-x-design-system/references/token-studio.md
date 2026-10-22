@@ -40,9 +40,11 @@ MB — світлий продукт (page `#f0f8ff`, heading `#113098`), XON �
 
 **Компонент з однієї частини** (Chip, Tag, Badge) — без проміжного рівня `base`/`item`: кольори прямо в `contextual.<component>.<role>.<state>`, інвертовані — `contextual.<component>-invert.<role>.<state>` (`contextual.chip.border.hover`, `contextual.chip-invert.color.default`). Рівень частини (`item`, як в Anchor) — лише коли в компоненті є під-компоненти.
 
-**Мінімум токенів:** текст і іконка одного елемента — **один** токен кольору (`color`, як `accordion.color.primary`); симетричні падінги — один токен `padding-horizontal` / `padding-vertical`, а не `padding-left` + `padding-right`; **структуру частин не зливати**: `item` / `item-invert` мають кожен свій `fill`, навіть якщо значення однакові (команда може розвести їх пізніше).
+**Мінімум токенів:** текст і іконка одного елемента — **один** токен кольору (`color`, як `accordion.color.primary`); симетричні падінги — один токен `padding-h` / `padding-v` (рішення 2026-10-22; висоту рядків — токеном `height`, не `padding-v`), а не `padding-left` + `padding-right`; **структуру частин не зливати**: `item` / `item-invert` мають кожен свій `fill`, навіть якщо значення однакові (команда може розвести їх пізніше).
 
-Значення — аліаси на alias/core (`{spacing.200}`, `{semantic.fill.default}`); сирі числа лише там, де немає відповідного аліасу (20).
+Значення — **тільки аліаси на alias** (`{spacing.200}`, `{size.300}`, `{semantic.fill.subtle}`, `{border-radius.global.md}`), не на core (рішення 2026-10-22); бракує в alias — додати alias-токен. Сирі числа лише там, де немає шкали (364, 20).
+
+**Робочий цикл (JSON-handoff)** — `working-agreements.md` §2: Андрей дає JSON alias+component MB/XON зі своєї бренчі → Claude редагує й diff-перевіряє → повертає файли → Андрей вставляє й робить Export.
 
 ## Як вставляти JSON вручну (JSON-вкладка сету)
 Сет — один великий JSON-обʼєкт. **Ніколи** не вставляти новий обʼєкт `{ … }` у кінець файлу і **не дублювати кореневі ключі** `border-radius`, `contextual` — дубль ключа перезапише всю групу (всі `contextual.*` сету зникнуть).
@@ -53,8 +55,8 @@ MB — світлий продукт (page `#f0f8ff`, heading `#113098`), XON �
 5. Повторити для `xon/component`.
 6. **Styles & Variables → Export** у колекцію `Product`; опцію видалення змінних без звʼязку не вмикати.
 
-## Запис токенів напряму в storage (Claude)
-Коли ручна вставка незручна — Claude може дописати токени у файл сам:
+## Запис токенів напряму в storage (Claude) — НЕ ВИКОРИСТОВУВАТИ
+Storage перезаписує синхронізація з GitHub (перевірено 2026-10-21). Лише для довідки:
 - Дані: `figma.root` shared plugin data, namespace `tokens`: `values_meta` = `{"type":"chunked","count":N}`, `values_chunk_0..N-1` = LZ-string `compressToUTF16` від JSON `{ "<set>": [{name, value, type}] }`. Читати рівно `count` чанків (у файлі бувають залишкові чанки поза `count`).
 - Ліміт Plugin API — 100 kB (UTF-8) на запис → чанки ≤ 30 000 символів; оновити `values_meta.count`, очистити зайві чанки, оновити `updatedAt`.
 - Обовʼязково: закритий плагін Token Studio; бекап оригіналу в namespace `claude_backup`; roundtrip-перевірка компресора до запису і після.
