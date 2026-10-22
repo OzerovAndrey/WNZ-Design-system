@@ -1,4 +1,4 @@
-# Profile Menu (сторінка `↳ List item - Андрей`)
+# List (раніше Profile Menu; сторінка `↳ List item - Андрей`)
 
 Оптимізована копія — Section `Profile Menu` (node `78859:297190`), поруч зі старими наборами. Зроблено 2026-10-22 на запит Андрея.
 
@@ -72,3 +72,8 @@ Section `List-item`: `List-item` (основний) і `List-item/Bullet` під
 ## State замість Active × Open (2026-10-22, рішення Андрея)
 «Не активний пункт не може бути відкритим»: `Profile Menu/Item` = `State = Default | Active | Open` × `Inverted` = 6 варіантів (+ boolean `Chevron`, `Tag`, SLOT `Items`). `Open` = активний і розкритий (заголовок як Active + слот підпунктів). Варіанти `Active=False, Open=True` видалено (0 інстансів), інші перейменовано без втрати інстансів.
 Виправлено: у клонованих Inverted-варіантах злетіли componentPropertyReferences (`Chevron`, `Tag` — шар `Tag` зник); відновлено на всіх варіантах. Урок: після `clone()` варіанта перевіряти посилання на властивості.
+
+## Перейменування (2026-10-22, Андрей)
+`Profile Menu` → **`List`**, `Profile Menu/Item` → **`List/Item`**, `Profile Menu/Subitem` → **`List/Subitem`**; Section → `List`. `List/Subitem` лишається — це вміст слота `Items` у `List/Item` (State=Open): активний підпункт, Badge, довільна кількість.
+Увага: в Section `Originals` теж є старий набір `List` (60349:55717) — однакова назва в Assets.
+Токени, запропоновані як `profile-menu.*`, тепер мають бути `list.*` / `list.item.*` / `list.subitem.*`.
