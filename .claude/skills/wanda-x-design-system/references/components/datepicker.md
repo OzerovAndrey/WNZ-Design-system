@@ -32,17 +32,26 @@ Section Datepicker (#BBBBBB, 80 px) — основний зверху, під-к
 - Вкладені інстанси Datepicker перемкнуто на нові під-компоненти, числа й назви місяців збережено як override-и тексту (text-властивостей немає — правило 2026-10-22).
 - Шари: `button` → `Footer`, `Days of the week` → `Week days`, `months row` → `Row`, `wrap` → `Day`.
 
-## Токени — стан як в оригіналі (перепривʼязку відкочено 2026-10-22)
-Копія, як і оригінал, прив'язана до змінних **видаленої колекції** (`66812:267089`): 646 прив'язок, шари показують кешовані значення. Спроба перепривʼязати на наявні змінні/шкалу відкочена на прохання Андрея — потрібні саме ті токени, яких зараз немає; рішення за командою.
+## Токени (2026-10-22)
+Компонент був прив'язаний до змінних видаленої колекції (`66812:267089`). Відсутні токени **створено** з тими самими аліасами, що були у видалених змінних — у `mb/component` і `xon/component` (однакові) + змінні `Product` (явні scopes), JSON — `tokens/datepicker.new-tokens.json`:
 
-Змінні, на які посилається компонент:
-| Є в Product і Token Studio | **Немає ніде (треба створити)** |
-|---|---|
-| `contextual.datepicker.{fill,border,bottom-fill}`, `datepicker.padding`, `contextual.datepicker.item.{fill,border}.{default,hover,today,selected,selected-range,disabled}`, `semantic.text.{default.primary,disabled.primary,brand.on-brand}`, `button.gap.sm` | `datepicker.date.size` (→size.500, 40), `border-radius.datepicker.item` (→core.full), `border-radius.datepicker.all` (→core.300), `datepicker.gap` (→spacing.200), `datepicker.selects.gap` (→spacing.400), `datepicker.weeks.gap`, `datepicker.weeks.item.gap` (→spacing.0), `datepicker.months.padding-horizontal` (→spacing.200), `datepicker.months.padding-vertical` (→spacing.400), `contextual.datepicker.item.text.selected` (→core.content.a100) |
+| Токен | Значення | Scope |
+|---|---|---|
+| `datepicker.date.size` | `{size.500}` (40) | WIDTH_HEIGHT |
+| `datepicker.gap` | `{spacing.200}` | GAP |
+| `datepicker.selects.gap` | `{spacing.400}` | GAP |
+| `datepicker.weeks.gap` | `{spacing.0}` | GAP |
+| `datepicker.weeks.item.gap` | `{spacing.0}` | GAP |
+| `datepicker.months.padding-horizontal` | `{spacing.200}` | GAP |
+| `datepicker.months.padding-vertical` | `{spacing.400}` | GAP |
+| `border-radius.datepicker.item` | `{border-radius.core.full}` | CORNER_RADIUS |
+| `border-radius.datepicker.all` | `{border-radius.core.300}` | CORNER_RADIUS |
+| `contextual.datepicker.item.text.selected` | `{core.content.a100}` | TEXT_FILL |
 
-Навіть ті, що «є», на шарах вказують на старі (видалені) id — після створення відсутніх токенів і Export з Token Studio потрібна перепривʼязка за назвою.
-Hardcode як в оригіналі: Footer padding 16/8, `Row` gap 8, Week day padding 6.
-Єдина відмінність від оригіналу: текст `Datepicker/Week day` — `semantic/text/default/primary` у мейні (в оригіналі колір давали override-и інстансів).
+Копію перепривʼязано **за назвою** (видалена змінна → жива з тією ж назвою): 392 прив'язки, 0 мертвих; токени TS на шарах — для всіх прив'язаних властивостей.
+Без токенів (як в оригіналі): Footer padding 16/8, `Row` gap 8, Week day padding 6.
+⚠ `contextual.datepicker.item.text.selected` = `core.content.a100` → у MB цифра вибраної дати темна (кешований колір оригіналу був білий). Порушує правило 6 (core замість semantic) — так було у видаленій змінній.
+Оригінал (зліва) досі на видалених змінних.
 
 ## Відхилення / питання (не виправлялось — точна копія)
 - Немає `Inverted` — потребує нових токенів.
