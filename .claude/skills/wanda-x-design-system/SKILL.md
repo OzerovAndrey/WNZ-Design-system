@@ -48,7 +48,8 @@ description: Правила, еталони та чекліст очистки �
 6. **Свої компонентні токени.** Компонент прив'язується до власних токенів `<component>.*`, `border-radius.<component>.*`, `contextual.<component>.*` у `mb/component` і `xon/component` (значення кольорів — **тільки alias `semantic.*`**, не `core.*`), а не напряму до semantic/core і не до токенів інших компонентів (`references/token-studio.md`).
 7. **Жодних чужих бібліотек.** Змінні з чужих бібліотек (`Colors/text`, `Radius/0`, `spacing/xxs`, `grid/12`, `list item/*` …) заборонені — заміняти на токени колекції `Product`.
 8. **Один компонент — одна сутність.** Дублікати (`Input` ×2, `Selection-controls` vs `Toggles`, 10 наборів `Status` …) зливаються в один набір з варіантами; legacy видаляється або маркується `Deprecated`.
-9. **Неймінг за стандартом** (`references/naming.md`): Title Case англійською, без опечаток, без `Property 1`, без `Frame 123`.
+9. **Без text-властивостей.** `✏️ Label` та інші TEXT-проперті не створюємо — текст міняють вручну в інстансі (рішення 2026-10-22).
+9a. **Неймінг за стандартом** (`references/naming.md`): Title Case англійською, без опечаток, без `Property 1`, без `Frame 123`.
 10. **Auto layout всюди**, де є 2+ дочірніх елементи. Absolute — тільки для оверлеїв/бейджів/масок.
 11. **Продуктові компоненти — не в ДС.** Hall of fame, Cashbox, Welcome bonus, Lootboxes тощо переїжджають у продуктовий файл або розділ Patterns.
 12. **Кожен компонент — у власній Section** з назвою компонента, без сміття на канвасі (нотатки, загублені інстанси, вектори). Section **сіра `#BBBBBB`**, обведення чорне 10%, радіус 2 — як `Anchor`; оформлення — `references/section-layout.md`.
@@ -93,6 +94,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-22 — **правило: без text-властивостей** (`✏️ Label`) — текст змінюється вручну в інстансі. З копії Datepicker (`Week day`, `Date`, `Month`) прибрано, тексти 62 інстансів збережено.
 - 2026-10-22 — **Datepicker: виправлена копія** (на запит Андрея, без нових токенів): Section `Datepicker` поруч з оригіналом; під-компоненти `Datepicker/Week day|Date|Month|Select`, Date — `State × Range` замість `Type` + `Selected range`; `✏️ Label`; прибрано `Title old`; колір Week day перенесено з override-ів у мейн (`components/datepicker.md`).
 - 2026-10-21 — **Chip: Inverted** (на запит Андрея, запис у Figma): набір `Chips` State × Inverted (6v); 9 токенів `contextual.chips.inverted.*` у `mb/component` і `xon/component` + змінні `Product`. Питання: немає `core.white.a8` для Active-інверта (`components/chip-tag.md`).
 - 2026-10-21 — **перший обхід у режимі навчання** (42 сторінки, read-only). Вивчено 💛: Input, Controls, Status, Timer, Empty, Section (+ проміжно Chip & Tag); дайджести в `snapshots/`. Структура файлу: Forms → `Input` + `Controls`, Loader → `Spinner`, Section-title → `Heading` (Molecules), Page → `Layout`, Image → Atoms, Thumb → Molecules, Breadcrumbs і Fader прибрані; `Button/Link` → `Button/Text`. Знімок у git — дайджест (хеші шарів), зміни — режимом `BASELINE`. Сім конвенцій на підтвердження — `open-questions.md`.

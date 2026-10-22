@@ -7,10 +7,10 @@
 ## Анатомія копії
 ```
 Section Datepicker (#BBBBBB, 80 px)
-├─ Datepicker/Week day (78766:182)   COMPONENT · ✏️ Label (Su…Sa)
-├─ Datepicker/Date     (78766:184)   State × Range · ✏️ Label
+├─ Datepicker/Week day (78766:182)   COMPONENT
+├─ Datepicker/Date     (78766:184)   State × Range
 │    Day (було wrap) → Label (було "1")
-├─ Datepicker/Month    (78766:221)   State · ✏️ Label (January)
+├─ Datepicker/Month    (78766:221)   State
 ├─ Datepicker/Select   (78766:232)   COMPONENT · інстанси Input: Month, Year
 └─ Datepicker          (78766:265)   Type = Days | Months
      Days:   Calendar → Select · Weeks → Week days (7× Week day) · Week ×6 (Date) ; Footer (Button sm)
@@ -20,9 +20,8 @@ Section Datepicker (#BBBBBB, 80 px)
 ## Властивості
 | Компонент | Було | Стало |
 |---|---|---|
-| Date | `Type` (12 значень) + `Selected range` = no \| yes (дублює `Type`) | `State` = Default \| Hover \| Today \| Selected \| Selected Hover \| Disabled · `Range` = None \| Start \| Middle \| End · `✏️ Label` |
-| Month | `Type` = Default \| Disabled \| Today \| Hover \| selected | `State` = Default \| Hover \| Today \| Selected \| Disabled · `✏️ Label` |
-| Week day | — | `✏️ Label` |
+| Date | `Type` (12 значень) + `Selected range` = no \| yes (дублює `Type`) | `State` = Default \| Hover \| Today \| Selected \| Selected Hover \| Disabled · `Range` = None \| Start \| Middle \| End |
+| Month | `Type` = Default \| Disabled \| Today \| Hover \| selected | `State` = Default \| Hover \| Today \| Selected \| Disabled |
 | Datepicker | `type` = days \| months | `Type` = Days \| Months |
 
 Мапа Date: Hover-Selected → Selected Hover/None; Start date → Default/Start; Selected range → Default/Middle; End date → Default/End; Hover Start date / Hover Selected range / Hover End date → Hover/Start|Middle|End.
@@ -31,7 +30,7 @@ Section Datepicker (#BBBBBB, 80 px)
 - Набори Date/Month без GRID-лейауту, де варіанти накладались; варіанти сіткою 16 px (рядки Range, колонки State).
 - Прихований `Title old` (вектори + текст `June` без стилю) прибрано.
 - `Week day`: у мейні текст був білий hardcode, колір давали override-и інстансів → у мейн перенесено `semantic/text/default/primary` (+ токен на шарі `fill`), як в override-ах оригіналу.
-- Вкладені інстанси Datepicker перемкнуто на нові під-компоненти, числа й назви місяців збережено через `✏️ Label`.
+- Вкладені інстанси Datepicker перемкнуто на нові під-компоненти, числа й назви місяців збережено як override-и тексту (text-властивостей немає — правило 2026-10-22).
 - Шари: `button` → `Footer`, `Days of the week` → `Week days`, `months row` → `Row`, `wrap` → `Day`.
 
 ## Токени (без змін, як в оригіналі)

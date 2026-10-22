@@ -20,7 +20,7 @@
 | Variant breakpoint | `Breakpoint` | токен брейкпоінта | `3xs \| sm \| lg \| xl \| 2xl` |
 | Boolean | Title Case / іконка | — | `Show`, `Indicator`, `⬅️ Icon`, `Icon ➡️` |
 | Instance swap | `↳ 💠 …` | — | `↳ 💠 Icon left` |
-| Text | `✏️ …` | — | `✏️ Label` |
+| Text | **не використовується** | — | текст міняють вручну в інстансі (рішення 2026-10-22) |
 | Slot | Title Case | — | `Trigger`, `Body`, `↳ Slot` |
 
 Стандартні значення `State`: `Default | Hover | Active | Selected | Disabled` (+ `Error`, `Filled`, `Focus` для форм). Порядок властивостей: `Variant → Size → State → Inverted → решта`.
