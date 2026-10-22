@@ -96,7 +96,7 @@ description: Правила, еталони та чекліст очистки �
 ## Журнал
 - 2026-10-22 — **правило:** квадратні елементи — lock aspect ratio, токен розміру лише на висоту; застосовано до іконок Filter sort.
 - 2026-10-22 — **неймінг токенів падінгів:** `padding-h` / `padding-v`; Filter sort перейменовано (`naming.md`).
-- 2026-10-22 — **правило:** текст, іконки, шеврони — глобальні `semantic.*` напряму, компонентних колірних токенів для них не створюємо. Filter button: fill hover/active → `semantic.fill.hover` / новий `semantic.fill.active` (alias), розміри `filter-sort.button.*`.
+- 2026-10-22 — **правило:** текст, іконки, шеврони — глобальні `semantic.*` напряму, компонентних колірних токенів для них не створюємо. Filter button: fill hover/active → `semantic.fill.hover` / новий `semantic.fill.active` (alias), розміри `filter-sort.*`.
 - 2026-10-22 — **Filter & Sorting вивчено**: використання (Inverted не потрібен — темного контексту немає), впорядкована копія `Tabs & Sort` + `Filter button` (`Type=Icon|Text`), список наявних і потрібних токенів; Open-thumb-provider → Patterns (`components/filter-sorting.md`).
 - 2026-10-22 — **Datepicker: створено відсутні токени** (10 шт., аліаси з видалених змінних) у TS MB/XON + `Product`; копію перепривʼязано за назвою (`components/datepicker.md`, `tokens/datepicker.new-tokens.json`).
 - 2026-10-22 — **Datepicker: перепривʼязку відкочено** — копія знову на змінних видаленої колекції, як оригінал; список відсутніх токенів — `components/datepicker.md`. Урок: не підміняти відсутні токени наявними без погодження.

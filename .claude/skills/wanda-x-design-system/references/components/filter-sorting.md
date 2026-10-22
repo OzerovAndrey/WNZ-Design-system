@@ -41,13 +41,13 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 **Треба створити (зараз hardcode):**
 | Пропозиція | Значення | Де |
 |---|---|---|
-| `filter-sort.button.height` | 32 → `{size.400}` | корінь Filter button |
-| `filter-sort.button.padding-vertical` | 4 → `{spacing.100}` | |
-| `filter-sort.button.padding-left.icon` / `.text` | 8 / 12 | Type=Icon / Text |
-| `filter-sort.button.padding-right` | 8 (Default) / 4 (Hover, Active) ⚠ розбіжність — ширина «стрибає» при hover | |
-| `filter-sort.button.gap` | 2 → `{spacing.50}` | |
-| `filter-sort.button.icon-size` | 20 | Icon |
-| `filter-sort.button.chevron-size` | 16 → `{size.200}` | Chevron |
+| `filter-sort.height` | 32 → `{size.400}` | корінь Filter button |
+| `filter-sort.padding-vertical` | 4 → `{spacing.100}` | |
+| `filter-sort.padding-left.icon` / `.text` | 8 / 12 | Type=Icon / Text |
+| `filter-sort.padding-right` | 8 (Default) / 4 (Hover, Active) ⚠ розбіжність — ширина «стрибає» при hover | |
+| `filter-sort.gap` | 2 → `{spacing.50}` | |
+| `filter-sort.icon-size` | 20 | Icon |
+| `filter-sort.chevron-size` | 16 → `{size.200}` | Chevron |
 | `tabs-sort.padding-horizontal` | 32 → `{spacing.800}` | Tabs & Sort |
 | `tabs-sort.chips.gap` | 8 → `{spacing.200}` | Chips |
 
@@ -62,7 +62,7 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 ## Токени Filter button (2026-10-22, у гілці Token Studio `filter-button-tabs-sort`)
 - `contextual.filter-sort.item.fill.hover` → `{semantic.fill.hover}` (було `core.grey.300`), `.active` → `{semantic.fill.active}` (було `core.grey.200a40`); новий alias `semantic.fill.active` = `{core.grey.200a40}`.
 - Текст, іконка, шеврон — глобальні `semantic.text.*` / `semantic.icon.*` напряму (правило).
-- `filter-sort.button.{height (size.400), padding-v (spacing.100), padding-h (spacing.200 — 8 з обох боків у всіх варіантах, Label раніше мав зліва 12), gap (spacing.50), icon-size (20), chevron-size (size.200)}` — прив'язано на копії `Filter sort` (78821:89) разом зі змінними Product.
+- `filter-sort.{height (size.400), padding-v (spacing.100), padding-h (spacing.200 — 8 з обох боків у всіх варіантах, Label раніше мав зліва 12), gap (spacing.50), icon-size (20), chevron-size (size.200)}` — прив'язано на копії `Filter sort` (78821:89) разом зі змінними Product.
 
 ## Tabs & Sort — слот (2026-10-22)
 - Команда: `Breakpoint` → `Mobile = False | True`, `Filter button` → `Filter sort`.
