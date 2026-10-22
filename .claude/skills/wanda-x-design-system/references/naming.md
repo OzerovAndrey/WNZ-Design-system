@@ -62,3 +62,6 @@
 ## Відомі опечатки (виправити)
 
 `Progres/Step` → `Progress/Step` · `Welcom-bonus` → `Welcome bonus` · `status achivments card` / `contextual/achivments` → `achievements` · `Whaiting` → `Waiting` · `Tornament` → `Tournament` · `wining now` → `Winning now` · `bage` → `Badge` · `Openned` → `Opened` · `proress+points` · `opientation` → `Orientation` · `transperrent` → `Transparent` · `Payment llist items` → `Payment list items` · `(Debricate)` → `Deprecated`.
+
+## Токени: падінги
+`padding-h` (горизонтальні) і `padding-v` (вертикальні) — не `padding-horizontal` / `padding-vertical` (рішення 2026-10-22). Окремі сторони — `padding-left`, `padding-right`, `padding-top`, `padding-bottom` лише коли значення різні.

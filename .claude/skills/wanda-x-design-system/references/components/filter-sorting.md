@@ -62,4 +62,4 @@ Section Filter & Sorting (#BBBBBB, 80 px)
 ## Токени Filter button (2026-10-22, у гілці Token Studio `filter-button-tabs-sort`)
 - `contextual.filter-sort.item.fill.hover` → `{semantic.fill.hover}` (було `core.grey.300`), `.active` → `{semantic.fill.active}` (було `core.grey.200a40`); новий alias `semantic.fill.active` = `{core.grey.200a40}`.
 - Текст, іконка, шеврон — глобальні `semantic.text.*` / `semantic.icon.*` напряму (правило).
-- `filter-sort.button.{height (size.400), padding-vertical (spacing.100), padding-horizontal (spacing.200 — 8 з обох боків у всіх варіантах, Label раніше мав зліва 12), gap (spacing.50), icon-size (20), chevron-size (size.200)}` — прив'язано на копії `Filter sort` (78821:89) разом зі змінними Product.
+- `filter-sort.button.{height (size.400), padding-v (spacing.100), padding-h (spacing.200 — 8 з обох боків у всіх варіантах, Label раніше мав зліва 12), gap (spacing.50), icon-size (20), chevron-size (size.200)}` — прив'язано на копії `Filter sort` (78821:89) разом зі змінними Product.
