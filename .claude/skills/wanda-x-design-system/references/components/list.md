@@ -77,3 +77,9 @@ Section `List-item`: `List-item` (основний) і `List-item/Bullet` під
 `Profile Menu` → **`List`**, `Profile Menu/Item` → **`List/Item`**, `Profile Menu/Subitem` → **`List/Subitem`**; Section → `List`. `List/Subitem` лишається — це вміст слота `Items` у `List/Item` (State=Open): активний підпункт, Badge, довільна кількість.
 Увага: в Section `Originals` теж є старий набір `List` (60349:55717) — однакова назва в Assets.
 Токени, запропоновані як `profile-menu.*`, тепер мають бути `list.*` / `list.item.*` / `list.subitem.*`.
+
+## Токени (2026-10-22) — компоненти тепер `Profile-menu`, `Profile-menu/Item`, `Profile-menu/Subitem`
+Alias +1: `semantic.fill.subtle-invert` = `{core.white.500}` alpha 0.1 (MB, XON).
+Component: `profile-menu.item.padding-h|padding-v` {spacing.300}, `.gap` {spacing.100} (root + слот), `.content-gap` {spacing.200} (Header), `.icon-size` {size.300} (Icon, Chevron — висота + lock), `border-radius.profile-menu.item` {border-radius.global.md}, `contextual.profile-menu.item.fill.active` {semantic.fill.subtle}, `contextual.profile-menu.item.inverted.fill.active` {semantic.fill.subtle-invert}; `profile-menu.subitem.padding-v` {spacing.200}, `.padding-left` {spacing.800}, `.padding-right` {spacing.300} (було 44), `.gap` {spacing.200}. Прив'язано на всіх 6 + 4 варіантах.
+Зміни вигляду: Active/Open MB — 101,109,143@15 → `semantic.fill.subtle` (content a8); Subitem padding-right 44 → 12.
+Увага: Export з бренчі без цих токенів видаляє створені вручну змінні (так злетіли List-змінні — відновлено й перепривʼязано за TS-посиланнями).
