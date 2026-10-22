@@ -94,7 +94,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
-- 2026-10-22 — **Datepicker: перепривʼязка** — копія була повністю на змінних видаленої колекції; 382 прив'язки переведено на живі змінні Product (+ токени TS на шарах), відсутні `datepicker.*` — на шкалу `spacing/size/border-radius.core`, hardcode прибрано (`components/datepicker.md`).
+- 2026-10-22 — **Datepicker: перепривʼязку відкочено** — копія знову на змінних видаленої колекції, як оригінал; список відсутніх токенів — `components/datepicker.md`. Урок: не підміняти відсутні токени наявними без погодження.
 - 2026-10-22 — **правило порядку в Section:** основний компонент (той, що йде в дизайн) — завжди перший, під-компоненти під ним; Section Datepicker переставлено (`section-layout.md`).
 - 2026-10-22 — **правило: без text-властивостей** (`✏️ Label`) — текст змінюється вручну в інстансі. З копії Datepicker (`Week day`, `Date`, `Month`) прибрано, тексти 62 інстансів збережено.
 - 2026-10-22 — **Datepicker: виправлена копія** (на запит Андрея, без нових токенів): Section `Datepicker` поруч з оригіналом; під-компоненти `Datepicker/Week day|Date|Month|Select`, Date — `State × Range` замість `Type` + `Selected range`; `✏️ Label`; прибрано `Title old`; колір Week day перенесено з override-ів у мейн (`components/datepicker.md`).

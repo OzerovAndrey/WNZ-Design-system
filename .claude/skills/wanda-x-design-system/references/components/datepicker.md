@@ -32,20 +32,17 @@ Section Datepicker (#BBBBBB, 80 px) — основний зверху, під-к
 - Вкладені інстанси Datepicker перемкнуто на нові під-компоненти, числа й назви місяців збережено як override-и тексту (text-властивостей немає — правило 2026-10-22).
 - Шари: `button` → `Footer`, `Days of the week` → `Week days`, `months row` → `Row`, `wrap` → `Day`.
 
-## Токени (перепривʼязано 2026-10-22, нових не створювали)
-Аудит копії показав: **усі** прив'язки вели на змінні з видаленої колекції (`66812:267089`) — шари показували кешовані значення. Перепривʼязано 382 прив'язки (184 на мейнах + 198 override-ів в інстансах); на кожну властивість мейнів — токен Token Studio на шарі. Після правки: 0 мертвих змінних, 0 шарів без токена, 0 hardcode.
+## Токени — стан як в оригіналі (перепривʼязку відкочено 2026-10-22)
+Копія, як і оригінал, прив'язана до змінних **видаленої колекції** (`66812:267089`): 646 прив'язок, шари показують кешовані значення. Спроба перепривʼязати на наявні змінні/шкалу відкочена на прохання Андрея — потрібні саме ті токени, яких зараз немає; рішення за командою.
 
-| Що | Прив'язка |
+Змінні, на які посилається компонент:
+| Є в Product і Token Studio | **Немає ніде (треба створити)** |
 |---|---|
-| Кольори айтема | `contextual.datepicker.item.{fill,border}.{default,hover,today,selected,selected-range,disabled}` (є в TS і Product) |
-| Картка | `contextual.datepicker.{fill,border,bottom-fill}`, `datepicker.padding` (є) |
-| Тексти | `semantic.text.default.primary`, `semantic.text.disabled.primary`, `semantic.text.brand.on-brand` |
-| **Токенів немає ні в TS, ні в Product → на шкалу (значення ті самі)** | `datepicker/date/size` → `size.500`; `border-radius/datepicker/item` → `border-radius.core.full`; `border-radius/datepicker/all` → `border-radius.core.300`; `datepicker/gap` → `spacing.200`; `datepicker/selects/gap` → `spacing.400`; `datepicker/weeks/gap`, `weeks/item/gap` → `spacing.0`; `datepicker/months/padding-horizontal` → `spacing.200`, `-vertical` → `spacing.400` |
-| `contextual/datepicker/item/text/selected` (не існує) | → `semantic.text.brand.on-brand`, як у решти Selected-станів (Start/End, Selected Hover, Month Selected) |
-| Був hardcode | Footer `px 16` → `datepicker.padding`, `py 8` → `spacing.200`; `Row` gap 8 → `spacing.200`; Week day `py 6` → `spacing.150`; gap у фреймах з одним дочірнім → 0 |
+| `contextual.datepicker.{fill,border,bottom-fill}`, `datepicker.padding`, `contextual.datepicker.item.{fill,border}.{default,hover,today,selected,selected-range,disabled}`, `semantic.text.{default.primary,disabled.primary,brand.on-brand}`, `button.gap.sm` | `datepicker.date.size` (→size.500, 40), `border-radius.datepicker.item` (→core.full), `border-radius.datepicker.all` (→core.300), `datepicker.gap` (→spacing.200), `datepicker.selects.gap` (→spacing.400), `datepicker.weeks.gap`, `datepicker.weeks.item.gap` (→spacing.0), `datepicker.months.padding-horizontal` (→spacing.200), `datepicker.months.padding-vertical` (→spacing.400), `contextual.datepicker.item.text.selected` (→core.content.a100) |
 
-Питання: повернути компонентні токени `datepicker.*` / `border-radius.datepicker.*` у Token Studio (зараз шкала напряму) — правило 6.
-Оригінал (зліва) досі прив'язаний до видалених змінних.
+Навіть ті, що «є», на шарах вказують на старі (видалені) id — після створення відсутніх токенів і Export з Token Studio потрібна перепривʼязка за назвою.
+Hardcode як в оригіналі: Footer padding 16/8, `Row` gap 8, Week day padding 6.
+Єдина відмінність від оригіналу: текст `Datepicker/Week day` — `semantic/text/default/primary` у мейні (в оригіналі колір давали override-и інстансів).
 
 ## Відхилення / питання (не виправлялось — точна копія)
 - Немає `Inverted` — потребує нових токенів.
