@@ -94,6 +94,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-22 — **List / List/Bullet: токени** (`list.*`, `border-radius.list.bullet`, `contextual.list.bullet.fill.*`) + нові alias `semantic.fill.subtle`, `border-radius.global.xs`; **правило:** компонентні токени — тільки через alias, не core (`components/list-bullet.md`).
 - 2026-10-22 — **Profile Menu → `List`** (`List/Item`, `List/Subitem`), перейменував Андрей; Section `List`; документація → `components/list.md`.
 - 2026-10-22 — **Profile Menu/Item: `State = Default | Active | Open`** × Inverted (6v) — неактивний не може бути відкритим (рішення Андрея).
 - 2026-10-22 — **Profile Menu стандартизовано:** один компонент без Device (слот, 3 пункти), дефолти `Label` + іконка `plus`; живі макети перенесено.
