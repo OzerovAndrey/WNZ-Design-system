@@ -94,6 +94,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-22 — **правило:** квадратні елементи — lock aspect ratio, токен розміру лише на висоту; застосовано до іконок Filter sort.
 - 2026-10-22 — **неймінг токенів падінгів:** `padding-h` / `padding-v`; Filter sort перейменовано (`naming.md`).
 - 2026-10-22 — **правило:** текст, іконки, шеврони — глобальні `semantic.*` напряму, компонентних колірних токенів для них не створюємо. Filter button: fill hover/active → `semantic.fill.hover` / новий `semantic.fill.active` (alias), розміри `filter-sort.button.*`.
 - 2026-10-22 — **Filter & Sorting вивчено**: використання (Inverted не потрібен — темного контексту немає), впорядкована копія `Tabs & Sort` + `Filter button` (`Type=Icon|Text`), список наявних і потрібних токенів; Open-thumb-provider → Patterns (`components/filter-sorting.md`).
