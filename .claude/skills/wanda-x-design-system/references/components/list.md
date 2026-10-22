@@ -83,3 +83,10 @@ Alias +1: `semantic.fill.subtle-invert` = `{core.white.500}` alpha 0.1 (MB, XON)
 Component: `profile-menu.item.padding-h|padding-v` {spacing.300}, `.gap` {spacing.100} (root + слот), `.content-gap` {spacing.200} (Header), `.icon-size` {size.300} (Icon, Chevron — висота + lock), `border-radius.profile-menu.item` {border-radius.global.md}, `contextual.profile-menu.item.fill.active` {semantic.fill.subtle}, `contextual.profile-menu.item.inverted.fill.active` {semantic.fill.subtle-invert}; `profile-menu.subitem.padding-v` {spacing.200}, `.padding-left` {spacing.800}, `.padding-right` {spacing.300} (було 44), `.gap` {spacing.200}. Прив'язано на всіх 6 + 4 варіантах.
 Зміни вигляду: Active/Open MB — 101,109,143@15 → `semantic.fill.subtle` (content a8); Subitem padding-right 44 → 12.
 Увага: Export з бренчі без цих токенів видаляє створені вручну змінні (так злетіли List-змінні — відновлено й перепривʼязано за TS-посиланнями).
+
+## Profile-menu/Item — без Header, висота сайзом (2026-10-22, Андрей)
+- Default/Active: обгортку `Header` прибрано — Icon, Label, Tag, Chevron прямо в корені (HORIZONTAL, counter center). Корінь: `height` = `profile-menu.item.height` ({size.600} = 48), `padding-h`, gap = `content-gap`. Вертикальні падінги й `item.gap` прибрано (токени видалено).
+- Open: корінь VERTICAL без падінгів; рядок `Header` лишається (без нього шапку й слот не скласти), він має height 48 + padding-h + content-gap; слот: gap 0, padding-left = `padding-h` (текст підпунктів на 12+32 = 44, як у Label). Висота Open 144.
+- Subitem: лише `padding-left` {spacing.800} і `height` {size.400} = 32; інші падінги 0; текст FILL + обрізання.
+- **Правило:** висоту рядкових компонентів задаємо токеном розміру (height), не вертикальними падінгами.
+- Перенос шарів з Header змінює шлях → override-и інстансів (тексти, іконки) злітають; перед зміною — записати override-и і повернути (зроблено для 16 пунктів у макетах).
