@@ -38,3 +38,20 @@
 
 ## Inverted
 Payment sidebar (Cashbox s2p) — темно-синій фон, пункти зараз нечитабельні → Inverted потрібен для `Item`/`Subitem`, якщо Payment переходить на Profile Menu. Profile sidebar / popup — світлі, не потрібен.
+
+## Міграція (2026-10-22, на запит Андрея)
+Перевірено всі інстанси 6 старих наборів по файлу (`getInstancesAsync`, з вкладеністю). Живі використання замінено на Profile Menu з тими самими текстами, іконками, станами й видимістю:
+| Де | Було | Стало |
+|---|---|---|
+| `Profile +` → `Profile sidebar / Type=New` | `List` Desktop (6 пунктів) + Logout (`List item profile (Cashbox)`) | `Profile Menu` Desktop + `Profile Menu/Item` (Chevron off) |
+| `Profile +` → `Profile popup content mobile / tab=balances` | `List` Mobile (6) | `Profile Menu` Mobile |
+| `Cashbox (s2p), Payment block` → `Payment sidebar` | `Payment llist items / Old` (Payment history — Active, помаранчевий) | `Profile Menu` Desktop, Payment history — Active (сіра заливка) |
+| `[???]` → `anchors` | прихований `[new]` | прихований `Profile Menu/Item` |
+| `Profile +` (загублений на канвасі) | `List subitem profile (Cashbox)` | `Profile Menu/Subitem` |
+
+Не чіпали: `Profile sidebar / Type=Old` (0 інстансів) — досі на Cashbox-пунктах. Payment popup має зламаний темний фон (`slate-1` на всьому макеті) — окрема задача.
+
+Оригінали **не видалені** — Section `Originals — Profile list (не використовувати)` на тій же сторінці. Порядок сторінки: `List-item` → `Profile Menu` → `Originals`.
+
+## List-item (виправлено командою)
+Section `List-item`: `List-item` (основний) і `List-item/Bullet` під ним — еталон, оформлено за `section-layout.md`.

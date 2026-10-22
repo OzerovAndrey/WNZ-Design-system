@@ -94,6 +94,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-22 — **Profile Menu**: 6 старих наборів (34 варіанти) зведено в 3 (8 варіантів); живі використання в Profile sidebar, Profile popup mobile, Payment sidebar, anchors замінено; оригінали в Section `Originals` (`components/profile-menu.md`). `List-item` + `List-item/Bullet` (виправлені командою) — у власній Section.
 - 2026-10-22 — **правило:** квадратні елементи — lock aspect ratio, токен розміру лише на висоту; застосовано до іконок Filter sort.
 - 2026-10-22 — **неймінг токенів падінгів:** `padding-h` / `padding-v`; Filter sort перейменовано (`naming.md`).
 - 2026-10-22 — **правило:** текст, іконки, шеврони — глобальні `semantic.*` напряму, компонентних колірних токенів для них не створюємо. Filter button: fill hover/active → `semantic.fill.hover` / новий `semantic.fill.active` (alias), розміри `filter-sort.*`.
