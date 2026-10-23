@@ -100,6 +100,7 @@ description: Правила, еталони та чекліст очистки �
 - Token Studio (storage у файлі, запис токенів, токени на шарах) — `references/token-studio.md`.
 
 ## Журнал
+- 2026-10-23 — **Table: оригінали зібрано на `↳ Table -`** у 4 Section за типом (лідерборди / транзакції / історія з розкриттям / сітки) з підписами. Пастка: набори зі шрифтом, недоступним конектору (MrBet Black), не переносяться через `appendChild` — Mariupol переноситься (`components/table.md`).
 - 2026-10-23 — **Table: інвентаризація** — на сторінці `↳ Table -` лише продуктові набори; ще 9 табличних конструкцій у лейаутах (Tournaments, Profile, FAQ/Statistics, Ingame, Cashbox, Wheel). Анатомія універсального `Table` / `Table/Header` / `Table/Row` / `Table/Cell` і питання — `components/table.md`.
 - 2026-10-22 — **правило: висота рядкових компонентів — size-токен на height, без вертикальних падінгів**; Profile-menu/Item без обгортки Header (`components/list.md`).
 - 2026-10-22 — **List / List/Bullet: токени** (`list.*`, `border-radius.list.bullet`, `contextual.list.bullet.fill.*`) + нові alias `semantic.fill.subtle`, `border-radius.global.xs`; **правило:** компонентні токени — тільки через alias, не core (`components/list-bullet.md`).
