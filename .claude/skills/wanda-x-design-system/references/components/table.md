@@ -71,3 +71,18 @@ Section `Table` (`79056:3415`, сіра) праворуч від білих ор
 - Відступи / розміри прив'язані до наявних змінних `Product` + plugin data `tokens`; **компонентні токени `table.*` — наступний етап** (Андрей дає JSON).
 - Відхилення від оригіналів (рішення на перевірку): перша колонка Time limit (`$1456.77`, `text/lg-strong`, `semantic/text/brand/primary`) — змінюється в інстансі вручну; Rules head мав gap 48 між колонками — у новій сітці колонки FILL з gap 16; рядки без вертикальних падінгів неможливі (2-рядкові комірки) — padding-v токеном за `Size`.
 - Inverted у сітці не потрібен (темного контексту в джерелах немає).
+
+## 7. Етап 2 — Лідерборд (зібрано 2026-10-23)
+Section `Leaderboard` (`79075:3513`, сіра) праворуч від білих оригіналів, на рівні групи 1.
+
+| Компонент | Node | Властивості | Анатомія |
+|---|---|---|---|
+| `Leaderboard` | `79075:3926` | `Style = Card \| Striped`; SLOT `Head` (preferred `Table/Head/Cell`), SLOT `Rows` (preferred `Leaderboard/Row`), Boolean `Show head` | VERTICAL 676. **Card** (Hall of fame, Ingame): без плашки, gap `spacing/200` між Head і Rows та між рядками; Head height `size/500`. **Striped** (Tournaments, Lottery, Leaders): плашка `semantic/background/slate-1`, радіус 16, clip; Head height `size/600`, fill `semantic/background/slate-for-cards`, комірки Inverted; рядки gap 0, чергуються `Plain` / `Fill` |
+| `Leaderboard/Row` | `79075:3526` | `Style = Card \| Fill \| Plain` × `State = Default \| Selected` × `Inverted = False \| True` (12v); SLOT `Cells` (preferred `Table/Cell`) | HORIZONTAL 676, padding-h `spacing/400`, padding-v `spacing/200`, gap `spacing/400`. Fill: Card — `semantic/fill/subtle` / Inverted `semantic/fill/subtle-invert`, радіус 8; Fill — `semantic/background/slate-for-cards`; Plain — без заливки; **Selected** (поточний гравець) — `semantic/fill/active` для всіх стилів. Дефолт: 3 комірки md (перша з іконкою-місцем, третя Align=Right) |
+
+- **`Table/Cell` і `Table/Head/Cell` отримали `Inverted = False | True`** — текст `semantic/text/default-invert/*`, іконка `semantic/text/default-invert/primary` (групи icon-invert немає). Сітка лишається на `Inverted=False`.
+- Місце: в іконку першої комірки swap-ом ставиться `Place` (медаль, **чужа бібліотека**, key `a1aa8a61…`) або номер `List/Bullet` (як у Hall of fame). Місце розміром 24 (height токен іконки); Tournaments desktop мав 32.
+- Перевірено превʼю (обидва стилі, MB і XON).
+- **Бракує токенів** (на етап токенів): радіус 8 (рядок Card) і 16 (плашка Striped) — у `border-radius.global.*` є лише 4/6/12/20; стоять значення без токена.
+- Відхилення від оригіналів: Lottery рядок мав падінги 12/6 → 16/8; Hall of fame — колонки з gap 48 і thumb гри 48 → колонки FILL, гра через іконку/ручну заміну; поточний гравець у Lottery мав помаранчевий текст — тепер підсвічення заливкою `Selected`, текст змінюється вручну; Ingame активний рядок `#9f87cf` (hex) → `semantic/fill/active`; spin history (чужі змінні) → `Style=Card, Inverted=True`.
+- Device-варіанти (`Mobile(320-767)` / `Desktop`) не робимо: мобільна версія — та сама таблиця вужча, 2-рядкові комірки через `Subtext`.
