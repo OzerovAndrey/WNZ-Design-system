@@ -23,7 +23,7 @@
 | List + List/Bullet | `↳ List item - Андрей`, Section `List` | Виправлено командою + токени | 2026-10-22 | 47820:58472, 30276:434400 | 2 + 4 | `components/list-bullet.md` |
 | Profile-menu (+ /Item, /Subitem) | `↳ List item - Андрей`, Section `Profile-menu` | Нова збірка, макети перенесено, токени | 2026-10-22 | 78892:291573, 78859:389, 78859:340 | 1 + 6 + 4 | `components/list.md` |
 | Gamehall / Open-thumb-provider | `Gamehall` | 1 варіант (Progress=Off) + токени | 2026-10-22 | 41123:11531 | 1 | `components/filter-sorting.md` |
-| Table | `↳ Table -` | Not started | | — (продуктові) | | |
+| Table | `↳ Table -` | Inventory 2026-10-23 | | `components/table.md` | | |
 | Notifications, Cookies, Toast | `↳ Notifications, Cookies, Toast` | Not started | | `Toast` 47040:2552 | 8 | |
 | Pagination & Scroll | `↳ Pagination & Scroll` | Not started | | `scrollbar` 28787:64507 | 6 | |
 | Popup | `↳ Popup -` | Changed | | нові `Popup mob` 77814:6477, `Popup web` 77818:294521 у Section `Popup` | 2 + 5 | |
