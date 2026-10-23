@@ -49,3 +49,25 @@
 4. Розкриття рядка (`State=Open` + панель деталей) — частина `Table/Row` чи окремий компонент?
 </content>
 </invoke>
+
+## 5. План збірки (рішення 2026-10-23)
+Три різні таблиці за логікою, бо поводяться по-різному:
+1. **Сітка** (`Table`) — хедер + рядки з текстовими комірками. Джерела: Time limit history, Welcome bonus, FAQ/Rules Tables.
+2. **Лідерборд** — місце-медаль, поточний гравець, картки / смуги на темному. Джерела: Hall of fame, Tournaments/Lottery, Leaders, Ingame, spin history.
+3. **Історія з розкриттям** — шеврон, іконка, статус, сума, дії, `State=Open`. Джерела: transactions/Payment history, Betting history, Loyalty/points.
+`Table/Cell` — спільна комірка для всіх трьох.
+
+## 6. Етап 1 — Сітка (зібрано 2026-10-23)
+Section `Table` (`79056:3415`, сіра) праворуч від білих оригіналів, на рівні групи 4.
+
+| Компонент | Node | Властивості | Анатомія |
+|---|---|---|---|
+| `Table` | `79056:291816` | SLOT `Head` (preferred `Table/Head/Cell`), SLOT `Rows` (preferred `Table/Row`), Boolean `Show head` | VERTICAL 676 FIXED; `Head`: HORIZONTAL, height `size/500` (40), gap `spacing/400`, 3 комірки FILL; `Rows`: VERTICAL gap 0, 3 рядки STRETCH |
+| `Table/Row` | `79056:291751` | `Size = md \| sm` × `Divider = True \| False`; SLOT `Cells` (preferred `Table/Cell`) | HORIZONTAL 676; padding-v md `spacing/400` (16) / sm `spacing/200` (8), padding-h 0; Divider — нижнє обведення 1 px `semantic/divider/default/primary`; `Cells` gap `spacing/400`, 3 комірки FILL |
+| `Table/Cell` | `79056:3444` | `Size = md \| sm` × `Align = Left \| Right`; Boolean `⬅️ Icon` (off), swap `↳ 💠 Icon` (plus, Static — Icons), Boolean `Subtext` (off) | HORIZONTAL FILL, gap `spacing/200`; `Icon` 24 (`size/300` на height, lock ratio, `semantic/icon/default/primary`) + `Content` (VERTICAL): `Label` md `text/md-strong` / sm `text/sm-strong`, `semantic/text/default/primary`; `Subtext` md `text/sm-strong` / sm `text/sm`, `semantic/text/default/secondary`. Align Right — текст праворуч, іконка після тексту |
+| `Table/Head/Cell` | `79056:3449` | `Align = Left \| Right` | `Label` `text/sm-strong`, `semantic/text/default/secondary` |
+
+- Перевірено превʼю (Time limit history з інстансу `Table`) у MB і XON — читається в обох.
+- Відступи / розміри прив'язані до наявних змінних `Product` + plugin data `tokens`; **компонентні токени `table.*` — наступний етап** (Андрей дає JSON).
+- Відхилення від оригіналів (рішення на перевірку): перша колонка Time limit (`$1456.77`, `text/lg-strong`, `semantic/text/brand/primary`) — змінюється в інстансі вручну; Rules head мав gap 48 між колонками — у новій сітці колонки FILL з gap 16; рядки без вертикальних падінгів неможливі (2-рядкові комірки) — padding-v токеном за `Size`.
+- Inverted у сітці не потрібен (темного контексту в джерелах немає).
